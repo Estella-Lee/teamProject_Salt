@@ -1,0 +1,61 @@
+/* ====== video ====== */
+
+
+.mainVideo {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.mainVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+ /* ====== artistBgText ======== */
+
+
+.artistBgText {
+    position: relative;
+    font-family: 'Mongolian Baiti';
+    text-align: center;
+    top: -100px;
+    opacity: 50%;
+}
+
+.artistBgText p {
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-size: 550px;
+    
+}
+
+.artistLineUp {
+    position: sticky;
+    top: 500px;
+}
+
+.artistLineUp ul {
+    position: relative;
+    top: -300px;
+}
+
+
+.artistLineUp ul li {
+    padding: 15px 0;
+}
+
+.artistLineUp ul li:first-child a {
+    border-top: 10px solid blue;
+    padding-top: 10px;
+}
+
+
+
+
