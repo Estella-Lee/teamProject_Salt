@@ -33,7 +33,6 @@
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     font-size: 550px;
-    
 }
 
 .artistLineUp {
@@ -55,6 +54,30 @@
     border-top: 10px solid blue;
     padding-top: 10px;
 }
+
+
+
+/* ========= artistLineUp ========= */
+
+
+.artist1 {
+    position: relative;
+    left: 480px;
+    top: -700px;
+}
+
+
+.artist1 .artistPhotoBg1 {
+    width: 550px;
+    width: 375px;
+    background-color:black;
+}
+
+.artist1 img {
+    width: 550px;
+    width: 375px;
+}
+
 
 
 
