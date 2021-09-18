@@ -146,11 +146,41 @@ main {
 
 
 /* Latest release */
-.latestRelease {
+/* .latestRelease {
     background-color: pink;
+} */
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.posters div img {
+    width: 380px;
+    margin-bottom: 20px;
+}
+
+.column01 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 780px;
+    
+}
+
+.column01 div:first-child img {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.posterItem img {
+    width: auto;
+    height: auto;
 }
 
 
+/* Our artists */
 .ourArtists {
     background-color: aqua;
 }
