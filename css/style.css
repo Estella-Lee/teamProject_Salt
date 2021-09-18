@@ -130,7 +130,6 @@ main {
 
 .aboutSalt {
     margin-top: 90px;
-    margin-bottom: 115px;
 }
 
 .aboutSalt p {
@@ -140,9 +139,22 @@ main {
     line-height: 30px;
 }
 
-/* .mainContents h2 {
-   font-size: ;
-} */
+/* 컨텐츠 공통 */
+.ttl {
+    margin-bottom: 50px;
+    margin-top: 100px;
+    /* padding: 10px;
+    border-left: 8px solid #1f4da0; */
+}
+
+.ttl::before {
+    content: "";
+    display: block;
+    margin-bottom: 15px;
+    width: 80px;
+    height: 8px;
+    background-color: #1f4da0;
+}
 
 
 /* Latest release */
@@ -154,6 +166,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 120px;
 }
 
 .posters div img {
@@ -174,15 +187,10 @@ main {
     margin-bottom: 0;
 }
 
-.posterItem img {
-    width: auto;
-    height: auto;
-}
-
 
 /* Our artists */
 .ourArtists {
-    background-color: aqua;
+    background-color: #f1f1fa;
 }
 
 
