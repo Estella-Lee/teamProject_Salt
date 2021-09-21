@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$('.artistList').slick({
 	  centerMode: true,
-	  centerPadding: '10px',
+	  centerPadding: '100px',
 	  infinite: true,
 	  slidesToShow: 5,
 	  autoplay: true,
-	  speed: 1500,
+	  speed: 1000,
 	  index: 1,
 	  focusOnSelect: true
 //  responsive: [
