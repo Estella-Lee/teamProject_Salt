@@ -106,7 +106,7 @@ header {
 
 /*========== content area ==========*/
 main {
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
 }
 
 /* mianVideo */
@@ -198,14 +198,11 @@ main {
     padding-top: 100px;
 }
 
+/* our artists 슬라이더 */
 .artistList img {
     width: 215px;
     border-radius: 50%;
 }
-
-/* .slick-center .slide-h3{
-    color: #FFF;
-} */
 
 .artistList {
     margin: auto;    
@@ -214,16 +211,23 @@ main {
 }
 
 .slick-slide{
-    pointer-events: none;
     opacity: .7;
     padding-top: 70px;
+    cursor: pointer;
+}
+
+.slick-slide a{
+    pointer-events: none;
 }
 
 .slick-center {
-    pointer-events: auto;
     width: 350px;
     opacity: 1;
     padding-top: 0px;
+}
+
+.slick-center a {
+    pointer-events: auto;
 }
 
 .slick-center img {
@@ -232,8 +236,41 @@ main {
 
 /* goToSns */
 .goToSns img {
-    width: 100%;
+    width: 1080px;
     padding-top: 50px;
+}
+
+.artistBox {
+    position: relative;
+}
+
+.artistBoxL:hover .txtBox {
+    color: #fff;
+    background-color: #1f4da0;
+}
+
+.artistBox .txtBox {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 350px;
+    height: 140px;
+    background-color: #f3f3f3;
+    opacity: .7;
+}
+
+.txtBox span {
+    display: block;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.txtBox span:first-child {
+    padding-top: 40px;
+    font-size: 28px;
 }
 
 /*========== footer area ==========*/
