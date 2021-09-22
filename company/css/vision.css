@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+/* ===== 그리드 시스템 confix ===== */
+.confix { 
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* background-color: gold; */
+}
+
+.vBox::before, .vBox::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/*========== header area ==========*/
+header {
+  position: absolute;
+  height: 75px;
+  width: 100%;
+  background: rgba(255,255,255,0.3);
+  /* background-color: pink; */
+}
+
+/* 로고 */
+.logo {
+    float: left;
+    width: 180px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.logo h1 img{
+    width: 150px;
+}
+
+/* 메인메뉴 */
+.mainMenu .gnb {
+    display: flex;
+    flex-wrap: wrap;
+    width: 820px;
+    height: 75px;
+    line-height: 75px;
+}
+
+.gnb li{
+    width: 180px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.gnb li>a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gnb li:hover a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 로그인, 회원가입 */
+.loginSignup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.loginSignup ul{
+    display: flex;
+}
+
+.loginSignup ul li {
+    padding: 10px;
+}
+
+.loginSignup li>a {
+    font-size: 12px;
+}
+
+.loginSignup li:hover a {
+    font-weight: bold;
+}
+
+
+
+/*========== content area ==========*/
+main {
+    background-color: #f9f9f9;
+}
+
+.mainArea>article>img {
+  width: 100%;
+  height: 500px;
+}
+
+.mainArea>article>h2 {
+  position: absolute; 
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  color: #fff;
+  text-shadow: 1px 1px 7px #000;
+  font-size: 50px;
+  letter-spacing: 8px;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.title p {
+  margin-bottom: 50px;
+}
+
+.title p:first-child {
+  font-size: 32px;
+}
+
+.title p:nth-child(2) {
+  font-size: 65px;
+}
+
+.title p:last-child {
+  font-size: 20px;
+}
+
+#visiona {
+  font-size: 0;
+}
+
+.subMenu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.subMenu ul {
+  display: flex;
+}
+
+.subMenu li {
+  margin-right: 20px;
+}
+
+.subMenu li:last-child {
+  margin-right: 0;
+}
+
+.subMenu li>a {
+  width: 280px; 
+  border-top: 10px solid #ccc;
+  text-align: center;
+  font-size: 19px;
+  color: #ccc;
+  padding-top: 20px;
+}
+
+.subMenu li>a:hover {
+  border-top: 10px solid #1f4da0;
+  color: #1f4da0;
+}
+
+
+
+/*   메인  내용    */
+.vision {
+  padding-bottom: 300px;
+}
+
+.visionBox {
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 150px;
+}
+
+.visionBox>h3 {
+  width: 220px;
+  margin-right: 80px;
+  font-size: 36px;
+}
+
+.visionTxt>p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+
+/* 슬라이드 이미지 */
+.visionSlider {
+  width: 1180px;
+  height: 480px;
+  overflow: hidden;
+}
+
+.visionslides {
+  width: 500%;
+  height: 480px;
+  display: flex;
+}
+
+.visionslides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 1180px;
+  height: 480px;
+}
+
+
+.navigationManual {
+  position: absolute;
+  width: 1180px;
+  margin-top: 520px;
+  display: flex;
+  justify-content: center;
+}
+
+.manualBtn {
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manualBtn:hover {
+  background-color: #ccc;
+}
+
+#slide1:checked ~ .first{
+  margin-left: 0;
+}
+
+#slide2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .first{
+  margin-left: -60%;
+}
+
+.navigationAuto {
+  position: absolute;
+  display: flex;
+  width: 1180px;
+  justify-content: center;
+  margin-top: 520px;
+}
+
+.navigationAuto div {
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigationAuto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#slide1:checked ~ .navigationAuto .autoBtn1 {
+  background-color: #ccc;
+}
+
+#slide2:checked ~ .navigationAuto .autoBtn2 {
+  background-color: #ccc;
+}
+
+#slide3:checked ~ .navigationAuto .autoBtn3 {
+  background-color: #ccc;
+}
+
+#slide4:checked ~ .navigationAuto .autoBtn4 {
+  background-color: #ccc;
+}
+
+
+
+/* 이미지 텍스트 */
+.coreValueTxt {
+  width: 100%;
+  text-align: center;
+  margin-top: -460px;
+}
+
+.coreValueTxt h3{
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: white;
+}
+
+.coreValueTxt h4 {
+  font-size: 46px;
+  margin-bottom: 45px;
+  color: white;
+}
+
+.cvEn {
+  font-size: 30px;
+}
+
+.coreValueTxt p {
+  font-size: 15px;
+  color: white;
+}
+
+
+
+
+/*========== footer area ==========*/
+footer {
+    clear: both;
+    position: relative;
+    height: 140px;
+    line-height: 23px;
+    border-top: 1px solid #bdbdbd;
+    font-size: 12px;
+    color: #6f6f6f;
+    background-color: #f5f5f5;
+}
+
+.footerArea {
+    background-color: red;
+}
+
+/* 푸터로고 */
+.footerLogo {
+    float: left;
+    width: 180px;
+    margin-top: 36px;
+    margin-right: 20px;
+}
+
+.footerLogo h2 img{
+    width: 150px;
+}
+
+/* 주소,연락처 */
+.adrTxt {
+    float: left;
+    margin-top: 36px;
+}
+
+.adrTxt strong {
+    padding-right: 10px;
+}
+
+.adrTxt span {
+    padding-right: 35px;
+}
+
+/* 카피라이트 */
+.copyright {
+    font-size: 12px;
+}
+
+/* SNS */
+.snsArea .snsList {
+    float: right;
+    margin-top: 36px;
+}
+
+.snsList li {
+    float: left;
+    padding: 0 8px;
+}
+
+.snsList li img {
+    width: 15px;
+}
