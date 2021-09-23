@@ -70,35 +70,64 @@
                             </p>
                             <button>...more ▼</button>
                         </article>
-                        <!-- <div class="film">
-                            <ul>
-                                <li>MOVIE</li>
-                                <li>DRAMA</li>
-                                <li>etc</li>
-                            </ul>
+                        <div class="film">
+                            <input id="movie" type="radio" name="tabs">
+                            <label for="movie">MOVIE<span class="rightArrow">→</span></label>
+
+                            <input id="drama" type="radio" name="tabs" checked>
+                            <label for="drama">DRAMA<span class="rightArrow">→</span></label>
+
+                            <input id="etc" type="radio" name="tabs">
+                            <label for="etc">etc<span class="rightArrow">→</span></label>
+
+                            <section id="movieText">
+                                <ul>
+                                    <li>2020 &lt;콜&gt;</li>
+                                    <li>2020 <#살아있다&gt; </li>
+                                    <li>2017 &lt;침묵&gt;</li>
+                                    <li>2016 &lt;형&gt;</li>
+                                    <li>2015 &lt;뷰티 인사이드&gt;</li>
+                                    <li>2014 &lt;상의원&gt;</li>
+                                    <li>2013 &lt;사랑의 가위바위보&gt;</li>
+                                    <li>2013 &lt;7번방의 선물&gt;</li>
+                                    <li>2011 &lt;소중한 날의 꿈&gt;</li>
+                                    <li>2010 &lt;시라노; 연애조작단&gt;</li>
+                                    <li>2007 &lt;전설의 고향&gt;</li>
+                                    <li>2006 &lt;도마뱀&gt;</li>
+                                </ul>
+                            </section>
+
+                            <section id="dramaText">
+                                <ul>
+                                    <li> 2021 JTBC &lt;시지프스: the myth&gt;</li>
+                                    <li> 2018 tvN &lt;알함브라 궁전의 추억&gt;</li>
+                                    <li> 2016 SBS &lt;닥터스&gt;</li>
+                                    <li> 2014 SBS &lt;피노키오&gt;</li>
+                                    <li> 2013 SBS &lt;상속자들&gt;</li>
+                                    <li> 2013 tvN &lt;이웃집 꽃미남&gt;</li>
+                                    <li> 2012 KBS &lt;걱정마세요, 귀신입니다&gt;</li>
+                                    <li> 2011 MBC &lt;넌 내게 반했어&gt;</li>
+                                    <li> 2010 대만 &lt;선풍관가&gt;</li>
+                                    <li> 2009 SBS &lt;미남이시네요&gt;</li>
+                                    <li> 2008 SBS &lt;비천무&gt;</li>
+                                    <li> 2007 MBC &lt;깍두기&gt;</li>
+                                    <li> 2007 MBC &lt;궁S&gt;</li>
+                                    <li>2006 SBS &lt;천국의 나무&gt;</li>
+                                    <li>2006 KBS &lt;서울 1945&gt;</li>
+                                    <li>2005 SBS &lt;귀엽거나 미치거나&gt;</li>
+                                    <li>2005 KBS &lt;새아빠는 스물아홉&gt;</li>
+                                    <li>2003 SBS &lt;천국의 계단&gt;</li>
+                                </ul>
+                            </section>
+
+                            <section id="etcText">
+                                <ul>
+                                    <li>2019 MBC &lt;휴머니멀&gt;</li>
+                                    <li>2018 tvN &lt;숲속의 작은 집&gt;</li>
+                                    <li>2009 Olive &lt;박신혜 인 뉴칼레도니아, Take It Paradise!!&gt;</li>
+                                </ul>
+                            </section>
                         </div>
-                        <div class="casting">
-                            <ul>
-                                <li> 2021 JTBC &lt;시지프스: the myth&gt;</li>
-                                <li> 2018 tvN &lt;알함브라 궁전의 추억&gt;</li>
-                                <li> 2016 SBS &lt;닥터스&gt;</li>
-                                <li> 2014 SBS &lt;피노키오&gt;</li>
-                                <li> 2013 SBS &lt;상속자들&gt;</li>
-                                <li> 2013 tvN &lt;이웃집 꽃미남&gt;</li>
-                                <li> 2012 KBS &lt;걱정마세요, 귀신입니다&gt;</li>
-                                <li> 2011 MBC &lt;넌 내게 반했어&gt;</li>
-                                <li> 2010 대만 &lt;선풍관가&gt;</li>
-                                <li> 2009 SBS &lt;미남이시네요&gt;</li>
-                                <li> 2008 SBS &lt;비천무&gt;</li>
-                                <li> 2007 MBC &lt;깍두기&gt;</li>
-                                <li> 2007 MBC &lt;궁S&gt;</li>
-                                <li>2006 SBS &lt;천국의 나무&gt;</li>
-                                <li>2006 KBS &lt;서울 1945&gt;</li>
-                                <li>2005 SBS &lt;귀엽거나 미치거나&gt;</li>
-                                <li>2005 KBS &lt;새아빠는 스물아홉&gt;</li>
-                                <li>2003 SBS &lt;천국의 계단&gt;</li>
-                            </ul>
-                        </div> -->
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div><a href="#"><img src="images/Park_Shin_Hye/detail1.jpg" alt=""></a></div>
@@ -108,8 +137,10 @@
                         </div>
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div><a href="#"><img src="images/Park_Shin_Hye/detail_video_1.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Park_Shin_Hye/detail_video_2.jpg" alt=""></a></div>
+                            <div><a href="#"><img src="images/Park_Shin_Hye/detail_video_1.jpg" alt=""></a>
+                            </div>
+                            <div><a href="#"><img src="images/Park_Shin_Hye/detail_video_2.jpg" alt=""></a>
+                            </div>
                             <button>...more ▼</button>
                         </div>
                     </div>

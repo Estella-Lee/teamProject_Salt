@@ -1,4 +1,6 @@
-
+html, body {
+    background-color: #f9f9f9;
+}
 
 .mainImg {
     position: relative;
@@ -7,11 +9,14 @@
 
 .wrap {
     position: relative;
-    bottom: 600px;
+    top: -600px;
 }
 
 .profile {
     float: left;
+    position: sticky;
+    top: 200px;
+    letter-spacing: -1px;
 }
 
 .profile> h1 {
@@ -45,11 +50,11 @@
 }
 
 .profile button {
-    background: white ; 
+    background: #f9f9f9 ; 
     border:none; 
     padding:0; 
     color: #535353;
-    cursor:pointer
+    cursor:pointer;
 }
 
 .rightBox {
@@ -75,7 +80,7 @@
 .description button {
     float: right;
     margin-top: 30px;
-    background: white ; 
+    background: #f9f9f9 ; 
     border:none; 
     padding:0; 
     color: #535353;
@@ -83,34 +88,69 @@
 }
 
 .film {
-    clear: both;
-    float: left;
     margin-top: 200px;
-    font-size: 20px;
-    font-family: 'NEXON Lv2 Gothic Bold';
+    margin-bottom: 80px;
 }
 
-.film li {
-    width: 270px;
+input {
+    display: none;
+}
+.rightArrow {
+    float: right;
+}
+
+label {
+    display: block;
     padding-bottom: 15px;
     margin-bottom: 30px;
+    width: 265px;
+    font-size: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
     border-bottom: 5px solid black;
 }
 
 
-.film li:nth-child(2) {
+
+label:hover {
+    cursor: pointer;
     border-bottom: 5px solid #1f4da0;
 }
-.casting {
-    float: right;
-    margin-top: 85px;
-    margin-right: 180px;
+
+input:checked + label {
+    border-bottom: 5px solid #1f4da0;
 }
 
-.casting li {
-    margin-bottom: 10px;
+section {
+    display: none;
+    position: relative;
+    bottom: 390px;
+    right: 200px;
+    float: right;
     font-size: 14px;
+    width: 250px;
+    height: 550px;
 }
+
+section ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+}
+
+section ul li {
+    margin: 9px 0px;
+}
+
+#movie:checked ~ #movieText,
+#drama:checked ~ #dramaText,
+#etc:checked ~ #etcText {
+    display: block;
+}
+
+
+
 
 .photoLine, .videoLine {
     clear: both;
@@ -122,13 +162,19 @@
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
+.photoLine {
+    position: relative;
+    top: -350px;
+}
+
 .photoLine div {
     display: inline-block;
 }
 
 
 .videoLine {
-    margin-top: 100px;
+    position: relative;
+    top: -300px;
 }
 
 .videoLine div{
@@ -142,9 +188,9 @@
     position: relative;
     right: 20px;
     margin-top: 30px;
-    background: white ; 
+    background: #f9f9f9; 
     border:none; 
     padding:0; 
     color: #535353;
-    cursor:pointer
+    cursor:pointer;
 }

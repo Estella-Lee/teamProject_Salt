@@ -1,10 +1,7 @@
-main {
-    background-color: #eee;
-}
-
 a {
     display: inline;
 }
+
 
 
 /* ====== video ====== */
@@ -25,7 +22,7 @@ a {
 
 
 .artistPhotoArea {
-    height: 4500px;
+    height: 4300px;
 }
 
 /* ====== artistBgText ======== */
@@ -42,7 +39,7 @@ a {
 
 .artistBgText p {
     color: black;
-    -webkit-text-fill-color: #eee;;
+    -webkit-text-fill-color: #f9f9f9;;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     font-size: 480px;
