@@ -1,0 +1,150 @@
+
+
+.mainImg {
+    position: relative;
+    width: 100%;
+}
+
+.wrap {
+    position: relative;
+    bottom: 600px;
+}
+
+.profile {
+    float: left;
+}
+
+.profile> h1 {
+    font-size: 30px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.profile p {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.profile>span {
+    display: block;
+}
+
+.profile a {
+    margin-top: 45px;
+    display: inline-block;
+    padding-top: 20px;
+    border-top: 10px solid #1f4da0;
+    color: #535353;
+}
+
+.share {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.profile button {
+    background: white ; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer
+}
+
+.rightBox {
+    position: relative;
+    margin-left: 395px;
+    bottom: 350px;
+}
+
+.description .subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.description h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.description .descTxt {
+    line-height: 30px;
+}
+
+.description button {
+    float: right;
+    margin-top: 30px;
+    background: white ; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer
+}
+
+.film {
+    clear: both;
+    float: left;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.film li {
+    width: 270px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid black;
+}
+
+
+.film li:nth-child(2) {
+    border-bottom: 5px solid #1f4da0;
+}
+.casting {
+    float: right;
+    margin-top: 85px;
+    margin-right: 180px;
+}
+
+.casting li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.photoLine, .videoLine {
+    clear: both;
+}
+
+.photoLine h2, .videoLine h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.photoLine div {
+    display: inline-block;
+}
+
+
+.videoLine {
+    margin-top: 100px;
+}
+
+.videoLine div{
+    display: inline-block;
+}
+
+
+
+.photoLine button, .videoLine button {
+    float: right;
+    position: relative;
+    right: 20px;
+    margin-top: 30px;
+    background: white ; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer
+}

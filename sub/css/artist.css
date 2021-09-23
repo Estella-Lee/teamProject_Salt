@@ -1,6 +1,5 @@
 /* ====== video ====== */
 
-
 .mainVideo {
     position: relative;
     height: 0;
@@ -25,6 +24,7 @@
 
 .artistBgText {
     position: relative;
+    /* position: sticky; */
     font-family: 'Mongolian Baiti';
     text-align: center;
     top: -100px;
@@ -56,7 +56,7 @@
 }
 
 .artistLineUp ul li:first-child a {
-    border-top: 10px solid blue;
+    border-top: 10px solid #1f4da0;
     padding-top: 20px;
 }
 
@@ -93,19 +93,20 @@
 
 .artist1ImgName .artist1Korean {
     position: relative;
-    left: -45px;
-    top: -30px;
+    right: 55px;
+    bottom: 30px;
     z-index: 2;
 }
 
 .artist1ImgName .artist1English {
     position: relative;
     display: inline-block;
-    right: 170px;
+    right: 190px;
     bottom: 280px;
     font-size: 30px;
     z-index: 2;
     transform: rotate(-90deg);
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 
@@ -131,7 +132,7 @@
 .artist2 .artistPhotoBg2 {
     width: 370px;
     height: 310px;
-    background-color: #dbe2df;
+    background-color: #e8e8e8;
     position: relative;
     top: -300px;
     left: 45px;
@@ -139,7 +140,7 @@
 
 .artist2ImgName .artist2Korean {
     position: relative;
-    left: 350px;
+    left: 330px;
     top: -30px;
     z-index: 2;
 }
@@ -147,9 +148,10 @@
 .artist2ImgName .artist2English {
     position: relative;
     bottom: 440px;
-    left: -40px;
+    right: 50px;
     font-size: 30px;
     z-index: 2;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 /* =========== artist3 ============ */
@@ -171,7 +173,7 @@
 .artist3 .artistPhotoBg3 {
     width: 580px;
     height: 385px;
-    background-color: #dbe2df;
+    background-color: #dfe7e8;
     position: relative;
     left: 85px;
     bottom: 370px;
@@ -179,17 +181,18 @@
 
 .artist3ImgName .artist3Korean {
     position: relative;
-    left: -45px;
-    top: -30px;
+    left: -55px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist3ImgName .artist3English {
     position: relative;
-    bottom: 420px;
-    left: 370px;
+    bottom: 425px;
+    left: 350px;
     font-size: 30px;
     z-index: 2;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 /* =========== artist4 ============ */
@@ -210,28 +213,29 @@
 
 .artist4 .artistPhotoBg4 {
     position: relative;
-    left: 60px;
+    left: 80px;
     bottom: 320px;
     width: 490px;
     height: 355px;
-    background-color: #dbe2df;
+    background-color: #ebebeb;
 }
 
 .artist4ImgName .artist4Korean {
     position: relative;
     left: 500px;
-    bottom: 30px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist4ImgName .artist4English {
     position: relative;
     display: inline-block;
-    bottom: 285px;
-    left: 380px;
-    font-size: 30px;
+    bottom: 260px;
+    left: 370px;
+    font-size: 36px;
     z-index: 2;
     transform: rotate(90deg);
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 
@@ -253,26 +257,27 @@
 
 .artist5 .artistPhotoBg5 {
     position: relative;
-    right: 100px;
+    right: 120px;
     bottom: 500px;
-    width: 400px;
+    width: 440px;
     height: 520px;
-    background-color: #dbe2df;
+    background-color: #d2dadc;
 }
 
 .artist5ImgName .artist5Korean {
     position: relative;
     right: 50px;
-    bottom: 30px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist5ImgName .artist5English {
     position: relative;
     bottom: 460px;
-    right: 250px;
-    font-size: 30px;
+    right: 280px;
+    font-size: 36px;
     z-index: 2;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 /* =========== artist6 ============ */
@@ -293,26 +298,27 @@
 
 .artist6 .artistPhotoBg6 {
     position: relative;
-    bottom: 540px;
+    bottom: 560px;
     right: 70px;
-    width: 370px;
+    width: 420px;
     height: 460px;
-    background-color: #dbe2df;
+    background-color: #d3d5ca;
 }
 
 .artist6ImgName .artist6Korean {
     position: relative;
     left: 380px;
-    bottom: 30px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist6ImgName .artist6English {
     position: relative;
-    right: 45px;
+    right: 100px;
     bottom: 500px;
-    font-size: 30px;
+    font-size: 36px;
     z-index: 2;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 /* =========== artist7 ============ */
@@ -326,8 +332,8 @@
 
 .artist7 img {
     position: relative;
-    width: 330px;
-    height: 460px;
+    /* width: 330px;
+    height: 460px; */
     z-index: 4;
 }
 
@@ -335,26 +341,27 @@
     position: relative;
     bottom: 570px;
     right: 130px;
-    width: 400px;
-    height: 460px;
-    background-color: #dbe2df;
+    width: 350px;
+    height: 400px;
+    background-color: #cdd5dc;
 }
 
 .artist7ImgName .artist7Korean {
     position: relative;
     right: 50px;
-    bottom: 30px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist7ImgName .artist7English {
     position: relative;
-    right: 180px;
-    bottom: 400px;
-    font-size: 30px;
+    right: 220px;
+    bottom: 340px;
+    font-size: 36px;
     z-index: 2;
     display: inline-block;
     transform: rotate(-90deg);
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 /* =========== artist8 ============ */
@@ -375,23 +382,25 @@
 
 .artist8 .artistPhotoBg8 {
     position: relative;
-    bottom: 300px;
-    left: 100px;
+    bottom: 370px;
+    left: 70px;
     width: 480px;
-    height: 320px;
-    background-color: #dbe2df;
+    height: 400px;
+    background-color: #d6e2e2;
 }
 
 .artist8ImgName .artist8Korean {
     position: relative;
-    left: 500px;
-    bottom: 30px;
+    left: 490px;
+    bottom: 35px;
     z-index: 2;
 }
 
 .artist8ImgName .artist8English {
     position: relative;
-    font-size: 30px;
+    font-size: 36px;
+    top: 10px;
     right: 50px;
     z-index: 2;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
