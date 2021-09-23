@@ -1,3 +1,12 @@
+main {
+    background-color: #eee;
+}
+
+a {
+    display: inline;
+}
+
+
 /* ====== video ====== */
 
 .mainVideo {
@@ -19,7 +28,7 @@
     height: 4500px;
 }
 
- /* ====== artistBgText ======== */
+/* ====== artistBgText ======== */
 
 
 .artistBgText {
@@ -33,7 +42,7 @@
 
 .artistBgText p {
     color: black;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: #eee;;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     font-size: 480px;
@@ -64,8 +73,8 @@
     font-weight: bold;
 }
 
-
 /* ========= artist1========= */
+
 
 
 .artist1 {
@@ -116,9 +125,9 @@
 
 
 .artist2 {
-    position: relative;
+    position: absolute;
     left: 200px;
-    top: -200px;
+    top: -180px;
 }
 
 
@@ -157,9 +166,9 @@
 /* =========== artist3 ============ */
 
 .artist3 {
-    position: relative;
-    top: -350px;
-    left: 550px;
+    position: absolute;
+    left: 500px;
+    top: 400px;
 }
 
 
@@ -198,9 +207,9 @@
 /* =========== artist4 ============ */
 
 .artist4 {
-    position: relative;
-    bottom: 500px;
-    left: 350px;
+    position: absolute;
+    left: 270px;
+    top: 950px;
 }
 
 
@@ -242,9 +251,9 @@
 /* =========== artist5 ============ */
 
 .artist5 {
-    position: relative;
-    bottom: 700px;
-    left: 800px;
+    position: absolute;
+    left: 830px;
+    top: 1500px;
 }
 
 
@@ -283,9 +292,9 @@
 /* =========== artist6 ============ */
 
 .artist6 {
-    position: relative;
-    bottom: 1000px;
-    left: 300px;
+    position: absolute;
+    left: 260px;
+    top: 2250px;
 }
 
 
@@ -324,16 +333,14 @@
 /* =========== artist7 ============ */
 
 .artist7 {
-    position: relative;
-    bottom: 1200px;
-    left: 650px;
+    position: absolute;
+    left: 710px;
+    top: 2950px;
 }
 
 
 .artist7 img {
     position: relative;
-    /* width: 330px;
-    height: 460px; */
     z-index: 4;
 }
 
@@ -367,9 +374,9 @@
 /* =========== artist8 ============ */
 
 .artist8 {
-    position: relative;
-    bottom: 1500px;
-    left: 300px;
+    position: absolute;
+    left: 310px;
+    top: 3570px;
 }
 
 

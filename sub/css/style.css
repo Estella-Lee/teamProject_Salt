@@ -7,7 +7,6 @@
     margin: 0 auto;
     padding: 0 10px;
     height: 100%;
-    /* background-color: gold; */
 }
 
 .vBox::before, .vBox::after {
@@ -21,7 +20,6 @@
 /*========== header area ==========*/
 header {
     height: 75px;
-    /* background-color: pink; */
 }
 
 /* 로고 */
