@@ -16,12 +16,12 @@ html, body {
     float: left;
     position: sticky;
     top: 200px;
-    letter-spacing: -1px;
 }
 
 .profile> h1 {
     font-size: 30px;
     font-family: 'NEXON Lv2 Gothic Bold';
+    letter-spacing: -1px;
 }
 
 .profile p {
@@ -29,10 +29,13 @@ html, body {
     margin-top: 30px;
     margin-bottom: 20px;
     font-size: 18px;
+    letter-spacing: -1px;
 }
 
 .profile>span {
     display: block;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .profile a {
@@ -45,8 +48,9 @@ html, body {
 
 .share {
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 16px;
+    font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 .profile button {
@@ -140,7 +144,8 @@ section ul{
 }
 
 section ul li {
-    margin: 9px 0px;
+    margin: 12px 0px;
+    color: #383838;
 }
 
 #movie:checked ~ #movieText,
