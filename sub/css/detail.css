@@ -7,6 +7,10 @@ html, body {
     width: 100%;
 }
 
+.mainImg img{
+    width: 100%;
+}
+
 .wrap {
     position: relative;
     top: -600px;
