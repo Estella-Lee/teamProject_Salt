@@ -15,16 +15,15 @@
     clear: both;
 }
 
-
-
 /*========== header area ==========*/
 header {
     position: fixed;
     top: 0;
     left: 50%;
-    z-index: -9999;
     transform: translateX(-50%);
     height: 75px;
+    width: 100%;
+    background: rgba(255,255,255,0.3);
     /* background-color: pink; */
 }
 
@@ -60,6 +59,7 @@ header {
     font-size: 16px;
     font-weight: bold;
     transition: all 0.4s;
+    color: #fff;
 }
 
 .gnb li:hover a {
@@ -100,6 +100,7 @@ header {
 }
 
 .loginSignup li>a {
+    color: #fff;
     font-size: 12px;
 }
 
@@ -116,21 +117,102 @@ main {
     background-color: #f9f9f9;
 }
 
+
+/*=== Scroll Animation (sa, 스크롤 애니메이션) ==*/
+.sa {
+    opacity: 0;
+    transition: all .5s ease;
+  }
+
+  /* 아래에서 위로 페이드 인 */
+  .sa-up {
+    transform: translate(0, 100px);
+  }
+  /* 위에서 아래로 페이드 인 */
+  .sa-down {
+    transform: translate(0, -100px);
+  }
+  /* 왼쪽에서 오른쪽으로 페이드 인 */
+  .sa-right {
+    transform: translate(-100px, 0);
+  }
+  /* 오른쪽에서 왼쪽으로 페이드 인 */
+  .sa-left {
+    transform: translate(100px, 0);
+  }
+  /* 왼쪽으로 회전하면서 페이드 인 */
+  .sa-rotateL {
+    transform: rotate(180deg);
+  }
+  /* 오른쪽으로 회전하면서 페이드 인 */
+  .sa-rotateR {
+    transform: rotate(-180deg);
+  }
+  /* 작아진 상태에서 커지면서 페이드 인 */
+  .sa-scaleUp {
+    transform: scale(.5);
+  }
+  /* 커진 상태에서 작아지면서 페이드 인 */
+  .sa-scaleDown {
+    transform: scale(1.5);
+  }
+
+  .sa.show {
+    opacity: 1;
+    transform: none;
+  }
+
+
+
 /* mianVideo */
-.mainVideo {
+.videoBox {
     position: fixed;
-    top: 75px;
+    top: 0;
     right: 0;
     min-height: 100%;
     min-width: 100%;
     z-index: -9999;
 }
 
-.musicVideo video {
+.videoBox video {
     width: 100%;
     max-width: 100%;
     height: auto;
 } 
+
+@keyframes mainTxt {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.videoTxt { 
+    position: absolute; 
+    bottom: 15%; 
+    left: 3%; 
+    animation-name: mainTxt;
+    animation-duration: 7s;
+}
+
+.videoTxt h2 {
+    margin-top: -24px; 
+    padding-bottom: 10px;
+    text-align: center; 
+    font-size: 48px; 
+    font-weight: bold;
+    color: #fff; 
+}
+.videoTxt span {
+    display: block;
+    font-size: 28px; 
+    color: #fff; 
+}
+
+.videoTxt span>a {
+    font-size: 25px;
+    color: #ccc;
+}
+
+
 
 .mainContents {
     min-height: 100%;
@@ -153,6 +235,7 @@ main {
     font-weight: bold;
     line-height: 35px;
 }
+
 
 /* 컨텐츠 공통 */
 .ttl {
