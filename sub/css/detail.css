@@ -171,7 +171,18 @@ section ul li {
     display: inline-block;
 }
 
+.photoLine div>a {
+    overflow: hidden;
+}
 
+.photoLine div>a>img {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.photoLine div>a>img:hover {
+    transform: scale(1.05);
+}
 .videoLine {
     position: relative;
     top: -300px;
@@ -193,4 +204,38 @@ section ul li {
     padding:0; 
     color: #535353;
     cursor:pointer;
+}
+
+/* ================== video hover ============= */
+
+#video1 {
+    position: absolute;
+    top: 36px;
+}
+#videoHover1 {
+    position: relative;
+    width: 381px;
+    height: 204px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#videoHover1:hover {
+    opacity: 0.8;
+}
+
+#video2 {
+    position: absolute;
+    top: 36px;
+}
+#videoHover2 {
+    position: relative;
+    width: 381px;
+    height: 204px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#videoHover2:hover {
+    opacity: 0.8;
 }
