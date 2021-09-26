@@ -468,7 +468,6 @@ main {
     height: 160px;
     padding: 0 8px;
     margin-bottom: 50px;
-    background-color: #fff;
 }
 
 .sharingTxt h3 {
@@ -490,7 +489,13 @@ main {
     line-height: 22px;
 }
 
+.sharing02.sa, .sharing05.sa {
+    transition: all .7s ease;
+}
 
+.sharing03.sa, .sharing06.sa {
+    transition: all .9s ease;
+}
 
 
 /*========== footer area ==========*/
