@@ -1,43 +1,122 @@
-html, body {
+@charset "utf-8";
+
+/* ===== 그리드 시스템 confix ===== */
+.confix { 
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.vBox::before, .vBox::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*========== header area ==========*/
+header {
+    height: 75px;
+}
+
+/* 로고 */
+.logo {
+    float: left;
+    width: 180px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.logo h1 img{
+    width: 130px;
+}
+
+/* 메인메뉴 */
+.mainMenu .gnb {
+    display: flex;
+    flex-wrap: wrap;
+    width: 820px;
+    height: 75px;
+    line-height: 75px;
+}
+
+.gnb li{
+    width: 180px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.gnb li>a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gnb li:hover a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 로그인, 회원가입 */
+.loginSignup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.loginSignup ul{
+    display: flex;
+}
+
+.loginSignup ul li {
+    padding: 10px;
+}
+
+.loginSignup li>a {
+    font-size: 12px;
+}
+
+.loginSignup li:hover a {
+    font-weight: bold;
+}
+
+
+/*============ main ============*/
+main {
+    width: 100%;
     background-color: #f9f9f9;
 }
 
-a {
-    display: inline;
+section h1 {
+    font-size: 0;
 }
 
-
-
-/* ====== video ====== */
-
+/* ====== mainVideo ====== */
 .mainVideo {
     position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
 }
 
 .mainVideo video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 }
 
 
-.artistPhotoArea {
-    height: 4300px;
+/*===== artistCon =====*/
+.artistCon {
+    position: relative;
 }
 
-/* ====== artistBgText ======== */
-
-
+/* artistBgText */
 .artistBgText {
-    position: relative;
-    /* position: sticky; */
+    position: absolute;
+    top: -1%;
+    margin: 0 auto;
+    width: 100%;
     font-family: 'Mongolian Baiti';
     text-align: center;
-    top: -100px;
     opacity: 50%;
 }
 
@@ -50,17 +129,18 @@ a {
     letter-spacing: -11px;
 }
 
+/* artistLineUp */
 .artistLineUp {
     position: sticky;
-    top: 500px;
+    top: -200px;
     font-size: 24px;
+    z-index: 1;
 }
 
 .artistLineUp ul {
-    position: relative;
-    top: -300px;
+    float: left;
+    margin-top: 305px;
 }
-
 
 .artistLineUp ul li {
     padding: 15px 0;
@@ -75,341 +155,449 @@ a {
     font-weight: bold;
 }
 
-/* ========= artist1========= */
+/*== artistPhotoArea == */
+.artistPhotoArea {
+    position: relative;
+    height: 5300px;
+}
 
-
-
+/* artist1 */
 .artist1 {
     position: absolute;
-    top: -740px;
-    left: 616px;
+    top: 240px;
+    right: 150px;
+    width: 550px;
+    height: 365px;
+    /* background-color: #dbe2df; */
 }
+
+.artist1Bg {
+    position: relative;
+    left: 0;
+    bottom: 385px;
+    width: 550px;
+    height: 378px;
+    background-color: #dbe2df;
+}
+
 
 
 .artist1 img {
     position: relative;
+    top: 40px;
+    left: 150px;
     width: 550px;
-    height: 375px;
-    z-index: 4;
-}
-
-.artist1 .artistPhotoBg1 {
-    width: 550px;
-    height: 360px;
-    background-color: #dbe2df;
-    position: relative;
-    top: -435px;
-    right: 150px;
-}
-
-.artist1ImgName .artist1Korean {
-    position: relative;
-    right: 55px;
-    bottom: 30px;
     z-index: 2;
 }
 
-.artist1ImgName .artist1English {
+.artist1Korean {
+    position: relative;
+    left: 90px;
+    bottom: 375px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.artist1English {
     position: relative;
     display: inline-block;
-    right: 210px;
-    bottom: 250px;
+    left: -65px;
+    bottom: 620px;
     font-size: 36px;
-    z-index: 2;
-    transform: rotate(-90deg);
     font-family: 'NEXON Lv2 Gothic Bold';
+    z-index: 1;
+    pointer-events: none; 
+    transform: rotate(-90deg);
 }
 
 
-/* ========= artist2========= */
-
-
-
+/* artist2 */
 .artist2 {
     position: absolute;
-    left: 230px;
-    top: -180px;
+    left: 260px;
+    top: 795px;
+    width: 380px;
+    height: 315px;
+    /* background-color: #e8e8e8; */
 }
 
+.artist2Bg {
+    position: relative;
+    left: 0;
+    bottom: 359px;
+    width: 380px;
+    height: 315px;
+    background-color: #e8e8e8;
+}
 
 .artist2 img {
     position: relative;
-    width: 320px;
-    height: 400px;
-    z-index: 4;
-}
-
-.artist2 .artistPhotoBg2 {
-    width: 370px;
-    height: 310px;
-    background-color: #e8e8e8;
-    position: relative;
-    top: -300px;
-    left: 45px;
-}
-
-.artist2ImgName .artist2Korean {
-    position: relative;
-    left: 330px;
-    top: -30px;
+    top: -55px;
+    left: -90px;
+    width: 355px;
     z-index: 2;
 }
 
-.artist2ImgName .artist2English {
+.artist2Korean {
     position: relative;
-    bottom: 450px;
-    right: 45px;
+    left: 280px;
+    bottom: 415px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.artist2English {
+    position: relative;
+    left: -120px;
+    bottom: 770px;
     font-size: 36px;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-/* =========== artist3 ============ */
+
+
+/* artist3 */
 
 .artist3 {
     position: absolute;
-    left: 500px;
-    top: 400px;
+    right: 0;
+    top: 1280px;
+    width: 590px;
+    height: 395px;
 }
 
+.artist3Bg {
+    position: relative;
+    left: 0;
+    bottom: 390px;
+    background-color: #dfe7e8;
+    width: 590px;
+    height: 395px;
+}
 
 .artist3 img {
     position: relative;
+    top: -90px;
+    right: 100px;
     width: 580px;
-    height: 385px;
-    z-index: 4;
-}
-
-.artist3 .artistPhotoBg3 {
-    width: 580px;
-    height: 385px;
-    background-color: #dfe7e8;
-    position: relative;
-    left: 85px;
-    bottom: 370px;
-}
-
-.artist3ImgName .artist3Korean {
-    position: relative;
-    left: -55px;
-    bottom: 35px;
     z-index: 2;
 }
 
-.artist3ImgName .artist3English {
+.artist3Korean {
     position: relative;
-    bottom: 425px;
-    left: 320px;
+    right: 160px;
+    bottom: 520px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.artist3English {
+    position: relative;
+    left: 216px;
+    bottom: 925px;
     font-size: 36px;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-/* =========== artist4 ============ */
 
+
+/* artist4 */
 .artist4 {
     position: absolute;
-    left: 270px;
-    top: 950px;
+    left: 325px;
+    top: 1965px;
+    width: 510px;
+    height: 325px;
+    /* background-color: red; */
+}
+
+.artist4Bg {
+    position: relative;
+    bottom: 358px;
+    width: 510px;
+    height: 325px;
+    background-color: #ebebeb;
 }
 
 
 .artist4 img {
     position: relative;
+    top: -125px;
+    left: -55px;
     width: 490px;
-    height: 355px;
-    z-index: 4;
-}
-
-.artist4 .artistPhotoBg4 {
-    position: relative;
-    left: 80px;
-    bottom: 320px;
-    width: 490px;
-    height: 355px;
-    background-color: #ebebeb;
-}
-
-.artist4ImgName .artist4Korean {
-    position: relative;
-    left: 500px;
-    bottom: 35px;
     z-index: 2;
 }
 
-.artist4ImgName .artist4English {
+.artist4Korean {
+    position: relative;
+    left: 455px;
+    bottom: 490px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.artist4English {
     position: relative;
     display: inline-block;
-    bottom: 250px;
-    left: 370px;
+    bottom: 710px;
+    left: 310px;
     font-size: 36px;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none; 
     transform: rotate(90deg);
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
 
-/* =========== artist5 ============ */
-
+/* artist5 */
 .artist5 {
     position: absolute;
-    left: 830px;
-    top: 1500px;
-}
-
-
-.artist5 img {
-    position: relative;
-    width: 350px;
-    height: 520px;
-    z-index: 4;
-}
-
-.artist5 .artistPhotoBg5 {
-    position: relative;
-    right: 120px;
-    bottom: 500px;
+    right: 40px;
+    top: 2455px;
     width: 440px;
-    height: 520px;
+    height: 540px;
+    /* background-color: red; */
+}
+
+.artist5Bg {
+    position: relative;
+    right: 10px;
+    bottom: 529px;
+    width: 440px;
+    height: 540px;
     background-color: #d2dadc;
 }
 
-.artist5ImgName .artist5Korean {
+.artist5 img {
     position: relative;
-    right: 50px;
-    bottom: 35px;
+    top: -30px;
+    right: -100px;
+    width: 350px;
     z-index: 2;
 }
 
-.artist5ImgName .artist5English {
+.artist5Korean {
     position: relative;
-    bottom: 460px;
-    right: 280px;
+    left: 40px;
+    bottom: 610px;
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.artist5English {
+    position: relative;
+    right: 182px;
+    bottom: 1000px;
     font-size: 36px;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-/* =========== artist6 ============ */
 
+
+/* artist6 */
 .artist6 {
     position: absolute;
-    left: 260px;
-    top: 2250px;
+    left: 190px;
+    top: 3115px;
+    width: 410px;
+    height: 410px;
 }
 
-
-.artist6 img {
+.artist6Bg {
     position: relative;
-    width: 370px;
-    height: 460px;
-    z-index: 4;
-}
-
-.artist6 .artistPhotoBg6 {
-    position: relative;
-    bottom: 560px;
-    right: 70px;
-    width: 420px;
-    height: 460px;
+    left: 0;
+    bottom: 468px;
+    width: 410px;
+    height: 410px;
     background-color: #d3d5ca;
 }
 
-.artist6ImgName .artist6Korean {
+.artist6 img {
     position: relative;
-    left: 380px;
-    bottom: 35px;
+    top: 70px;
+    left: 60px;
+    width: 370px;
     z-index: 2;
 }
 
-.artist6ImgName .artist6English {
+.artist6Korean {
     position: relative;
-    right: 100px;
-    bottom: 500px;
+    left: 445px;
+    bottom: 380px;
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.artist6English {
+    position: relative;
+    left: -30px;
+    bottom: 855px;
     font-size: 36px;
-    z-index: 2;
+    pointer-events: none; 
+    z-index: 1;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-/* =========== artist7 ============ */
 
+/* artist7 */
 .artist7 {
     position: absolute;
-    left: 710px;
-    top: 2950px;
+    right: 230px;
+    top: 3805px;
+    width: 370px;
+    height: 400px;
+    /* background-color: red; */
+}
+
+.artist7Bg {
+    position: relative;
+    left: 0;
+    bottom: 434px;
+    width: 370px;
+    height: 400px;
+    background-color: #cdd5dc;
 }
 
 
 .artist7 img {
     position: relative;
-    z-index: 4;
-}
-
-.artist7 .artistPhotoBg7 {
-    position: relative;
-    bottom: 570px;
-    right: 130px;
-    width: 350px;
-    height: 400px;
-    background-color: #cdd5dc;
-}
-
-.artist7ImgName .artist7Korean {
-    position: relative;
-    right: 50px;
-    bottom: 35px;
+    top: 120px;
+    left: 120px;
+    width: 430px;
     z-index: 2;
 }
 
-.artist7ImgName .artist7English {
+.artist7Korean {
     position: relative;
-    right: 220px;
-    bottom: 340px;
+    left: 60px;
+    bottom: 320px;
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.artist7English {
+    position: relative;
+    right: 100px;
+    bottom: 630px;
     font-size: 36px;
-    z-index: 2;
-    display: inline-block;
+    pointer-events: none; 
+    z-index: 1;
     transform: rotate(-90deg);
+    display: inline-block;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-/* =========== artist8 ============ */
 
+
+/* artist8 */
 .artist8 {
     position: absolute;
-    left: 310px;
-    top: 3570px;
+    left: 400px;
+    top: 4570px;
+    width: 480px;
+    height: 410px;
 }
 
-
-.artist8 img {
+.artist8Bg {
     position: relative;
+    left: 0;
+    bottom: 383px;
     width: 480px;
-    height: 370px;
-    z-index: 4;
-}
-
-.artist8 .artistPhotoBg8 {
-    position: relative;
-    bottom: 370px;
-    left: 70px;
-    width: 480px;
-    height: 400px;
+    height: 410px;
     background-color: #d6e2e2;
 }
 
-.artist8ImgName .artist8Korean {
+.artist8 img {
     position: relative;
-    left: 490px;
-    bottom: 35px;
+    top: -35px;
+    right: 100px;
+    width: 480px;
+    z-index: 4;
+}
+
+.artist8Korean {
+    position: relative;
+    left: 395px;
+    bottom: 485px;
+    pointer-events: none; 
     z-index: 2;
 }
 
-.artist8ImgName .artist8English {
+.artist8English {
     position: relative;
+    bottom: 440px;
+    right: 150px;
     font-size: 36px;
-    top: 10px;
-    right: 50px;
+    pointer-events: none; 
     z-index: 2;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
+
+
+
+
+/*========== footer area ==========*/
+footer {
+    position: relative;
+    height: 140px;
+    line-height: 23px;
+    border-top: 1px solid #bdbdbd;
+    font-size: 12px;
+    color: #6f6f6f;
+    background-color: #f5f5f5;
+}
+
+
+/* 푸터로고 */
+.footerLogo {
+    float: left;
+    width: 180px;
+    margin-top: 36px;
+    margin-right: 20px;
+}
+
+.footerLogo h2 img{
+    width: 150px;
+}
+
+/* 주소,연락처 */
+.adrTxt {
+    float: left;
+    margin-top: 36px;
+}
+
+.adrTxt strong {
+    padding-right: 10px;
+}
+
+.adrTxt span {
+    padding-right: 35px;
+    font-size: 12px;
+}
+
+/* 카피라이트 */
+.copyright {
+    font-size: 12px;
+}
+
+/* SNS */
+.snsArea .snsList {
+    float: right;
+    margin-top: 36px;
+}
+
+.snsList li {
+    float: left;
+    padding: 0 8px;
+}
+
+.snsList li img {
+    width: 15px;
+}

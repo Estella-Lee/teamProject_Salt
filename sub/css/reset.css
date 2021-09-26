@@ -3,7 +3,13 @@
 @font-face {
     font-family: 'NEXON Lv2 Gothic';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-family: "NEXON Lv2 ";
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -58,6 +64,10 @@ h4 {
 
 p {
     font-size: 14px;
+}
+
+span {
+    font-size: 18px;
 }
 
 input, select, textarea, button {
