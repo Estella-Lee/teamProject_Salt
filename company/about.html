@@ -4,141 +4,135 @@
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
     <meta name="Author" content="Estella">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/about.css" type="text/css">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
     <title>SALT Entertainment</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+      <header>
+        <div class="logoMenu confix">
+          <div class="logo">
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+          </div><!-- logo end -->
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="#">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+          <nav class="mainMenu">
+            <ul class="gnb">
+              <li><a href="#">COMPANY</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">NOTICE</a></li>
+              <li><a href="#">AUDITION</a></li>
+            </ul>
+          </nav>
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li> 
-                    </ul>
-                </div>
-            </div><!-- logoMenu end -->
-        </header>
+          <div class="loginSignup">
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Sign up</a></li> 
+            </ul>
+          </div>
+        </div><!-- logoMenu end -->
+      </header>
         
-        <main>
-          <div class="mainArea">
-            <article>
-              <h2>Company</h2>
-              <img src="images/main1.jpg" alt="메인이미지">
-              <!-- <video loop>
-                <source src="media/companyIntro.mp4" type="video/mp4">
-              </video>
-              <div class="center">
-                <div class="down"></div>
-              </div> -->
-              <div class="title">
-                <p>나눔과 즐거움, 사랑과 신뢰의 아이콘</p>
-                <P>S . A . L . T</P>
-                <P>영화, 드라마, 음악, 극장, 스포츠, 매니지먼트, 글로벌 콘텐츠 합작 등<br>
-                  모든 엔터테인먼트 영역에서 새로운 도전을 멈추지 않겠습니다.</p>
-              </div>
-            </article>
-            
-            <section>
-              <h2 id="abouta">서브 메뉴</h2>
-              <div class="confix">
-                <div class="subMenu">
-                  <ul>
-                    <li><a href="about.html#abouta">ABOUT</a></li>
-                    <li><a href="vision.html#visiona">VISION</a></li>
-                    <li><a href="culture.html#culturea">CULTURE</a></li>
-                    <li><a href="contact.html#contacta">CONTACT</a></li>
-                  </ul>
-                </div> <!-- subMenu -->
-              </div> <!-- confix -->
-            </section>
-            
-            <section>
-              <div class="confix">
-                <div class="about">
-                  <div class="brandStory">
-                    <h3>Brand Story</h3>
-                    <div class="brandStoryTxt">
-                      <p>솔트 엔터테인먼트의 회사명 솔트(S.A.L.T.)에는 '소금'이라는 뜻과 더불어<br> 나눔(Sharing) / 즐거움(Amusement) / 사랑(Love) / 신뢰(Trust)의 4가지 의미가 담겨있습니다.</p>
-                      <p>솔트는 무한한 가능성을 지닌 연기자들과 즐거운 컨텐츠를 함께 만들어가며<br> 소속 연기자가 작품 활동과 개인의 삶, 두 가지 모두를 행복하게 영위할 수 있도록<br> 신뢰를 바탕으로 서로 존중하며 함께 노력합니다. 또한 '나눔'의 소중함을 알고 더불어 사는<br> 사회에 '선한 영향력'을 미치는 '건강한 매니지먼트'를 지향합니다.</p>
-                      <p>'빛'과 같은 배우 그리고 힘이 되어주시는 여러분께<br> '소금'과 같이 꼭 필요한 동반자가 되는 솔트 엔터테인먼트가 되겠습니다.</p>
-                    </div> <!-- brandStoryTxt-->
-                  </div> <!-- brandStory-->
+      <main>
+        <article>
+          <div class="parallax z1">
+            <h2>메인 이미지</h2>
+          </div>
+        </article>
+
+        <div class="parallax z2">
+          <section>
+            <h2 id="abouta">서브 메뉴</h2>
+            <div class="confix">
+              <div class="subMenu">
+                <ul>
+                  <li><a href="about.html#abouta">ABOUT</a></li>
+                  <li><a href="vision.html#visiona">VISION</a></li>
+                  <li><a href="culture.html#culturea">CULTURE</a></li>
+                  <li><a href="contact.html#contacta">CONTACT</a></li>
+                </ul>
+              </div> <!-- subMenu -->
+            </div> <!-- confix -->
+          </section>
+          
+          <section>
+            <div class="confix">
+              <div class="about">
+                <div class="brandStory" data-aos="fade-up" data-aos-duration="2000">
+                  <h3>Brand Story</h3>
+                  <div class="brandStoryTxt">
+                    <p>솔트 엔터테인먼트의 회사명 솔트(S.A.L.T.)에는 '소금'이라는 뜻과 더불어<br> 나눔(Sharing) / 즐거움(Amusement) / 사랑(Love) / 신뢰(Trust)의 4가지 의미가 담겨있습니다.</p>
+                    <p>솔트는 무한한 가능성을 지닌 연기자들과 즐거운 컨텐츠를 함께 만들어가며<br> 소속 연기자가 작품 활동과 개인의 삶, 두 가지 모두를 행복하게 영위할 수 있도록<br> 신뢰를 바탕으로 서로 존중하며 함께 노력합니다. 또한 '나눔'의 소중함을 알고 더불어 사는<br> 사회에 '선한 영향력'을 미치는 '건강한 매니지먼트'를 지향합니다.</p>
+                    <p>'빛'과 같은 배우 그리고 힘이 되어주시는 여러분께<br> '소금'과 같이 꼭 필요한 동반자가 되는 솔트 엔터테인먼트가 되겠습니다.</p>
+                  </div> <!-- brandStoryTxt-->
+                </div> <!-- brandStory-->
+                
+                <div class="logoContent" data-aos="fade-left" data-aos-duration="2000">
+                  <h3>LOGO</h3>
+                  <div class="logoContentTxt">
+                    <p>솔트 엔터테인먼트의 CI는 건강한 매니지먼트를 지향하는 솔트의 기업 문화를 바탕으로 만들어졌습니다.<br> 단단하게 하나로 뭉쳐 보석처럼 빛나는 소금을 정육면체로 표현하고, 그 안에 알파벳 SALT를 형상화하여 나타냈습니다.</p>
+                    <p>솔트 CI는 심볼마크와 로고를 조합으로 활용하는 것을 원칙으로 하며, 이는 아이덴티티의 핵심요소입니다.<br> 따라서 솔트 이미지의 일관성을 유지하기 위해서는 공식적으로 규정된 요소를 정확히 준수해야 합니다.</p>
+                  </div> <!-- logoContentTxt-->
                   
-                  <div class="logoContent">
-                    <h3>LOGO</h3>
-                    <div class="logoContentTxt">
-                      <p>솔트 엔터테인먼트의 CI는 건강한 매니지먼트를 지향하는 솔트의 기업 문화를 바탕으로 만들어졌습니다.<br> 단단하게 하나로 뭉쳐 보석처럼 빛나는 소금을 정육면체로 표현하고, 그 안에 알파벳 SALT를 형상화하여 나타냈습니다.</p>
-                      <p>솔트 CI는 심볼마크와 로고를 조합으로 활용하는 것을 원칙으로 하며, 이는 아이덴티티의 핵심요소입니다.<br> 따라서 솔트 이미지의 일관성을 유지하기 위해서는 공식적으로 규정된 요소를 정확히 준수해야 합니다.</p>
-                    </div> <!-- logoContentTxt-->
-                    
-                    <div class="logoImg">
-                      <img src="./images/logo.png" alt="로고">
-                      <img src="./images/logo2.png" alt="로고2">
-                    </div> <!-- logoImg -->
-                  </div> <!-- logoContent -->
-                </div> <!-- about -->
-              </div>
-            </section>
-            
-          </div> <!-- mainArea -->
-        </main>
+                  <div class="logoImg">
+                    <img src="./images/logo.png" alt="로고">
+                    <img src="./images/logo2.png" alt="로고2">
+                  </div> <!-- logoImg -->
+                </div> <!-- logoContent -->
+              </div> <!-- about -->
+            </div> <!-- confix -->
+          </section>
+        </div> <!-- parallax z2 -->
+      </main>
 
-        <footer>
-            <div class="footerArea confix">
-                <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
-                </div>
+      <footer>
+        <div class="footerArea confix">
+          <div class="footerLogo">
+            <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+          </div>
 
-                <div class="adrTxt">
-                    <address><strong>(주) 솔트엔터테인먼트</strong> 04791 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호(성수동1가 13-12)</address>
-                    <span><b>이메일</b> : salt_ent@naver.com</span>
-                    <span><b>대표 전화</b> : 070-8129-0513</span>
-                    <p class="copyright">Copyright &copy; <strong>SALT Entertainment.</strong> All rights reserved.</p>
-                </div><!-- adrTxt end -->
+          <div class="adrTxt">
+            <address><strong>(주) 솔트엔터테인먼트</strong> 04791 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호(성수동1가 13-12)</address>
+            <span><b>이메일</b> : salt_ent@naver.com</span>
+            <span><b>대표 전화</b> : 070-8129-0513</span>
+            <p class="copyright">Copyright &copy; <strong>SALT Entertainment.</strong> All rights reserved.</p>
+          </div><!-- adrTxt end -->
 
-                <div class="snsArea confix">
-                    <ul class="snsList">
-                        <li>
-                            <a href="https://www.instagram.com/salt_ent/" target="_blink"><img src="images/instagram.png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/salt0513/" target="_blink"><img src="images/facebook.png" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/2013_SALT" target="_blink"><img src="images/twitter.png" alt="twitter"></a>
-                        </li>
-                        <li>
-                            <a href="https://m.post.naver.com/profile.nhn?authorId=salt_ent" target="_blink"><img src="images/naver.png" alt="naver"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.vlive.tv/channel/B818E3" target="_blink"><img src="images/v.png" alt="v"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCMMVbKz97CxrFMvGZZmT4kw" target="_blink"><img src="images/youtube.png" alt="youtube"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@salt_ent?" target="_blink"><img src="images/tiktok.png" alt="tiktok"></a>
-                        </li>
-                    </ul>
-                </div><!-- snsArea end -->
-            </div><!-- footerArea -->
-        </footer>
+          <div class="snsArea confix">
+            <ul class="snsList">
+              <li>
+                <a href="https://www.instagram.com/salt_ent/" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/salt0513/" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/2013_SALT" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+              </li>
+              <li>
+                <a href="https://m.post.naver.com/profile.nhn?authorId=salt_ent" target="_blank"><img src="images/naver.png" alt="naver"></a>
+              </li>
+              <li>
+                <a href="https://www.vlive.tv/channel/B818E3" target="_blank"><img src="images/v.png" alt="v"></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCMMVbKz97CxrFMvGZZmT4kw" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@salt_ent?" target="_blank"><img src="images/tiktok.png" alt="tiktok"></a>
+              </li>
+            </ul>
+          </div><!-- snsArea end -->
+        </div><!-- footerArea -->
+      </footer>
     </div><!-- container end -->
-</body>
-</html>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  </html>
