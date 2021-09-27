@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+/* ===== 그리드 시스템 confix ===== */
+.confix { 
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.vBox::before, .vBox::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*========== header area ==========*/
+header {
+    height: 75px;
+}
+
+/* 로고 */
+.logo {
+    float: left;
+    width: 180px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.logo h1 img{
+    width: 130px;
+}
+
+/* 메인메뉴 */
+.mainMenu .gnb {
+    display: flex;
+    flex-wrap: wrap;
+    width: 820px;
+    height: 75px;
+    line-height: 75px;
+}
+
+.gnb li{
+    width: 180px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.gnb li>a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gnb li:hover a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 로그인, 회원가입 */
+.loginSignup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.loginSignup ul{
+    display: flex;
+}
+
+.loginSignup ul li {
+    padding: 10px;
+}
+
+.loginSignup li>a {
+    font-size: 12px;
+}
+
+.loginSignup li:hover a {
+    font-weight: bold;
+}
+
+
+/*=============== main============= */
+.mainImg {
+    position: absolute;
+    top: 75px;
+    left: 0;
+}
+
+.rightBox {
+    margin-top: 550px;
+    margin-left: 395px;
+}
+
+.profile {
+    float: left;
+    position: sticky;
+    top: 200px;
+}
+
+.profile> h1 {
+    font-size: 30px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    letter-spacing: -1px;
+}
+
+.profile p {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.profile>span {
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.profile a {
+    margin-top: 45px;
+    display: inline-block;
+    padding-top: 20px;
+    border-top: 10px solid #1f4da0;
+    color: #535353;
+}
+
+.share {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.profile button {
+    background: #f9f9f9 ; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer;
+}
+
+
+.description .subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.description h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.description .descTxt {
+    line-height: 30px;
+}
+
+.description button {
+    float: right;
+    margin-top: 30px;
+    background: #f9f9f9 ; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer
+}
+
+.film {
+    margin-top: 200px;
+    margin-bottom: 80px;
+}
+
+input {
+    display: none;
+}
+.rightArrow {
+    float: right;
+}
+
+label {
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    width: 265px;
+    font-size: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    border-bottom: 5px solid black;
+}
+
+
+
+label:hover {
+    cursor: pointer;
+    border-bottom: 5px solid #1f4da0;
+}
+
+input:checked + label {
+    border-bottom: 5px solid #1f4da0;
+}
+
+section {
+    display: none;
+    position: relative;
+    bottom: 390px;
+    right: 200px;
+    float: right;
+    font-size: 14px;
+    width: 250px;
+    height: 550px;
+}
+
+section ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+}
+
+section ul li {
+    margin: 12px 0px;
+    color: #383838;
+}
+
+#movie:checked ~ #movieText,
+#drama:checked ~ #dramaText,
+#etc:checked ~ #etcText {
+    display: block;
+}
+
+
+.photoLine, .videoLine {
+    clear: both;
+}
+
+.photoLine h2, .videoLine h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.photoLine {
+    position: relative;
+    top: -350px;
+}
+
+
+
+.photoLine div {
+    display: inline-block;
+}
+
+.photoLine div>a {
+    overflow: hidden;
+    width: 247px;
+    height: 165px;
+}
+
+.photoLine div:nth-child(2)>a>img {
+    height: 300px;
+}
+
+.photoLine div>a>img {
+    width: 247px;
+    height: 165px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.photoLine div>a>img:hover {
+    transform: scale(1.05);
+}
+.videoLine {
+    position: relative;
+    top: -300px;
+}
+
+.videoLine div{
+    display: inline-block;
+}
+
+
+
+.photoLine button, .videoLine button {
+    float: right;
+    position: relative;
+    right: 20px;
+    margin-top: 30px;
+    background: white; 
+    border:none; 
+    padding:0; 
+    color: #535353;
+    cursor:pointer;
+}
+
+/* ================== video hover ============= */
+
+#video1 {
+    position: absolute;
+    top: 36px;
+}
+#videoHover1 {
+    position: relative;
+    width: 381px;
+    height: 204px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#videoHover1:hover {
+    opacity: 0.8;
+}
+
+#video2 {
+    position: absolute;
+    top: 36px;
+}
+#videoHover2 {
+    position: relative;
+    width: 381px;
+    height: 204px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#videoHover2:hover {
+    opacity: 0.8;
+}
+
+
+
+footer {
+    position: relative;
+    height: 140px;
+    line-height: 23px;
+    border-top: 1px solid #bdbdbd;
+    font-size: 12px;
+    color: #6f6f6f;
+    background-color: #f5f5f5;
+}
+
+
+/* 푸터로고 */
+.footerLogo {
+    float: left;
+    width: 180px;
+    margin-top: 36px;
+    margin-right: 20px;
+}
+
+.footerLogo h2 img{
+    width: 150px;
+}
+
+/* 주소,연락처 */
+.adrTxt {
+    float: left;
+    margin-top: 36px;
+}
+
+.adrTxt strong {
+    padding-right: 10px;
+}
+
+.adrTxt span {
+    padding-right: 35px;
+    font-size: 12px;
+}
+
+/* 카피라이트 */
+.copyright {
+    font-size: 12px;
+}
+
+/* SNS */
+.snsArea .snsList {
+    float: right;
+    margin-top: 36px;
+}
+
+.snsList li {
+    float: left;
+    padding: 0 8px;
+}
+
+.snsList li img {
+    width: 15px;
+}
