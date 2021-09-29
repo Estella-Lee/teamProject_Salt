@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/artist.css" type="text/css">
     <link rel="stylesheet" href="./css/animation.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Artists</title>
 </head>
 
@@ -23,7 +25,7 @@
                 <nav class="mainMenu">
                     <ul class="gnb">
                         <li><a href="#">COMPANY</a></li>
-                        <li><a href="../sub/artist.html">ARTISTS</a></li>
+                        <li><a href="#">ARTISTS</a></li>
                         <li><a href="#">NOTICE</a></li>
                         <li><a href="#">AUDITION</a></li>
                     </ul>
@@ -69,7 +71,7 @@
                 <section class="artistPhotoArea">
                     <h1>아티스트 사진목록</h1>
                     <div class="confix">
-                        <div class="artist1">
+                        <div class="artist1" data-aos="fade-up">
                             <a href="artist1_detail.html"><img src="images/Kim_Jung_Hwa/artist1.jpg"
                                     alt="Kim_Jung_Hwa"></a>
                             <div class="artist1Bg" onclick="location.href='artist1_detail.html'"
@@ -79,7 +81,7 @@
                             <span class="artist1English">KIM JUNG HWA</span>
                         </div>
 
-                        <div class="artist2">
+                        <div class="artist2" data-aos="fade-left">
                             <a href="artist2_detail.html"><img src="images/Park_Shin_Hye/4.jpg"></a>
                             <div class="artist2Bg" onclick="location.href='artist2_detail.html'"
                                 style="cursor: pointer;">
@@ -88,8 +90,8 @@
                             <span class="artist2English">PARK SIN HYE</span>
                         </div>
 
-                        <div class="artist3">
-                            <a href="artist3_detail.html"><img src="images/Kim_Ji_Won/artist3.jpg"></a>
+                        <div class="artist3" data-aos="fade-down"">
+                            <a href=" artist3_detail.html"><img src="images/Kim_Ji_Won/artist3.jpg"></a>
                             <div class="artist3Bg" onclick="location.href='artist3_detail.html'"
                                 style="cursor: pointer;">
                             </div>
@@ -97,7 +99,7 @@
                             <span class="artist3English">KIM JI WON</span>
                         </div>
 
-                        <div class="artist4">
+                        <div class="artist4" data-aos="zoom-in">
                             <a href="artist4_detail.html"><img src="images/Kim_Seon_Ho/artist4.jpg"></a>
                             <div class="artist4Bg" onclick="location.href='artist4_detail.html'"
                                 style="cursor: pointer;">
@@ -106,7 +108,7 @@
                             <span class="artist4English">KIM SUN HO</span>
                         </div>
 
-                        <div class="artist5">
+                        <div class="artist5" data-aos="zoom-in-up">
                             <a href="artist5_detail.html"><img src="images/Kim_Ju_Hun/artist5.jpg"></a>
                             <div class="artist5Bg" onclick="location.href='artist5_detail.html'"
                                 style="cursor: pointer;">
@@ -115,7 +117,7 @@
                             <span class="artist5English">KIM JU HUN</span>
                         </div>
 
-                        <div class="artist6">
+                        <div class="artist6" data-aos="fade-up">
                             <a href="artist6_detail.html"><img src="images/Hong_Seung_Bum/artist6.jpg"></a>
                             <div class="artist6Bg" onclick="location.href='artist6_detail.html'"
                                 style="cursor: pointer;">
@@ -124,7 +126,7 @@
                             <span class="artist6English">HONG SEUNG BUM</span>
                         </div>
 
-                        <div class="artist7">
+                        <div class="artist7" data-aos="fade-up">
                             <a href="artist7_detail.html"><img src="images/Lee_Jun_Kyung/artist7.jpg"></a>
                             <div class="artist7Bg" onclick="location.href='artist7_detail.html'"
                                 style="cursor: pointer;">
@@ -133,7 +135,7 @@
                             <span class="artist7English">LEE JUN KYUNG</span>
                         </div>
 
-                        <div class="artist8">
+                        <div class="artist8" data-aos="fade-up">
                             <a href="artist8_detail.html"><img src="images/Jang_Do_Ha/artist8.jpg"></a>
                             <div class="artist8Bg" onclick="location.href='artist8_detail.html'"
                                 style="cursor: pointer;">
@@ -194,8 +196,11 @@
                 </ul>
             </div><!-- snsArea end -->
         </div><!-- footerArea -->
-
     </footer>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
     </div><!-- container end -->
 </body>
 

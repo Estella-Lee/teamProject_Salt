@@ -68,7 +68,7 @@
 }
 
 .artist2>a:hover ~.artist2English {
-    left: -85px;
+    left: -60px;
     bottom: 620px;
     z-index: 4;
     font-size: 30px;
