@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist1_detail.css">
+    <link rel="stylesheet" href="./css/artist1_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
     <title>Artists</title>
 </head>
 
@@ -56,7 +57,7 @@
                     </aside>
                     <div class="rightBox">
                         <article class="description">
-                            <p class="subtitle">Actor</p>
+                            <p class="subtitle"><span></span>Actor</p>
                             <h1>아름답고 우아한 배우. 김정화</h1>
                             <p class="descTxt">
                                 대중들에게 인기를 받는 유명인들은 각자의 삶의 지표들이 흔들리거나 보이지 않는 것에 대해 이끌리는 경우가 많다 특히 온라인을 통해 실시간으로 전해지는
@@ -64,17 +65,19 @@
                                 만38세의 나이에 대뷔이후 가장 아름다운 외모를 간직하면서 구김없는 미소를 가지면서 살아가는 라이프스타일이 더 친근감을 주고 있다고 말하면서 질투가 느껴지는
                                 외모를 지녔지만 절대 미워할 수 없는 김정화다.
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
-                            <label for="movie">MOVIE<span class="rightArrow">→</span></label>
+                            <label for="movie">MOVIE<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <input id="drama" type="radio" name="tabs" checked>
-                            <label for="drama">DRAMA<span class="rightArrow">→</span></label>
+                            <label for="drama">DRAMA<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <input id="etc" type="radio" name="tabs">
-                            <label for="etc">etc<span class="rightArrow">→</span></label>
+                            <label for="etc">etc<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <section id="movieText">
                                 <ul>
@@ -128,29 +131,104 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Kim_Jung_Hwa/detail1.jpg" alt="" width="247px"
-                                        height="165px"></a></div>
-                            <div><a href="#"><img src="images/Kim_Jung_Hwa/detail2.jpg" alt="" width="247px"></a></div>
-                            <div><a href="#"><img src="images/Kim_Jung_Hwa/detail3.jpg" alt="" width="247px"></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Kim_Jung_Hwa/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Kim_Jung_Hwa/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Kim_Jung_Hwa/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Kim_Jung_Hwa/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Kim_Jung_Hwa/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Kim_Jung_Hwa/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Kim_Jung_Hwa/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://tv.naver.com/v/8101157" target="_blank" id="video1">
+                                        <img src="images/Kim_Jung_Hwa/video1.jpg" alt="">
+                                        <span>tvN &lt;자백&gt;</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=H9_TxHmpzOQ&feature=emb_title&ab_channel=cellbijou"
+                                        target="_blank" id="video1">
+                                        <img src="images/Kim_Jung_Hwa/video2.jpg" alt="">
+                                        <span>'셀비쥬' 광고</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=BvIiBgJ1lGw&feature=emb_title&ab_channel=SALTEntertainment"
+                                        target="_blank" id="video1">
+                                        <img src="images/Kim_Jung_Hwa/video4.jpg" alt="">
+                                        <span>'아나 드론' 화보</span>
+                                    </a>
+                                </div>
+
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=wxhCi3HhEkY&ab_channel=SALTEntertainment"
+                                        target="_blank" id="video1">
+                                        <img src="images/Kim_Jung_Hwa/video3.jpg" alt="">
+                                        <span>'여성조선' 화보</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -207,6 +285,7 @@
 
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

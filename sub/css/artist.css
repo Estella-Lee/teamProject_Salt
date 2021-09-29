@@ -18,7 +18,14 @@
 
 /*========== header area ==========*/
 header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
     height: 75px;
+    width: 100%;
+    background: rgba(255,255,255,0.3);
 }
 
 /* 로고 */
@@ -93,39 +100,49 @@ section h1 {
 }
 
 /* ====== mainVideo ====== */
-.mainVideo {
-    position: relative;
+.mainImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
 
-.mainVideo video {
+.mainImg img {
     width: 100%;
-    height: 100%;
 }
 
 
 /*===== artistCon =====*/
-.artistCon {
+/* .artistCon {
     position: relative;
-}
+} */
 
 /* artistBgText */
 .artistBgText {
-    position: absolute;
-    top: -1%;
+    position: relative;
+    top: 200px;
     margin: 0 auto;
     width: 100%;
+    height: 400px;
     font-family: 'Mongolian Baiti';
     text-align: center;
-    opacity: 50%;
-}
-
-.artistBgText p {
+    opacity: 40%;
     color: black;
+    user-select: none;
     -webkit-text-fill-color: #f9f9f9;;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
-    font-size: 25vw;
-    letter-spacing: -11px;
+}
+
+.artistBgText h2 {
+    letter-spacing: 20px;
+    font-size: 14px;
+}
+
+.artistBgText p {
+    font-size: 10vw;
 }
 
 /* artistLineUp */

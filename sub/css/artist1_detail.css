@@ -18,7 +18,14 @@
 
 /*========== header area ==========*/
 header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
     height: 75px;
+    width: 100%;
+    background: rgba(255,255,255,0.3);
 }
 
 /* 로고 */
@@ -86,8 +93,12 @@ header {
 /*=============== main============= */
 .mainImg {
     position: absolute;
-    top: 75px;
+    top: 0;
     left: 0;
+    width: 100%;
+}
+.mainImg img {
+    width: 100%;
 }
 
 .rightBox {
@@ -95,6 +106,7 @@ header {
     margin-left: 395px;
 }
 
+/* ================profile================= */
 .profile {
     float: left;
     position: sticky;
@@ -145,9 +157,28 @@ header {
 }
 
 
+/* ================description================= */
+
+.description .subtitle span {
+    width: 100px;
+    height: 2px;
+    background-color: black;
+}
+
 .description .subtitle {
     font-size: 16px;
+    font-weight: bold;
     margin-bottom: 30px;
+}
+
+.description .subtitle::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    background-color: black;
 }
 
 .description h1 {
@@ -159,15 +190,7 @@ header {
     line-height: 30px;
 }
 
-.description button {
-    float: right;
-    margin-top: 30px;
-    background: #f9f9f9 ; 
-    border:none; 
-    padding:0; 
-    color: #535353;
-    cursor:pointer
-}
+/* ================film================= */
 
 .film {
     margin-top: 200px;
@@ -180,11 +203,15 @@ input {
 .rightArrow {
     float: right;
 }
+.rightArrow img {
+    transform: rotate(-90deg);
+    width: 14px;
+}
 
 label {
     display: block;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
     width: 265px;
     font-size: 20px;
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -206,11 +233,12 @@ section {
     display: none;
     position: relative;
     bottom: 390px;
-    right: 200px;
+    right: 40px;
     float: right;
     font-size: 14px;
-    width: 250px;
+    width: 400px;
     height: 550px;
+    /* background-color: red; */
 }
 
 section ul{
@@ -231,16 +259,23 @@ section ul li {
 #etc:checked ~ #etcText {
     display: block;
 }
+/* ================photoLine================= */
 
-
-.photoLine, .videoLine {
+.photoLine, 
+.videoLine {
     clear: both;
 }
 
-.photoLine h2, .videoLine h2 {
-    font-size: 14px;
-    margin-bottom: 20px;
+.photoLine h2,
+.videoLine h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
     font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.imgWrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .photoLine {
@@ -249,83 +284,112 @@ section ul li {
 }
 
 
-
-.photoLine div {
-    display: inline-block;
-}
-
-.photoLine div>a {
+.photoLine .open1,
+.photoLine .open2,
+.photoLine .open3,
+.photoLine .open4,
+.photoLine .open5,
+.photoLine .open6{
     overflow: hidden;
-}
-
-.photoLine div>a>img {
     width: 247px;
     height: 165px;
+    cursor: pointer;
+}
+
+.photoLine .open1 img,
+.photoLine .open2 img,
+.photoLine .open3 img,
+.photoLine .open4 img,
+.photoLine .open5 img,
+.photoLine .open6 img {
+    width: 100%;
+    height: 100%;
     transform: scale(1);
     transition: 0.5s;
 }
 
-.photoLine div>a>img:hover {
+
+.photoLine .open1 img:hover,
+.photoLine .open2 img:hover,
+.photoLine .open3 img:hover,
+.photoLine .open4 img:hover,
+.photoLine .open5 img:hover,
+.photoLine .open6 img:hover {
     transform: scale(1.05);
 }
-.videoLine {
-    position: relative;
-    top: -300px;
+
+.imgWrapper2 {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
 }
 
-.videoLine div{
-    display: inline-block;
-}
-
-
-
-.photoLine button, .videoLine button {
-    float: right;
-    position: relative;
-    right: 20px;
-    margin-top: 30px;
-    background: white; 
-    border:none; 
-    padding:0; 
-    color: #535353;
-    cursor:pointer;
-}
 
 /* ================== video hover ============= */
 
-#video1 {
-    position: absolute;
-    top: 36px;
-}
-#videoHover1 {
+.videoLine {
     position: relative;
-    width: 381px;
-    height: 204px;
-    opacity: 0;
-    transition: opacity 0.5s;
+    top: -250px;
+    width: 786px;
+}
+.videoWrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
-#videoHover1:hover {
-    opacity: 0.8;
+.videoWrapper2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
 }
 
+#video1,
 #video2 {
-    position: absolute;
-    top: 36px;
-}
-#videoHover2 {
     position: relative;
+}
+
+#video1>img, #video2>img  {
     width: 381px;
     height: 204px;
+}
+
+.videoLine span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 22px;
+    color: white;
     opacity: 0;
-    transition: opacity 0.5s;
+    z-index: 5;
+    transition: 0.5s;
 }
 
-#videoHover2:hover {
-    opacity: 0.8;
+.videoLine #video1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 381px;
+    height: 204px;
+    background-color: black;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.videoLine #video1:hover::after {
+    opacity: 0.5;
+}
+
+.videoLine #video1:hover span {
+    opacity: 1;
 }
 
 
+
+
+
+/* ==================footer================== */
 
 footer {
     position: relative;

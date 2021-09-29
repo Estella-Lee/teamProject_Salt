@@ -1,0 +1,207 @@
+
+
+
+/* ========modal1=========== */
+.modal1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal1_Bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+
+.modal1_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+/* ========modal2=========== */
+.modal2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal2_Bg {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal2_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+/* ========modal3=========== */
+
+.modal3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal3_Bg {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal3_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+/* ========moda4=========== */
+
+.modal4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal4_Bg {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal4_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ========moda5=========== */
+
+.modal5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal5_Bg {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal5_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ========modal6=========== */
+
+.modal6 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.modal6_Bg {
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal6_Bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, -50%);
+}
+
+
+.more, .close {
+    margin-top: 30px;
+    float: right;
+    border:none; 
+    padding:0; 
+    background: none;
+
+}
+
+.more img, .close img {
+    width: 20px;
+}
+
+
+.close img {
+    transform: rotate(180deg);
+}
+
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.appear {
+    animation: fade-in 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.disappear {
+    animation: fade-out 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0;
+    }
+}
