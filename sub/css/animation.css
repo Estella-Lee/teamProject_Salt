@@ -4,14 +4,16 @@
     bottom: 342px;
     z-index: 4;
     opacity: 0.8;
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .artist1>a:hover ~ .artist1Korean {
     left: 400px;
     bottom: 520px;
     z-index: 4;
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .artist1>a:hover ~.artist1English {
@@ -19,7 +21,8 @@
     bottom: 580px;
     z-index: 4;
     transform: rotate(0deg);
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .artist1Bg:hover {
@@ -28,7 +31,8 @@
     bottom: 342px;
     z-index: 3;
     opacity: 0.8;
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 
@@ -36,7 +40,8 @@
     left: 400px;
     bottom: 520px;
     z-index: 4;
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .artist1Bg:hover ~ .artist1English {
@@ -44,7 +49,8 @@
     bottom: 580px;
     z-index: 4;
     transform: rotate(0deg);
-    transition: all 0.5s;
+        -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 
@@ -387,7 +393,7 @@
 .artist8>a:hover ~.artist8English {
     right: 40px;
     bottom: 620px;
-    z-index: 4;
+    z-index: 5;
     transition: all 0.5s;
 }
 
@@ -412,6 +418,6 @@
 .artist8Bg:hover ~ .artist8English {
     right: 40px;
     bottom: 620px;
-    z-index: 4;
+    z-index: 5;
     transition: all 0.5s;
 }
