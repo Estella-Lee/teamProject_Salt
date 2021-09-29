@@ -21,7 +21,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 
@@ -45,7 +46,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 
@@ -70,7 +72,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 
@@ -95,7 +98,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 
@@ -121,7 +125,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 
@@ -147,7 +152,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 1000px;
+    max-width: 85vw;
+    max-height: 85vh;
     transform: translate(-50%, -50%);
 }
 

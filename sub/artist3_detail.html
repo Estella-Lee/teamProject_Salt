@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist3_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Kim Ji-Won</title>
 </head>
 
 <body>
@@ -64,7 +65,6 @@
                                 나왔다. 봄에 피는 꽃들은 그냥 지나칠 수 없는 아름다움을 가지고 있다. '인터뷰하기 위해 꾸미고 나온 것만으로도 봄나들이 온 것 같다'고 웃는 김지원은 그
                                 자체가 봄꽃같았다. 포근한 봄날, 김지원의 배우 인생에도 꽃이 만발했다.
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
@@ -123,29 +123,109 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Kim_Ji_Won/detail1.jpg" alt="" width="247px"
-                                        height="165px"></a></div>
-                            <div><a href="#"><img src="images/Kim_Ji_Won/detail2.jpg" alt="" width="247px"></a></div>
-                            <div><a href="#"><img src="images/Kim_Ji_Won/detail3.jpg" alt="" width="247px"></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Kim_Ji_Won/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Kim_Ji_Won/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Kim_Ji_Won/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Kim_Ji_Won/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Kim_Ji_Won/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Kim_Ji_Won/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Kim_Ji_Won/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Kim_Ji_Won/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Kim_Ji_Won/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Kim_Ji_Won/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Kim_Ji_Won/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Kim_Ji_Won/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=d6UTXaRZNak&feature=emb_title&ab_channel=%EB%A9%94%EB%94%94%ED%9E%90MEDIHEAL"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ji_Won/video1.jpg" alt="">
+                                        <span class="date">2021.03.30</span>
+                                        <span>'메디힐' 영상</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=DzGZWVIPAuU&feature=emb_title&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ji_Won/video2.jpg" alt="">
+                                        <span class="date">2021.01.21</span>
+                                        <span>카카오TV '도시남녀의 사랑법'</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=kQ2bAdIGO5M&feature=emb_title&ab_channel=%EB%86%8D%EC%8B%ACnongshim"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ji_Won/video3.jpg" alt="">
+                                        <span class="date">2020.05.22</span>
+                                        <span>'신라면 건면' 광고</span>
+                                    </a>
+                                </div>
+
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=7PLBGKt6ANs&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ji_Won/video4.jpg" alt="">
+                                        <span class="date">2020.03.31</span>
+                                        <span>첫 단독 브이라이브 영상</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -199,9 +279,9 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

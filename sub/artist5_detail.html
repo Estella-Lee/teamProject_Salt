@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist5_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Kim Ju-Hun</title>
 </head>
 
 <body>
@@ -63,7 +64,6 @@
                                 다수의 연극 작품을 통해 쌓은 연기 내공을 바탕으로, 캐릭터에 자신만의 색깔을 입혀 완성시키고 있기도. 이에 앞으로 김주헌이 드라마에서 보여줄
                                 활약에 기대감을 높인다.
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
@@ -134,28 +134,109 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Kim_Ju_Hun/detail1.jpg"></a></div>
-                            <div><a href="#"><img src="images/Kim_Ju_Hun/detail2.jpg"></a></div>
-                            <div><a href="#"><img src="images/Kim_Ju_Hun/detail3.jpg"></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Kim_Ju_Hun/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Kim_Ju_Hun/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Kim_Ju_Hun/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Kim_Ju_Hun/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Kim_Ju_Hun/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Kim_Ju_Hun/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Kim_Ju_Hun/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=mzDdLhm4x2I&ab_channel=SKtelecom"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ju_Hun/video1.jpg" alt="">
+                                        <span class="date">2021.09.24</span>
+                                        <span>'SKT' 광고</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=X6xxwVRdadA&feature=emb_title&ab_channel=SSG.COM"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ju_Hun/video2.jpg" alt="">
+                                        <span class="date">2021.09.24</span>
+                                        <span>'SSG.COM' 광고</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?time_continue=2&v=fO8_woFoQtM&feature=emb_title&ab_channel=%EC%84%9C%EB%A8%B8%EB%84%88%EC%A6%88%EC%9B%8C"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ju_Hun/video4.jpg" alt="">
+                                        <span class="date">2021.05.13</span>
+                                        <span>'서머너즈워' 광고</span>
+                                    </a>
+                                </div>
+
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=Chgs6nI-fK8&feature=emb_title&ab_channel=%EB%B9%99%EA%B7%B8%EB%A0%88%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC"
+                                        target="_blank" class="video1">
+                                        <img src="images/Kim_Ju_Hun/video3.jpg" alt="">
+                                        <span class="date">2021.05.13</span>
+                                        <span>'슈퍼콘X마루' 광고</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -209,9 +290,9 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

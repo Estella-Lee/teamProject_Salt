@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist7_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Lee Jun-Kyung</title>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Lee Jun Kyung</h1>
+                        <h1>Lee Jun-Kyung</h1>
                         <p>이준경</p>
                         <span>1993년 1월 31일</span>
                         <span>183cm</span>
@@ -65,7 +66,6 @@
                                 성공적으로 데뷔한 준경 배우 이번엔
                                 '사랑은 뷰티풀 인생은 원더풀'로 브라운관 데뷔에 나섰습니다
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
@@ -129,28 +129,109 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Lee_Jun_Kyung/detail1.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Lee_Jun_Kyung/detail2.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Lee_Jun_Kyung/detail3.jpg" alt=""></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/lee_jun_kyung/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/lee_jun_kyung/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/lee_jun_kyung/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/lee_jun_kyung/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/lee_jun_kyung/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/lee_jun_kyung/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/lee_jun_kyung/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/lee_jun_kyung/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/lee_jun_kyung/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/lee_jun_kyung/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/lee_jun_kyung/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/lee_jun_kyung/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=nRWJNMLiubI&feature=emb_title&ab_channel=%ED%95%80%ED%81%AC"
+                                        target="_blank" class="video1">
+                                        <img src="images/Lee_Jun_Kyung/video1.jpg" alt="">
+                                        <span class="date">2020.07.24</span>
+                                        <span>'핀크' 광고</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=ncCiqePjFPw&feature=emb_title&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Lee_Jun_Kyung/video2.jpg" alt="">
+                                        <span class="date">2020.03.31</span>
+                                        <span>60초 자기소개 영상</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=z5YCNhKYhTI&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Lee_Jun_Kyung/video3.jpg" alt="">
+                                        <span class="date">2020.03.31</span>
+                                        <span>프로필 틈터뷰 영상</span>
+                                    </a>
+                                </div>
+
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=wxhCi3HhEkY&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Lee_Jun_Kyung/video4.jpg" alt="">
+                                        <span class="date">2019.07.17</span>
+                                        <span>웹드라마 '미스콤플렉스'</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -204,9 +285,9 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

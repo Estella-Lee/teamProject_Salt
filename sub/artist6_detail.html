@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist6_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Hong Seung-Bum</title>
 </head>
 
 <body>
@@ -64,7 +65,6 @@
                                 관객과 평단 모두를 사로잡았다. 뿐만 아니라 드라마 ‘피고인’과 ‘의문의 일승’에서는 묵직한 존재감을 발산하며 괴물 신인의 위력을 확실히 보여주었다.홍승범은
                                 영화와 드라마에 이어 연극 ‘에쿠우스’까지 연이어 출연하며 장르를 넘나드는 활발한 활동을 펼치고 있다.
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
@@ -113,28 +113,80 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Hong_Seung_Bum/detail1.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Hong_Seung_Bum/detail2.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Hong_Seung_Bum/detail3.jpg" alt=""></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Hong_Seung_Bum/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Hong_Seung_Bum/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Hong_Seung_Bum//detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Hong_Seung_Bum//detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Hong_Seung_Bum//detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Hong_Seung_Bum//detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Hong_Seung_Bum//detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Hong_Seung_Bum//detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Hong_Seung_Bum//detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Hong_Seung_Bum//detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Hong_Seung_Bum//detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Hong_Seung_Bum//detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://tv.naver.com/v/21927893" target="_blank" class="video1"
+                                        id="video1">
+                                        <img src="images/Hong_Seung_Bum/video1.jpg" alt="">
+                                        <span class="date">2021.09.24</span>
+                                        <span>영화 '쇼미더고스트'</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
-                            </div>
-                            <button>...more ▼</button>
                         </div>
                     </div>
                 </div>
@@ -188,9 +240,9 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

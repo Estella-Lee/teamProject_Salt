@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist8_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Jang Do-Ha</title>
 </head>
 
 <body>
@@ -63,7 +64,6 @@
                                 맡았습니다. 중저음 톤의 멋진 목소리는 시청자들의 심금을 울렸습니다. 실제 촬영장에서 장도하 배우는 진지하게 연기에 임하기도 하고 주변 사람들에게는
                                 개구장이같은 미소로 좋은 분위기를 만듭니다
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
@@ -110,28 +110,100 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Jang_Do_Ha/detail1.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Jang_Do_Ha/detail2.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Jang_Do_Ha/detail3.jpg" alt=""></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Jang_Do_Ha/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Jang_Do_Ha/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Jang_Do_Ha/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Jang_Do_Ha/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Jang_Do_Ha/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Jang_Do_Ha/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Jang_Do_Ha/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Jang_Do_Ha/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Jang_Do_Ha/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Jang_Do_Ha/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Jang_Do_Ha/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Jang_Do_Ha/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=hY-z0g9eFgM&feature=emb_title&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Jang_Do_Ha/video1.jpg" alt="">
+                                        <span class="date">2020.03.31</span>
+                                        <span>프로필 메이킹 영상</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=3dNwVahSxuk&feature=emb_title&ab_channel=SALTEntertainment"
+                                        target="_blank" class="video1">
+                                        <img src="images/Jang_Do_Ha/video2.jpg" alt="">
+                                        <span class="date">2020.03.31</span>
+                                        <span>프로필 틈터뷰 영상</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=9ecnAiIYH-w&feature=emb_title&ab_channel=%ED%8B%B0%EB%A5%B4%ED%8B%B0%EB%A5%B4TIRTIR"
+                                        target="_blank" class="video1">
+                                        <img src="images/Jang_Do_Ha/video3.jpg" alt="">
+                                        <span class="date">2020.01.10</span>
+                                        <span>'TIRTIR' 광고</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -185,9 +257,9 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

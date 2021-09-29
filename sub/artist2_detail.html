@@ -7,8 +7,10 @@
     <meta name="Author" content="Estella">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
-    <link rel="stylesheet" href="./css/artist2_detail.css">
-    <title>Artists</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
+    <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <title>Park Shin-Hye</title>
 </head>
 
 <body>
@@ -67,17 +69,19 @@
                                 하고 있으며 이를 통해 사람을 안아줄 줄 아는 모습도 보여주고 있다.
                                 한류 배우로서의 입지도 단단하게 다지며 보다 살기 좋은 세상을 위해 노력하는 박신혜가 앞으로 한류에 끼칠 긍정적인 영향력이 더욱 기대된다.
                             </p>
-                            <button>...more ▼</button>
                         </article>
                         <div class="film">
                             <input id="movie" type="radio" name="tabs">
-                            <label for="movie">MOVIE<span class="rightArrow">→</span></label>
+                            <label for="movie">MOVIE<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <input id="drama" type="radio" name="tabs" checked>
-                            <label for="drama">DRAMA<span class="rightArrow">→</span></label>
+                            <label for="drama">DRAMA<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <input id="etc" type="radio" name="tabs">
-                            <label for="etc">etc<span class="rightArrow">→</span></label>
+                            <label for="etc">etc<span class="rightArrow"><img src="images/expand-button.png"
+                                        alt=""></span></label>
 
                             <section id="movieText">
                                 <ul>
@@ -129,28 +133,109 @@
                         </div>
                         <div class="photoLine">
                             <h2>PHOTO</h2>
-                            <div><a href="#"><img src="images/Park_Shin_Hye/detail1.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Park_Shin_Hye/detail2.jpg" alt=""></a></div>
-                            <div><a href="#"><img src="images/Park_Shin_Hye/detail3.jpg" alt=""></a></div>
-                            <button>...more ▼</button>
+                            <div class="imgWrapper">
+                                <div class="open1">
+                                    <img src="images/Park_Shin_Hye/detail1.jpg" alt="">
+                                </div>
+                                <div class="modal1 hidden">
+                                    <div class="modal1_Bg">
+                                        <img src="images/Park_Shin_Hye/detail1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open2">
+                                    <img src="images/Park_Shin_Hye/detail2.jpg" alt="">
+                                </div>
+                                <div class="modal2 hidden">
+                                    <div class="modal2_Bg">
+                                        <img src="images/Park_Shin_Hye/detail2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open3">
+                                    <img src="images/Park_Shin_Hye/detail3.jpg" alt="">
+                                </div>
+                                <div class="modal3 hidden">
+                                    <div class="modal3_Bg">
+                                        <img src="images/Park_Shin_Hye/detail3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="imgWrapper2 hidden">
+                                <div class="open4">
+                                    <img src="images/Park_Shin_Hye/detail4.jpg" alt="">
+                                </div>
+                                <div class="modal4 hidden">
+                                    <div class="modal4_Bg">
+                                        <img src="images/Park_Shin_Hye/detail4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class=" open5">
+                                    <img src="images/Park_Shin_Hye/detail5.jpg" alt="">
+                                </div>
+                                <div class="modal5 hidden">
+                                    <div class="modal5_Bg">
+                                        <img src="images/Park_Shin_Hye/detail5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="open6">
+                                    <img src="images/Park_Shin_Hye/detail6.jpg" alt="">
+                                </div>
+                                <div class="modal6 hidden">
+                                    <div class="modal6_Bg">
+                                        <img src="images/Park_Shin_Hye/detail6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+
+
                         <div class="videoLine">
                             <h2>VIDEO</h2>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_1.jpg" alt="" id="video1">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_1.jpg" alt="" id="videoHover1">
-                                </a>
+                            <div class="videoWrapper">
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=TGpH-4B75RI&feature=emb_title&ab_channel=NetflixKorea%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4%EC%BD%94%EB%A6%AC%EC%95%84"
+                                        target="_blank" class="video1">
+                                        <img src="images/Park_Shin_Hye/video1.jpg" alt="">
+                                        <span class="date">2021.03.30</span>
+                                        <span>'넷플릭스' 키워드 인터뷰</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=HPWD9mxJWoE&feature=emb_title&ab_channel=TheSwoon"
+                                        target="_blank" class="video1">
+                                        <img src="images/Park_Shin_Hye/video2.jpg" alt="">
+                                        <span class="date">2021.03.30</span>
+                                        <span>'The Swoon' 심층 인터뷰</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=Ayl_1hxTPy4&ab_channel=%EC%81%A8bbeum"
-                                    target="_blank">
-                                    <img src="images/Park_Shin_Hye/detail_video_2.jpg" alt="" id="video2">
-                                    <img src="images/Park_Shin_Hye/detail_video_hover_2.jpg" alt="" id="videoHover2">
-                                </a>
+                            <div class="videoWrapper2 hidden">
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=NzdivX6c70M&feature=emb_title&ab_channel=Ryo-Hair"
+                                        target="_blank" class="video1">
+                                        <img src="images/Park_Shin_Hye/video4.jpg" alt="">
+                                        <span class="date">2021.05.31</span>
+                                        <span>'려' 광고</span>
+                                    </a>
+                                </div>
+
+                                <div class="">
+                                    <a href="https://www.youtube.com/watch?v=kBTc6oNLcOU&feature=emb_title&ab_channel=CASTELBAJAC%EA%B9%8C%EC%8A%A4%ED%85%94%EB%B0%94%EC%9E%91"
+                                        target="_blank" class="video1">
+                                        <img src="images/Park_Shin_Hye/video3.jpg" alt="">
+                                        <span class="date">2020.04.07</span>
+                                        <span>'까스텔바작' 영상</span>
+                                    </a>
+                                </div>
                             </div>
-                            <button>...more ▼</button>
+                            <button class="more"><img src="images/expand-button.png" alt=""></button>
+                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -207,6 +292,7 @@
 
         </footer>
     </div><!-- container end -->
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>
