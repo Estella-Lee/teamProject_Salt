@@ -303,6 +303,7 @@ section ul li {
 .photoLine .open5 img,
 .photoLine .open6 img {
     width: 100%;
+    min-height: 165px;
     height: auto;
     transform: scale(1);
     transition: 0.5s;
