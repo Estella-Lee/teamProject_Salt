@@ -16,8 +16,6 @@
 }
 
 
-
-
 /*========== header area ==========*/
 header {
   height: 75px;
@@ -107,6 +105,7 @@ header {
 
 /*========== content area ==========*/
 main {
+  width: 100%;
   background-color: #f9f9f9;
 }
 
@@ -119,9 +118,11 @@ main {
 }
 
 .z1 {
-  background-image: url(../images/main.jpg);
+  position: relative;
+  background-image: url(../images/main1.jpg);
   height: 560px;
-  animation: movebg 17s linear infinite; 
+  z-index: 2;
+  animation: movebg 30s linear infinite; 
 }
 
 @keyframes movebg {
@@ -129,12 +130,20 @@ main {
     background-position: 0 75px;
   }
   100% {
-    background-position: -3500px 75px;
+    background-position: -3600px 75px;
   }
 }
 
 .z1>h2 {
-  font-size: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  z-index: 3;
+  color: #fff;
+  opacity: .6;
+  text-shadow: 1px 1px 5px #000;
 }
 
 .z2 {
@@ -291,17 +300,104 @@ footer {
 }
 
 
-@media all and (max-width:768px) {
-  .z1 {
-    display: none;
-  }
+/*================== 반응형 웹 =====================*/
+
+@media screen and (max-width:768px) {  /* 태블릿 버전 641px~768px */
+  
 }
 
-@media all and (max-width:425px) {
-  .z1 {
-    display: block;
+@media screen and (max-width:640px) {  /* 모바일 버전 640px 이하 */
+  .confix { 
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 1.5%;
+    /* background-color: gold; */
   }
-  .z2 {
+
+  header {
     display: none;
   }
+
+  .subMenu {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: aqua; */
+  }
+
+  .subMenu li {
+    width: 25%;
+    margin-right: 2%;
+  }
+  
+  .subMenu li>a {
+    width: 100%;
+    border-top: 5px solid #ccc;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+
+  .subMenu li:first-child>a {
+    border-top: 5px solid #1f4da0;
+  }
+  
+  .subMenu li:hover>a {
+    border-top: 5px solid #1f4da0;
+  }
+  
+  .about {
+    margin-left: 0;
+    padding-bottom: 100px;
+  }
+  
+  .brandStory{
+    display: block;
+    margin-bottom: 100px;
+  }
+  
+  .brandStory>h3, .logoContent>h3 {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+    /* background-color: blue; */
+  }
+  
+  .brandStoryTxt>p, .logoContentTxt>p {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    /* background-color: palegreen; */
+  }
+
+  .logoContent {
+    display: block;
+  }
+
+  .logoImg {
+    width: 87%;
+    margin: 0 auto;
+    margin-top: 40px;
+    /* background-color: peachpuff; */
+  }
+  
+  .logoImg img:first-child {
+    min-width: 60%;
+    min-height: 5vh;
+    margin-right: 3%;
+  }
+
+  .logoImg img:last-child {
+    min-width: 20%;
+    min-height: 5vh;
+  }
+
+
+  footer {
+    display: none;
+  }
+  
+  
 }

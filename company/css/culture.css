@@ -120,7 +120,7 @@ main {
 .z1 {
   background-image: url(../images/main.jpg);
   height: 560px;
-  animation: movebg 17s linear infinite; 
+  animation: movebg 30s linear infinite; 
 }
 
 @keyframes movebg {
@@ -237,7 +237,13 @@ main {
 
 .cultureList div p {
   text-align: center;
-  line-height: 22px;
+  line-height: 20px;
+}
+
+.cultureList div p strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
 .box {
@@ -304,38 +310,6 @@ main {
 .hiden:hover span:nth-child(4) {
   height: 90%;
 }
-
-/* 
-.hiden::before, .hiden::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 90%;
-  transform: translate(-50%, -50%);
-  transition: all .8s;
-}
-
-.hiden::before {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  width: 0;
-}
-
-.hiden::after {
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  height: 0;
-}
-
-.hiden:hover::before {
-  width: 90%;
-}
-
-.hiden:hover::after {
-  height: 90%;
-} */
 
 .hiden:hover {
   opacity: 1;
