@@ -181,7 +181,7 @@ header {
     background-color: black;
 }
 
-.description h1 {
+.description h2 {
     font-size: 28px;
     margin-bottom: 30px;
 }
@@ -193,8 +193,7 @@ header {
 /* ================film================= */
 
 .film {
-    margin-top: 200px;
-    margin-bottom: 80px;
+    margin-top: 150px;
 }
 
 input {
@@ -229,7 +228,7 @@ input:checked + label {
     border-bottom: 5px solid #1f4da0;
 }
 
-section {
+.career {
     display: none;
     position: relative;
     bottom: 390px;
@@ -241,7 +240,7 @@ section {
     /* background-color: red; */
 }
 
-section ul{
+.career ul{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -249,7 +248,7 @@ section ul{
     height: auto;
 }
 
-section ul li {
+.career ul li {
     margin: 12px 0px;
     color: #383838;
 }
@@ -268,7 +267,7 @@ section ul li {
 
 .photoLine h2,
 .videoLine h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
     font-family: 'NEXON Lv2 Gothic Bold';
 }

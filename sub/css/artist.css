@@ -25,6 +25,7 @@ header {
     transform: translateX(-50%);
     height: 75px;
     width: 100%;
+    z-index: 9999;
     background: rgba(255,255,255,0.3);
 }
 
@@ -98,28 +99,72 @@ main {
 section h1 {
     font-size: 0;
 }
-
-/* ====== mainVideo ====== */
-.mainImg {
+/* ============ card ========== */
+.card {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 600px;
     overflow: hidden;
-}
-
-.mainImg img {
+  }
+  
+  
+  .card_part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+  
+    display: flex;
+    align-items: center;
     width: 100%;
-}
+    height: 100%;
+    
+    /* transform: translateX( 700px ); */
+    background-image: url( ../images/mainImg1.jpg);
+    animation: slide 12s linear infinite;
+  }
+  
+  
+  .card_part.card_part-two {
+    z-index: 6;
+    background-image: url( ../images/mainImg2.jpg);
+    animation-delay: 3s;
+  }
+  
+  .card_part.card_part-three {
+    z-index: 5;
+    background-image: url( ../images/mainImg3.jpg );
+    animation-delay: 6s;
+  }
+  
+  .card_part.card_part-four {
+    z-index: 4;
+    background-image: url( ../images/mainImg4.jpg );
+    animation-delay: 9s;
+  }
+  
+  
+  @keyframes slide {
+    3% { transform: translateX( 0 ); }
+    25% { transform: translateX( 0 ); }
+    28% { transform: translateX( -1920px); }
+    100% { transform: translateX( -1920px ); }
+  }
+  
 
-/* artistBgText */
+
+
+/* ===========artistBgText============== */
 .artistBgText {
     position: relative;
     top: 200px;
     margin: 0 auto;
     width: 100%;
     height: 400px;
+    z-index: 9;
+    margin-bottom: 100px;
     font-family: 'Mongolian Baiti';
     text-align: center;
     opacity: 40%;
@@ -132,7 +177,7 @@ section h1 {
 
 .artistBgText h2 {
     letter-spacing: 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .artistBgText p {
@@ -143,7 +188,7 @@ section h1 {
 .artistLineUp {
     position: sticky;
     top: -200px;
-    font-size: 24px;
+    font-size: 20px;
     z-index: 1;
 }
 
@@ -656,6 +701,8 @@ footer {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
+
+
 
 
 
