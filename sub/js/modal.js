@@ -97,49 +97,49 @@ function init6() {
 init6();
 
 
-const moreBtn = document.querySelector(".photoLine .more");
-const moreImg = document.querySelector(".imgWrapper2");
-const closeBtn = document.querySelector(".close");
+// const moreBtn = document.querySelector(".photoLine .more");
+// const moreImg = document.querySelector(".imgWrapper2");
+// const closeBtn = document.querySelector(".close");
 
-function dbg() {
-    moreBtn.addEventListener("click", function () {
-        moreImg.classList.remove("hidden");
-        moreBtn.classList.add("hidden");
-        closeBtn.classList.remove("hidden");
-    });
+// function dbg() {
+//     moreBtn.addEventListener("click", function () {
+//         moreImg.classList.remove("hidden");
+//         moreBtn.classList.add("hidden");
+//         closeBtn.classList.remove("hidden");
+//     });
 
-    closeBtn.addEventListener("click", function () {
-        moreImg.classList.add("hidden");
-        moreBtn.classList.remove("hidden");
-        closeBtn.classList.add("hidden");
-    })
+//     closeBtn.addEventListener("click", function () {
+//         moreImg.classList.add("hidden");
+//         moreBtn.classList.remove("hidden");
+//         closeBtn.classList.add("hidden");
+//     })
 
-}
-
-
-dbg();
-
-const moreBtn2 = document.querySelector(".videoLine .more");
-const moreVid = document.querySelector(".videoWrapper2");
-const closeBtn2 = document.querySelector(".videoLine .close");
-
-function dbg2() {
-    moreBtn2.addEventListener("click", function () {
-        moreVid.classList.remove("hidden");
-        moreBtn2.classList.add("hidden");
-        closeBtn2.classList.remove("hidden");
-    });
-
-    closeBtn2.addEventListener("click", function () {
-        moreVid.classList.add("hidden");
-        moreBtn2.classList.remove("hidden");
-        closeBtn2.classList.add("hidden");
-    })
-
-}
+// }
 
 
-dbg2();
+// dbg();
+
+// const moreBtn2 = document.querySelector(".videoLine .more");
+// const moreVid = document.querySelector(".videoWrapper2");
+// const closeBtn2 = document.querySelector(".videoLine .close");
+
+// function dbg2() {
+//     moreBtn2.addEventListener("click", function () {
+//         moreVid.classList.remove("hidden");
+//         moreBtn2.classList.add("hidden");
+//         closeBtn2.classList.remove("hidden");
+//     });
+
+//     closeBtn2.addEventListener("click", function () {
+//         moreVid.classList.add("hidden");
+//         moreBtn2.classList.remove("hidden");
+//         closeBtn2.classList.add("hidden");
+//     })
+
+// }
+
+
+// dbg2();
 
 
 

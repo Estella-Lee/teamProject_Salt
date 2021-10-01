@@ -352,33 +352,6 @@ input:checked + label {
     height: 204px;
 }
 
-#video1 {
-    width: 782px;
-    height: 408px;
-}
-
-#video1>img {
-    width: 782px;
-    height: 408px;
-}
-
-.videoLine #video1::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 782px;
-    height: 408px;
-    background-color: black;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.videoLine #video1:hover::after {
-    opacity: 0.5;
-}
-
-
 .videoLine span {
     position: absolute;
     top: 40%;
