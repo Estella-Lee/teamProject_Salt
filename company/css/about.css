@@ -3,9 +3,10 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 0.83333%;
     /* background-color: gold; */
 }
 
@@ -25,7 +26,7 @@ header {
 /* 로고 */
 .logo {
   float: left;
-  width: 180px;
+  width: 15%;
   margin-top: 15px;
   margin-right: 20px;
 }
@@ -38,13 +39,13 @@ header {
 .mainMenu .gnb {
   display: flex;
   flex-wrap: wrap;
-  width: 820px;
+  width: 68.333%;
   height: 75px;
   line-height: 75px;
 }
 
 .gnb li {
-  width: 180px;
+  width: 21.021%;
   margin: 0 10px;
   text-align: center;
 }
@@ -102,7 +103,6 @@ header {
 }
 
 
-
 /*========== content area ==========*/
 main {
   width: 100%;
@@ -121,7 +121,6 @@ main {
   position: relative;
   background-image: url(../images/main1.jpg);
   height: 560px;
-  z-index: 2;
   animation: movebg 30s linear infinite; 
 }
 
@@ -135,15 +134,7 @@ main {
 }
 
 .z1>h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 46px;
-  z-index: 3;
-  color: #fff;
-  opacity: .6;
-  text-shadow: 1px 1px 5px #000;
+  display: none;
 }
 
 .z2 {
@@ -159,15 +150,18 @@ main {
 }
 
 .subMenu {
+  width: 100%;
   margin-top: 180px;
   margin-bottom: 150px;
 }
 
 .subMenu ul {
   display: flex;
+  width: 100%;
 }
 
 .subMenu li {
+  width: 23.69988%;
   margin-right: 20px;
 }
 
@@ -176,7 +170,7 @@ main {
 }
 
 .subMenu li>a {
-  width: 280px; 
+  width: 100%; 
   border-top: 10px solid #ccc;
   text-align: center;
   font-size: 19px;
@@ -202,24 +196,34 @@ main {
 /*   메인  내용    */
 .about {
   margin-left: 30px;
-  padding-bottom: 200px;
+  padding-bottom: 154px;
 }
 
-.brandStory{
+.brandStory, .logoContent {
   display: flex;
   margin-bottom: 150px;
 }
 
 .brandStory>h3, .logoContent>h3 {
-  width: 220px;
-  margin-right: 80px;
+  width: 23%;
   font-size: 36px;
+  /* background-color: darksalmon; */
 }
+
+.brandStoryTxt , .logoContentTxt {
+  width: 77%;
+  /* background-color: darkslateblue; */
+}
+
 
 .brandStoryTxt>p, .logoContentTxt>p {
   margin-bottom: 25px;
   line-height: 30px;
   font-size: 18px;
+}
+
+.brandStoryTxt>p:nth-child(2) {
+  width: 73%;
 }
 
 .logoContent {
@@ -228,176 +232,433 @@ main {
 }
 
 .logoImg {
-  height: 130px;
-  margin-left: 280px;
+  width: 90%;
+  height: 150px;
+  margin-left: 25%;
   margin-top: 70px;
   display: flex;
   flex-direction: row;
 }
 
 .logoImg img:first-child {
-  margin-right: 160px;
+  width: 47%;
+  height: 90%;
+  margin-right: 20%;
+  /* background-color: cadetblue; */
 }
 
-
-
+.logoImg img:last-child {
+  width: 23%;
+  height: auto;
+}
 
 /*========== footer area ==========*/
 footer {
-    position: relative;
-    height: 140px;
-    line-height: 23px;
-    border-top: 1px solid #bdbdbd;
-    font-size: 12px;
-    color: #6f6f6f;
-    background-color: #f5f5f5;
+  position: relative;
+  padding: 33px 0;
+  min-height: 140px;
+  line-height: 23px;
+  border-top: 1px solid #bdbdbd;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #6f6f6f;
+  background-color: #f5f5f5;
+}
+
+.footerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: red; */
 }
 
 /* 푸터로고 */
 .footerLogo {
-    float: left;
-    width: 180px;
-    margin-top: 36px;
-    margin-right: 20px;
+  width: 180px;
+  margin-right: 20px;
 }
 
 .footerLogo h2 img{
-    width: 150px;
+  width: 150px;
 }
 
 /* 주소,연락처 */
-.adrTxt {
-    float: left;
-    margin-top: 36px;
-}
-
 .adrTxt strong {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .adrTxt span {
-    padding-right: 35px;
+  padding-right: 35px;
 }
 
 /* 카피라이트 */
 .copyright {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* SNS */
-.snsArea .snsList {
-    float: right;
-    margin-top: 36px;
+.snsArea {
+  width: 240px;
+  padding: 0;
 }
 
 .snsList li {
-    float: left;
-    padding: 0 8px;
+  float: left;
+  padding: 0 8px;
 }
 
 .snsList li img {
-    width: 15px;
+  width: 15px;
 }
 
 
 /*================== 반응형 웹 =====================*/
 
-@media screen and (max-width:768px) {  /* 태블릿 버전 641px~768px */
-  
-}
-
-@media screen and (max-width:640px) {  /* 모바일 버전 640px 이하 */
-  .confix { 
-    position: relative;
-    width: 95%;
-    margin: 0 auto;
-    padding: 0 1.5%;
-    /* background-color: gold; */
-  }
-
-  header {
-    display: none;
+@media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */
+  .z2 { 
+    height: 1300px;
   }
 
   .subMenu {
-    width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
     /* background-color: aqua; */
   }
 
   .subMenu li {
-    width: 25%;
-    margin-right: 2%;
+    width: 23.43777%;
+    margin-right: 2.08333%;
+    margin-bottom: 20px;
+    /* background-color: darkgoldenrod; */
   }
-  
+
   .subMenu li>a {
     width: 100%;
-    border-top: 5px solid #ccc;
-    font-size: 10px;
-    padding-top: 5px;
+    font-size: 131.3%;
+  }
+
+  .about {
+    max-width: 94%;
+    margin: 0 auto;
+  }
+
+  .brandStory>h3, .logoContent>h3 {
+    min-width: 20%;
+    font-size: 30px;
+  }
+
+  .brandStoryTxt>p, .logoContentTxt>p {
+    min-width: 77%;
+    margin-bottom: 25px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+
+  .brandStoryTxt>p:nth-child(2) {
+    width: 100%;
+  }
+
+
+  .logoImg {
+    width: 80%;
+    height: 80%;
+    margin-top: 40px;
+    /* background-color: chartreuse; */
+  }
+  
+  .logoImg img:first-child {
+    width: 57%;
+    margin-right: 15%;
+  }
+
+  .logoImg img:last-child {
+    width: 23%;
+  }
+
+    /*========== footer ==========*/
+    footer {
+      padding: 20px 0;
+      text-align: center;
+    }
+  
+    .footerArea {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* 푸터로고 */
+    .footerLogo {
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
+  
+    .footerLogo h2 img {
+      width: 120px;
+    }
+  
+    /* 주소,연락처 */
+    .adrTxt address,
+    .adrTxt span {
+      display: none;
+    }
+  
+    /* 카피라이트 */
+    .copyright {
+      margin-bottom: 20px;
+    }
+  
+    /* SNS */
+    .snsArea {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+  
+}
+
+
+@media screen and (max-width:767px) {  /* 모바일 버전 768px 이하 */
+  /*========== header ==========*/
+  header {
+    height: 55px;
+  }
+
+  .logoMenu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 20;
+      background: #fff;
+      overflow: hidden;
+      transition: all 0.3s;
+  }
+
+  /* mobileBtn */
+  .mobileBtn {
+      display: inline-block;
+      position: absolute;
+      top: -10px;
+      left: 5%;
+      content: "";
+      padding-top: 25px;
+      cursor: pointer;
+  }
+
+  .mobileBtn span {
+      position: relative;
+      display: block;
+      margin-bottom: 8px;
+      height: 2px;
+      width: 25px;
+      background: #000;
+      transition: all 0.5s;
+  }
+
+  .mobileBtn span:nth-child(2).closeBar::after {
+      position: absolute;
+      top: 0;
+      content: "";
+      height: 2px;
+      width: 25px;
+      background: #000;
+      transform: rotate(90deg);
+      transition: all 0.5s;
+  }
+
+  .mobileBtn span:first-child,
+  .mobileBtn span:last-child {
+      transition: all 0.2s;
+  }
+
+  .rotate {
+      transform: rotate(45deg);
+  }
+
+  .hidden {
+      opacity: 0;
+  }
+
+  /* 로고 */
+  .logo {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      margin-right: 0px;
+  }
+
+  .logo h1 {
+      text-align: center;
+  }
+  
+  .logo h1 img{
+      width: 100px;
+  }
+
+  /* 메인메뉴 */
+  .mainMenu .gnb {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      width: 100%;
+      height: auto;
+      line-height: 45px;
+      background: #fff;
+      transition: all 0.3s;
+  }
+
+  .gnb li {
+      width: 100%;
+  }
+
+  .gnb li>a {
+      width: 100%;
+  }
+
+  .gnb li a::after {
+      display: none;
+  }
+
+  /* 로그인, 회원가입 */
+  .loginSignup {
+      position: relative;
+      top: 0;
+      margin: 10px 0 0;
+      font-weight: bold;
+      line-height: 0;
+      z-index: 2;
+  }
+
+  .loginSignup ul {
+      justify-content: center;
+  }
+
+
+
+  /*========== main ==========*/
+  .z1>h2 {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    font-size: 46px;
+    z-index: 3;
+    color: #fff;
+    opacity: .6;
+    text-shadow: 1px 1px 5px #000;
+  }
+
+  .z2 { 
+    height: 1400px;
+    max-width: 600px;
+    margin: 0 auto;
+    /* background-color: gold; */
+  }
+
+  @keyframes movebg {
+    0% {
+      background-position: 0 55px;
+    }
+    100% {
+      background-position: -3600px 55px;
+    }
+  }
+
+    /* 서브 메뉴 */
+  .subMenu {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .subMenu ul {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .subMenu li {
+    display: inline-block;
+    max-width: 48.39716%;
+    min-width: 48.06666%;
+    margin-right: 2.60756%;
+    margin-bottom: 20px;
+  }
+
+  .subMenu li:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .subMenu li:nth-child(3), .subMenu li:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .subMenu li>a {
+    width: 100%;
+    border-top: 7px solid #ccc;
+    font-size: 131.3%;
+    padding-top: 10px;
   }
 
   .subMenu li:first-child>a {
-    border-top: 5px solid #1f4da0;
+    border-top: 7px solid #1f4da0;
   }
   
   .subMenu li:hover>a {
-    border-top: 5px solid #1f4da0;
+    border-top: 7px solid #1f4da0;
   }
   
+
+  /* 메인 내용 */
   .about {
-    margin-left: 0;
+    width: 94%;
+    margin: 0 auto;
     padding-bottom: 100px;
+    /* background-color: aqua; */
   }
   
-  .brandStory{
+  .brandStory, .logoContent {
+    width: 100%;
     display: block;
     margin-bottom: 100px;
+    /* background-color: wheat; */
   }
   
   .brandStory>h3, .logoContent>h3 {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     /* background-color: blue; */
+  }
+
+  .brandStoryTxt, .logoContentTxt {
+    width: 100%;
   }
   
   .brandStoryTxt>p, .logoContentTxt>p {
-    margin-bottom: 20px;
     text-align: center;
-    line-height: 30px;
-    font-size: 16px;
+    font-size: 13px;
     /* background-color: palegreen; */
   }
 
-  .logoContent {
-    display: block;
+  .brandStoryTxt>p:nth-child(2) {
+    width: 100%;
+  }
+
+  .brandtxt {
+    display: inline;
   }
 
   .logoImg {
-    width: 87%;
+    max-width: 80%;
     margin: 0 auto;
-    margin-top: 40px;
-    /* background-color: peachpuff; */
-  }
-  
-  .logoImg img:first-child {
-    min-width: 60%;
-    min-height: 5vh;
-    margin-right: 3%;
-  }
-
-  .logoImg img:last-child {
-    min-width: 20%;
-    min-height: 5vh;
-  }
-
-
-  footer {
-    display: none;
+    margin-top: 80px;
+    /* background-color: chartreuse; */
   }
   
   
+
 }
+
