@@ -420,8 +420,13 @@ footer {
 
 
 @media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */
+  .z2 {
+    height: 1200px;
+  }
 
   .subMenu {
+    width: 94%;
+    margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
     /* background-color: aqua; */
@@ -436,20 +441,22 @@ footer {
 
   .subMenu li>a {
     width: 100%;
-    font-size: 131.3%;
+    font-size: 18px;
   }
 
   .visionBox {
-    width: 94%;
-    max-width: 0 auto;
+    max-width: 94%;
+    margin: 0 auto;
+    margin-bottom: 150px;
   }
   
   .visionBox>h3 {
-    width: 20%;
+    min-width: 20%;
     font-size: 30px;
   }
 
   .visionTxt>p {
+    min-width: 77%;
     line-height: 30px;
     font-size: 16px;
   }
@@ -683,7 +690,6 @@ footer {
   }
 
   .z2 { 
-    max-width: 600px;
     margin: 0 auto;
     /* background-color: gold; */
   }
@@ -699,7 +705,8 @@ footer {
 
     /* 서브 메뉴 */
   .subMenu {
-    width: 100%;
+    width: 94%;
+    margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
   }
@@ -712,7 +719,7 @@ footer {
   .subMenu li {
     display: inline-block;
     max-width: 48.39716%;
-    min-width: 48.06666%;
+    min-width: 48.28111%;
     margin-right: 2.60756%;
     margin-bottom: 20px;
   }
@@ -728,7 +735,7 @@ footer {
   .subMenu li>a {
     width: 100%;
     border-top: 7px solid #ccc;
-    font-size: 131.3%;
+    font-size: 16px;
     padding-top: 10px;
   }
 
