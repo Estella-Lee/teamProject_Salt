@@ -36,6 +36,11 @@ $(window).load(function() {
         } 
         lastScroll = scrollMove;
     });
+
+
+    if (window.matchMedia("(max-width:768px)").matches) {
+        $(".logoMenu2").css("display", "none");
+    }
 });
 
 

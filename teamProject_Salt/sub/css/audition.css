@@ -128,7 +128,7 @@ header {
 
 /*========== content area ==========*/
 main {
-    width: 100vw;
+    width: 100%;
     background-color: #f9f9f9;
 }
 
@@ -287,7 +287,7 @@ section>h1 {
 /*========== footer area ==========*/
 footer {
     position: relative;
-    width: 100vw;
+    width: 100%;
     padding: 33px 0;
     min-height: 140px;
     line-height: 23px;
