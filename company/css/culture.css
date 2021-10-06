@@ -21,7 +21,6 @@
 /*========== header area ==========*/
 header {
   height: 75px;
-  /* background-color: pink; */
 }
 
 /* 로고 */
@@ -36,6 +35,11 @@ header {
   width: 130px;
 }
 
+/* mobileBtn */
+.mobileBtn {
+  display: none;
+}
+
 /* 메인메뉴 */
 .mainMenu .gnb {
   display: flex;
@@ -46,7 +50,7 @@ header {
 }
 
 .gnb li {
-  width: 20.021%;
+  width: 21.039%;
   margin: 0 10px;
   text-align: center;
 }
@@ -104,6 +108,7 @@ header {
 }
 
 
+
 /*========== content area ==========*/
 main {
     background-color: #f9f9f9;
@@ -129,7 +134,7 @@ main {
     background-position: 0 75px;
   }
   100% {
-    background-position: -3500px 75px;
+    background-position: -3600px 75px;
   }
 }
 
@@ -138,10 +143,9 @@ main {
 }
 
 .z2 {
-  height: 1400px;
+  padding: 0 3%;
+  height: 40%;
 }
-
-
 
 
 /*  서브 메뉴  */
@@ -191,16 +195,15 @@ main {
 }
 
 
-
-/*   메인  내용    */
+/* 메인  내용 */
 .culture {
-  padding-bottom: 200px;
+  padding-bottom: 12%;
 }
 
 .cultureTitle {
   display: flex;
-  margin-left: 30px;
-  margin-bottom: 150px;
+  margin-left: 2.5%;
+  margin-bottom: 15%;
 }
 
 .cultureTitle>h3 {
@@ -218,7 +221,6 @@ main {
 }
 
 
-
 /* culture 리스트 */
 .cultureList {
   display: flex;
@@ -226,7 +228,6 @@ main {
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
-  /* background-color: blue; */
 }
 
 .cultureList div {
@@ -243,7 +244,6 @@ main {
   margin: 0 auto;
   margin-top: 55px;
   margin-bottom: 35px;
-  
 }
 
 .cultureList div p {
@@ -329,7 +329,6 @@ main {
 
 
 
-
 /*========== footer area ==========*/
 footer {
   position: relative;
@@ -394,66 +393,38 @@ footer {
 /*================== 반응형 웹 =====================*/
 
 @media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */  
-  .z2 {
-    height: 1100px;
-  }
-
+  /* 서브 메뉴 */
   .subMenu {
-    width: 94%;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    /* background-color: aqua; */
-  }
-
-  .subMenu li {
-    width: 23.43777%;
-    margin-right: 2.08333%;
-    margin-bottom: 20px;
-    /* background-color: darkgoldenrod; */
+    margin-top: 150px;
+    margin-bottom: 120px;
   }
 
   .subMenu li>a {
-    width: 100%;
-    font-size: 18px;
+    font-size: 17px;
   }
 
-  .cultureTitle {
-    max-width: 94%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-
+  /*  메인 내용  */
   .cultureTitle>h3 {
-    min-width: 20%;
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .cultureTxt>p {
-    min-width: 77%;
-    margin-bottom: 25px;
-    line-height: 30px;
     font-size: 16px;
   }
 
+  /* 컬쳐 리스트 */
   .cultureList {
-    width: 94%;
-    height: 420px;
-    margin: 0 auto;
-    /* background-color: aqua; */
+    height: 440px;
   }
   
   .cultureList div {
-    min-width: 23.72881%;
-    height: 200px;
-    background-color: white;
-    border: 1px solid #ccc;
+    height: 210px;
   }
 
   .cultureList img {
     width: 50px;
     height: 50px;
-    margin-top: 25px;
+    margin-top: 33px;
     margin-bottom: 25px;
   }
   
@@ -466,19 +437,19 @@ footer {
   }
   
   .hiden:hover span:nth-child(1) {
-    width: 86%;
+    width: 87%;
   }
   
   .hiden:hover span:nth-child(2) {
-    height: 86%;
+    height: 87%;
   }
   
   .hiden:hover span:nth-child(3) {
-    width: 86%;
+    width: 87%;
   }
   
   .hiden:hover span:nth-child(4) {
-    height: 86%;
+    height: 87%;
   }
 
 
@@ -646,20 +617,13 @@ footer {
   .z1>h2 {
     display: block;
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
-    transform: translate(-35%, -50%);
+    transform: translate(-45%, -50%);
     font-size: 46px;
-    z-index: 3;
     color: #fff;
     opacity: .6;
     text-shadow: 1px 1px 5px #000;
-  }
-
-  .z2 { 
-    height: 1550px;
-    margin: 0 auto;
-    /* background-color: gold; */
   }
 
   @keyframes movebg {
@@ -671,29 +635,25 @@ footer {
     }
   }
 
-    /* 서브 메뉴 */
-  .subMenu {
-    width: 94%;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-  
+  /* 서브 메뉴 */
   .subMenu ul {
     display: inline-block;
-    width: 100%;
   }
 
   .subMenu li {
     display: inline-block;
     max-width: 48.39716%;
-    min-width: 48.28111%;
-    margin-right: 2.60756%;
-    margin-bottom: 20px;
+    min-width: 47.73399%;
+    margin-top: 10%;
+    margin-right: 3.27756%;
   }
 
   .subMenu li:nth-child(even) {
     margin-right: 0;
+  }
+
+  .subMenu li:nth-child(1), .subMenu li:nth-child(2) {
+    margin-top: 0;
   }
 
   .subMenu li:nth-child(3), .subMenu li:nth-child(4) {
@@ -701,10 +661,8 @@ footer {
   }
 
   .subMenu li>a {
-    width: 100%;
     border-top: 7px solid #ccc;
     font-size: 16px;
-    padding-top: 10px;
   }
 
   .subMenu li:nth-child(3)>a {
@@ -714,23 +672,20 @@ footer {
   .subMenu li:hover>a {
     border-top: 7px solid #1f4da0;
   }
-  
+
 
   /* 메인 내용 */
   .cultureTitle {
-    width: 94%;
-    margin: 0 auto;
     display: block;
-    margin-bottom: 100px;
-    /* background-color: aqua; */
+    margin-left: 0;
+    word-break: keep-all;
   }
 
   .cultureTitle>h3 {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 7%;
     text-align: center;
     font-size: 26px;
-    /* background-color: blue; */
   }
 
   .cultureTxt {
@@ -738,30 +693,33 @@ footer {
   }
   
   .cultureTxt>p {
-    margin-bottom: 30px;
     text-align: center;
-    line-height: 30px;
     font-size: 14px;
-    /* background-color: palegreen; */
   }
-
+  
+  /* 컬쳐 리스트 */
   .cultureList {
     width: 74%;
     height: 870px;
-    margin: 0 auto;
-    /* background-color: aqua; */
+    margin: 0 auto;  
+    justify-content: center;
   }
   
   .cultureList div {
-    min-width: 47.457627%;
-    height: 200px;
+    min-width: 36.457627%;
+    margin-right: 40px;
+    height: 185px;
+  }
+
+  .cultureList div:nth-child(even) {
+    margin-right: 0;
   }
 
   .cultureList img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     margin-top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .cultureList div p {
@@ -769,7 +727,38 @@ footer {
   }
 
   .cultureList div p strong {
-    font-size: 12px;
+    font-size: 11px;
   }
 
+  .hiden span:nth-child(1) {
+    height: 1px;
+  }
+  
+  .hiden span:nth-child(2) {
+    width: 1px;
+  }
+  
+  .hiden span:nth-child(3) {
+    height: 1px;
+  }
+  
+  .hiden span:nth-child(4) {
+    width: 1px;
+  }
+
+  .hiden:hover span:nth-child(1) {
+    width: 85%;
+  }
+  
+  .hiden:hover span:nth-child(2) {
+    height: 85%;
+  }
+  
+  .hiden:hover span:nth-child(3) {
+    width: 85%;
+  }
+  
+  .hiden:hover span:nth-child(4) {
+    height: 85%;
+  }
 }

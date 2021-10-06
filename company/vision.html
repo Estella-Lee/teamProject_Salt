@@ -13,12 +13,21 @@
     <script src="./js/headerScroll.js"></script>
     <title>SALT Entertainment</title>
     <script>
-      var counter = 1;
+      var i = 0;
       setInterval(function(){
-        document.getElementById('slide' + counter).checked = true;
-        counter++;
-        if(counter > 4) {
-          counter = 1;
+        const naviInput = document.querySelectorAll('.navigationManual input');
+        const visionSlides = document.querySelector('.visionslides');
+        const manualBtn = document.querySelectorAll('.manualBtn');
+
+        i++;
+        if ( i > 3) i = 0;
+        naviInput[i].checked = true;
+        visionSlides.style.transform = "translateX(" + -25 * i + "%)";
+
+        for (let j=0; j < naviInput.length; j++) {
+          manualBtn[j].onclick = () => {
+            visionSlides.style.transform = "translateX(" + -25 * j + "%)";
+          }
         }
       }, 5000);
     </script>
@@ -91,18 +100,12 @@
 
               <div class="visionSlider">
                 <div class="visionslides">
-                  <input type="radio" name="slide" id="slide1">
-                  <input type="radio" name="slide" id="slide2">
-                  <input type="radio" name="slide" id="slide3">
-                  <input type="radio" name="slide" id="slide4">
-                
                   <div class="slide first">
                     <img src="images/img1.jpg" alt="나눔">
                     <div class="coreValueTxt">
                       <h3>Core Value</h3>
                       <h4>나눔<br><span class="cvEn">Sharing</span></h4>
                       <p>나눔을 통해 우리는 보다<br>더 좋은 세상을 만들어갑니다</p>
-                      <!-- <span class="radius"></span> -->
                     </div> <!-- coreValueTxt -->
                   </div> <!-- slide first -->
 
@@ -112,7 +115,6 @@
                       <h3>Core Value</h3>
                       <h4>즐거움<br><span class="cvEn">Amusement</span></h4>
                       <p>즐거운 방식으로 비즈니스를 전개하며,<br>많은 이들에게 즐거움을 선물합니다.</p>
-                      <!-- <span class="radius"></span>  -->
                     </div> <!-- coreValueTxt -->
                   </div> <!-- slide -->
                 
@@ -122,7 +124,6 @@
                       <h3>Core Value</h3>
                       <h4>사랑<br><span class="cvEn">Love</span></h4>
                       <p>솔트와 연결된 한 사람, 한 사람을<br>사랑이 담긴 진정성 있는 자세로 대하며<br>함께합니다.</p>
-                      <!-- <span class="radius"></span> -->
                     </div> <!-- coreValueTxt -->
                   </div> <!-- slide -->
 
@@ -132,27 +133,25 @@
                       <h3>Core Value</h3>
                       <h4>신뢰<br><span class="cvEn">Trust</span></h4>
                       <p>서로간의 정직하고 올바른<br>신뢰 관계 구축을 위해 노력합니다.</p>
-                      <!-- <span class="radius"></span> -->
                     </div> <!-- coreValueTxt -->
                   </div> <!-- slide -->
-                  
-                  <div class="navigationAuto">
-                    <div class="autoBtn1"></div>
-                    <div class="autoBtn2"></div>
-                    <div class="autoBtn3"></div>
-                    <div class="autoBtn4"></div>
-                  </div> <!-- navigationAuto -->
+                </div> <!-- visionSlides -->
 
-                  <div class="navigationManual">
-                    <label for="slide1" class="manualBtn"></label>
-                    <label for="slide2" class="manualBtn"></label>
-                    <label for="slide3" class="manualBtn"></label>
-                    <label for="slide4" class="manualBtn"></label>
-                  </div> <!-- navigationManual -->
+                <div class="navigationManual">
+                  <input type="radio" checked name="slide" id="slide1">
+                  <label for="slide1" class="manualBtn"></label>
 
-                </div> <!-- visionSection -->
+                  <input type="radio" name="slide" id="slide2">
+                  <label for="slide2" class="manualBtn"></label>
+
+                  <input type="radio" name="slide" id="slide3">
+                  <label for="slide3" class="manualBtn"></label>
+
+                  <input type="radio" name="slide" id="slide4">
+                  <label for="slide4" class="manualBtn"></label>
+                </div> <!-- navigationManual -->
+
               </div> <!-- visionSlider -->
-
             </div> <!-- vision -->
           </div> <!-- confiv -->
         </section>

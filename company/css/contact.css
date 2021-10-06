@@ -3,8 +3,8 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 100%;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 0.83333%;
     /* background-color: gold; */
@@ -21,7 +21,6 @@
 /*========== header area ==========*/
 header {
   height: 75px;
-  /* background-color: pink; */
 }
 
 /* 로고 */
@@ -51,7 +50,7 @@ header {
 }
 
 .gnb li {
-  width: 21.021%;
+  width: 21.039%;
   margin: 0 10px;
   text-align: center;
 }
@@ -109,9 +108,9 @@ header {
 }
 
 
+
 /*========== content area ==========*/
 main {
-  width: 100%;
   background-color: #f9f9f9;
 }
 
@@ -121,7 +120,6 @@ main {
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-position: 0 75px;
-  
 }
 
 .z1 {
@@ -136,7 +134,7 @@ main {
     background-position: 0 75px;
   }
   100% {
-    background-position: -3500px 75px;
+    background-position: -3600px 75px;
   }
 }
 
@@ -145,9 +143,9 @@ main {
 }
 
 .z2 {
-  height: 1500px;
+  padding: 0 3%;
+  height: 40%;
 }
-
 
 
 /*  서브 메뉴  */
@@ -197,16 +195,15 @@ main {
 }
 
 
-
 /*   메인  내용    */
 .contactUS {
-  padding-bottom: 200px;
+  padding-bottom: 12%;
 }
 
 .contactUS>h3 {
-  margin-left: 30px;
+  margin-left: 2.5%;
+  margin-bottom: 15%;
   font-size: 36px;
-  margin-bottom: 60px;
 }
 
 iframe {
@@ -218,10 +215,11 @@ iframe {
 .saltTxt {
   display: flex;
   margin-bottom: 25px;
+  margin-left: 3%;
 }
 
 .saltTxt h4 {
-  width: 103px;
+  width: 8.58333%;
   font-size: 20px;
   margin-right: 25px;
   border-right: 3px solid #1f4da0;
@@ -235,9 +233,6 @@ iframe {
   font-size: 16px;
   line-height: 22px;
 }
-
-
-
 
 
 
@@ -305,46 +300,34 @@ footer {
 /*================== 반응형 웹 =====================*/
 
 @media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */
+  /* 서브 메뉴 */
   .subMenu {
-    width: 94%;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    /* background-color: aqua; */
-  }
-
-  .subMenu li {
-    width: 23.43777%;
-    margin-right: 2.08333%;
-    margin-bottom: 20px;
-    /* background-color: darkgoldenrod; */
+    margin-top: 150px;
+    margin-bottom: 120px;
   }
 
   .subMenu li>a {
-    width: 100%;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .contactUS>h3 {
-    font-size: 30px;
+    font-size: 28px;
   }
   
   iframe {
     height: 450px;
   }
   
-  .saltTxt {
-    width: 83%;
-    margin-left: 5%;
-  }
-  
   .saltTxt h4 {
-    font-size: 16px;
+    width: 13%;
+    font-size: 18px;
   }
 
   .saltTxt p {
-    font-size: 13px;
+    font-size: 14px;
   }
+
+
 
 /*========== footer ==========*/
   footer {
@@ -519,12 +502,6 @@ footer {
     text-shadow: 1px 1px 5px #000;
   }
 
-  .z2 { 
-    height: 1200px;
-    margin: 0 auto;
-    /* background-color: gold; */
-  }
-
   @keyframes movebg {
     0% {
       background-position: 0 55px;
@@ -534,28 +511,26 @@ footer {
     }
   }
 
-    /* 서브 메뉴 */
-  .subMenu {
-    width: 94%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
 
+  /* 서브 메뉴 */
   .subMenu ul {
     display: inline-block;
-    width: 100%;
   }
 
   .subMenu li {
     display: inline-block;
     max-width: 48.39716%;
-    min-width: 48.28111%;
-    margin-right: 2.60756%;
-    margin-bottom: 20px;
+    min-width: 47.73399%;
+    margin-top: 10%;
+    margin-right: 3.27756%;
   }
 
   .subMenu li:nth-child(even) {
     margin-right: 0;
+  }
+
+  .subMenu li:nth-child(1), .subMenu li:nth-child(2) {
+    margin-top: 0;
   }
 
   .subMenu li:nth-child(3), .subMenu li:nth-child(4) {
@@ -563,10 +538,8 @@ footer {
   }
 
   .subMenu li>a {
-    width: 100%;
     border-top: 7px solid #ccc;
     font-size: 16px;
-    padding-top: 10px;
   }
 
   .subMenu li:last-child>a {
@@ -582,22 +555,16 @@ footer {
     text-align: center;
     font-size: 26px;
   }
-  
+
   iframe {
     height: 350px;
   }
-  
-  .saltTxt {
-    width: 83%;
-    margin-left: 5%;
-  }
-  
+
   .saltTxt h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .saltTxt p {
-    font-size: 11px;
+    font-size: 12px;
   }
-
 }
