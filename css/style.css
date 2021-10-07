@@ -3,7 +3,8 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
     /* background-color: gold; */
@@ -15,22 +16,25 @@
     clear: both;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
+
 /*========== header area ==========*/
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     height: 75px;
     width: 100%;
-    background: rgba(255,255,255,0.3);
-    /* background-color: pink; */
+    z-index: 100;
 }
 
 /* 로고 */
 .logo {
     float: left;
     width: 180px;
+    width: 15%;
     margin-top: 15px;
     margin-right: 20px;
 }
@@ -39,17 +43,28 @@ header {
     width: 130px;
 }
 
+.logo .mobileLogo {
+    display: none;
+}
+
+/* mobileBtn */
+.mobileBtn {
+    display: none;
+}
+
 /* 메인메뉴 */
 .mainMenu .gnb {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 820px;
+    width: 68.333%;
     height: 75px;
     line-height: 75px;
 }
 
 .gnb li {
     width: 180px;
+    width: 22.304%;
     margin: 0 10px;
     text-align: center;
 }
@@ -82,13 +97,13 @@ header {
     width: 100%;
 }
 
-
 /* 로그인, 회원가입 */
 .loginSignup {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
-    transform: translateY(-50%);
+    line-height: 50px;
+    /* transform: translateY(-50%); */
 }
 
 .loginSignup ul{
@@ -113,71 +128,80 @@ header {
 /*========== content area ==========*/
 main {
     position: relative;
-    width: 100%;
+    width: 100vw;
     background-color: #f9f9f9;
 }
 
 
-/*=== Scroll Animation (sa, 스크롤 애니메이션) ==*/
-.sa {
+/*=== Scroll Animation (scrAni, 스크롤 애니메이션) ==*/
+.scrAni {
     opacity: 0;
-    transition: all .5s ease;
+    transition: all .8s ease;
   }
 
-  /* 아래에서 위로 페이드 인 */
-  .sa-up {
+  /* 아래에서 위 */
+  .scrAni-up {
     transform: translate(0, 100px);
   }
-  /* 위에서 아래로 페이드 인 */
-  .sa-down {
+  /* 위에서 아래 */
+  .scrAni-down {
     transform: translate(0, -100px);
   }
-  /* 왼쪽에서 오른쪽으로 페이드 인 */
-  .sa-right {
+  /* 왼쪽에서 오른쪽 */
+  .scrAni-right {
     transform: translate(-100px, 0);
   }
-  /* 오른쪽에서 왼쪽으로 페이드 인 */
-  .sa-left {
+  /* 오른쪽에서 왼쪽 */
+  .scrAni-left {
     transform: translate(100px, 0);
   }
-  /* 왼쪽으로 회전하면서 페이드 인 */
-  .sa-rotateL {
+  /* 왼쪽으로 회전 */
+  .scrAni-rotateL {
     transform: rotate(180deg);
   }
-  /* 오른쪽으로 회전하면서 페이드 인 */
-  .sa-rotateR {
+  /* 오른쪽으로 회전*/
+  .scrAni-rotateR {
     transform: rotate(-180deg);
   }
-  /* 작아진 상태에서 커지면서 페이드 인 */
-  .sa-scaleUp {
+  /* 작아진 상태에서 커지면서 */
+  .scrAni-scaleUp {
     transform: scale(.5);
   }
-  /* 커진 상태에서 작아지면서 페이드 인 */
-  .sa-scaleDown {
+  /* 커진 상태에서 작아지면서 */
+  .scrAni-scaleDown {
     transform: scale(1.5);
   }
 
-  .sa.show {
+  .scrAni.show {
     opacity: 1;
     transform: none;
   }
 
 
 
-/* mianVideo */
+/* 메인 비디오 */
+.mainvideo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .videoBox {
     position: fixed;
     top: 0;
     right: 0;
-    min-height: 100%;
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
     z-index: -9999;
 }
 
 .videoBox video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    height: 100vh;
+    width: auto;
+    margin: 0 auto;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: none;
 } 
 
 @keyframes mainTxt {
@@ -187,7 +211,7 @@ main {
 
 .videoTxt { 
     position: absolute; 
-    bottom: 15%; 
+    bottom: 8%; 
     left: 3%; 
     animation-name: mainTxt;
     animation-duration: 7s;
@@ -197,13 +221,13 @@ main {
     margin-top: -24px; 
     padding-bottom: 10px;
     text-align: center; 
-    font-size: 48px; 
+    font-size: 2.8vw; 
     font-weight: bold;
     color: #fff; 
 }
 .videoTxt span {
     display: block;
-    font-size: 28px; 
+    font-size: 1.9vw; 
     color: #fff; 
 }
 
@@ -212,12 +236,10 @@ main {
     color: #ccc;
 }
 
-
-
 .mainContents {
+    width: 100vw;
     min-height: 100%;
     min-width: 100%;
-    background-size: cover;
     margin-top: 1000px;
 }
 
@@ -225,6 +247,7 @@ main {
     font-size: 0;
 }
 
+/* 메인 텍스트 */
 .aboutSalt {
     margin-top: 90px;
 }
@@ -237,12 +260,11 @@ main {
 }
 
 
-/* 컨텐츠 공통 */
+/* 컨텐츠 공통 - 제목 */
 .ttl {
-    margin-bottom: 50px;
-    margin-top: 100px;
-    /* padding: 10px;
-    border-left: 8px solid #1f4da0; */
+    margin-bottom: 2vw;
+    margin-top: 8vw;
+    font-size: 28px;
 }
 
 .ttl::before {
@@ -256,268 +278,429 @@ main {
 
 
 /* Latest release */
-/* .latestRelease {
-    background-color: pink;
-} */
-
-.posters {
+.latestRelease {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 120px;
+    z-index: 1;
 }
 
-.posters div img {
-    width: 380px;
-    /* margin-bottom: 20px; */
+/* 배경 애니메이션 */
+@keyframes move {
+    from{ left: -50px; }/* 초기 */
+    to{ left: 100px; } /* 마지막 */
 }
 
-.column01 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 780px;
-    
-}
-
-.column01 div:first-child img {
-    width: 100%;
-    margin-bottom: 0;
-}
-
-.posters div a:hover .posterDetails {
-    opacity: 1; 
-}
-
-.posters div a {
+.circle01 {
     position: relative;
-    width: 100%;
-    margin-bottom: 20px;
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    line-height: 100px;
+    border: 1px solid #1f4da0;
+    border-radius: 50%;
+    background-color: #1f4da0;
+    opacity: .2;
+    z-index: -1;
+    animation-timing-function: linear;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-.posters div a::before {
+.circle02 {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-top: 60px;
+    line-height: 60px;
+    border: 1px solid #1f4da0;
+    border-radius: 50%;
+    background-color: #1f4da0;
+    opacity: .3;
+    z-index: -1;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.contentsBox {
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+#slideImg:checked ~ .slider {
+    display: none;
+}
+
+.slider .slide {
+    width: 220px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider .slide img {
+    display: block;
+    width: 180px;
+}
+
+.slider .slide:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#slide_1:checked ~ .slider .slide_1:before,
+#slide_2:checked ~ .slider .slide_2:before,
+#slide_3:checked ~ .slider .slide_3:before,
+#slide_4:checked ~ .slider .slide_4:before,
+#slide_5:checked ~ .slider .slide_5:before,
+#slide_6:checked ~ .slider .slide_6:before {
+    transform: scaleX(1);
+    width: 100%;
+}
+
+.contentsBox .contentDetails {
+    position: absolute;
+    width: 100%;
+}
+
+.contentDetails .img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 5%;
+    width: 38%;
+    z-index: 2;
+}
+
+.img img {
     height: 100%;
-    background-color: #1f4da0;
-    content: "";
+    width: 100%;
     opacity: 0;
-    transition: all 0.2s;
+    transition: .6s;
 }
 
-.posters div a:hover::before {
-    opacity: 0.75;
+#slide_1:checked ~ .contentDetails .img_1,
+#slide_2:checked ~ .contentDetails .img_2,
+#slide_3:checked ~ .contentDetails .img_3,
+#slide_4:checked ~ .contentDetails .img_4,
+#slide_5:checked ~ .contentDetails .img_5,
+#slide_6:checked ~ .contentDetails .img_6  {
+    opacity: 1;
+    transition-delay: .2s;
 }
 
-
-.posters .posterDetails {
-    position: absolute;
-    bottom: 55px;
-    left: 0;
-    padding-left: 15px;
+.content {
+    margin-top: 12%;
+    width: 45%;
+    padding-left: 15%;
     opacity: 0;
-    transition: 0.5s ease;
-    color: #fff;
+    transition: .6s; 
 }
 
-.posterDetails .aName {
-    display: block;
-    padding-bottom: 15px;
-    font-size: 25px;
+#slide_1:checked ~ .contentDetails .content_1,
+#slide_2:checked ~ .contentDetails .content_2,
+#slide_3:checked ~ .contentDetails .content_3,
+#slide_4:checked ~ .contentDetails .content_4,
+#slide_5:checked ~ .contentDetails .content_5,
+#slide_6:checked ~ .contentDetails .content_6 {
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: .3s;
 }
 
-.posterDetails h3 {
-    padding-bottom: 35px;
-    font-size: 35px;
+.content .contentTtl {
+    font-size: 30px;
     font-weight: bold;
+    color: #0d0925;
+    margin: 0 0 20px 0;
 }
 
+.content span {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+
+.content p {
+    font-size: 19px;
+    margin: 0 auto 30px auto;
+    padding-bottom: 20px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.content a {
+    float: left;
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background: #1f4da0;
+    white-space: normal;
+}
+
+.content a:hover {
+    background: #cecece;
+    color: #1f4da0;
+}
 
 
 /* Our artists */
-.ourArtists {
-    background-color: #f1f1fa;
-    padding-bottom: 100px;
+.ourArtists .ttl {
+    margin-top: 15vw;
 }
 
-.ourArtists h2 {
-    padding-top: 80px;
+.ourArtists .artistList {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    column-gap: 0;
+    row-gap: 0;
+    line-height:0;
 }
 
-/* our artists 슬라이더 */
-.artistList img {
-    width: 215px;
-    border-radius: 50%;
+.artistList li {
+    position: relative;
+    width: 100%;
 }
 
-.artistList {  
+.artistList li img {
+    width: 100%;
+}
+
+.artistList h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s ease;
+    font-size: 1.2vw;
     text-align: center;
-    margin-bottom: 20px;
-    overflow-x: hidden;
+    color: #fff;
 }
 
-.slick-track {
-    padding: 0 -200px;
-}
-
-.slick-slide{
-    padding: 0 -200px;
-    padding-top: 70px;
-    cursor: pointer;
-    opacity: .7;
-}
-
-.slick-slide a{
-    pointer-events: none;
-}
-
-.slick-center {
-    padding-top: 0;
+.artistList li a:hover h3 {
     opacity: 1;
 }
 
-.slick-center a {
-    pointer-events: all;
-}
-
-.slick-center img {
-    width: 350px;
-}
-
-/* goToSns */
-.goToSns {
-    margin-top: 20px;
-}
-
-.goToSns img {
-    width: 1080px;
-    padding-top: 50px;
-}
-
-.artistBox {
+.artistList li a {
     position: relative;
+    width: 100%;
 }
 
-.artistBox:hover .txtBox {
-    color: #fff;
-    background-color: #1f4da0;
-}
-
-.artistBox .txtBox {
+.artistList li a::before {
     position: absolute;
-    right: 0;
-    bottom: -40px;
-    width: 350px;
-    height: 140px;
-    background-color: #f3f3f3;
-    opacity: .7;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #1f4da0;
+	content: "";
+	opacity: 0;
+	transition: all 0.2s;
 }
 
-.txtBox span {
-    display: block;
-    padding-top: 20px;
-    padding-right: 20px;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: right;
-}
-
-.txtBox span:first-child {
-    padding-top: 40px;
-    font-size: 28px;
+.artistList li a:hover::before {
+    opacity: .4;
 }
 
 
 /* Salt sharing */
-.saltSharing {
-    margin-top: 155px;
-}
-
 .sharingList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 70px;
+}
+
+.sharingList li {
+    flex-basis: 28%;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .sharingList li:hover a{
     color: #1f4da0;
 }
 
-.sharingImg {
-    width: 370px;
-    height: 220px;
-    margin: 0 auto;
-    /* margin-bottom: 20px; */
-    overflow: hidden;
-}
-
-.sharingImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .sharingTxt {
+    position: relative;
     width: 370px;
-    height: 160px;
-    padding: 0 8px;
-    margin-bottom: 50px;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+.sharingTxt span {
+    /* display: block; */
+    position: absolute;
+    background-color: #1f4da0;
+    transition: all .7s;
+}
+
+.sharingTxt span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+}
+
+.sharingTxt span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+}
+
+.sharingTxt span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+}
+
+.sharingTxt span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+}
+
+.sharingTxt:hover span:nth-child(1) {
+    width: 100%;
+}
+
+.sharingTxt:hover span:nth-child(2) {
+    height: 100%;
+}
+
+.sharingTxt:hover span:nth-child(3) {
+    width: 100%;
+}
+
+.sharingTxt:hover span:nth-child(4) {
+   height: 100%;
 }
 
 .sharingTxt h3 {
     margin-bottom: 20px;
-    padding-top: 20px;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 1px;
 }
 
 .sharingTxt p {
-    width: 350px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
     font-size: 15px;
     line-height: 22px;
+    padding-bottom: 20px;
 }
 
-.sharing02.sa, .sharing05.sa {
-    transition: all .7s ease;
+.sharingTxt .link02 {
+    padding-top: 5px;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    display: none;
 }
 
-.sharing03.sa, .sharing06.sa {
-    transition: all .9s ease;
+.sharing02.scrAni, .sharing05.scrAni {
+    transition: all 1.2s ease;
+}
+
+.sharing03.scrAni, .sharing06.scrAni {
+    transition: all 1.5s ease;
+}
+
+
+/* Follow us */
+.followUs {
+    width: 100vw;
+    padding-bottom: 50px;
+    background-color: #f1f1fa;
+}
+
+.followUs .ttl {
+    padding-top: 50px; 
+}
+
+.followList {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.followList .followCnt {
+    flex-basis: 25%;    /*260px;*/
+    margin-bottom: 4.166666666666667%; /*50px;*/
+    padding: 0.5%; /*5px;*/
+}
+
+.instaImg:hover {
+    transform: scale(1.06);
+    transition: all 0.3s;
+}    
+
+.instaImg img {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 4.6%; /*12px*/
+    border-radius: 50%;
+}
+
+.instaAdd {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 
 /*========== footer area ==========*/
 footer {
     position: relative;
-    height: 140px;
+    width: 100vw;
+    padding: 33px 0;
+    min-height: 140px;
     line-height: 23px;
     border-top: 1px solid #bdbdbd;
     font-size: 12px;
+    word-break: keep-all;
     color: #6f6f6f;
     background-color: #f5f5f5;
 }
 
-/* .footerArea {
-    background-color: red;
-} */
+.footerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: red; */
+}
 
 /* 푸터로고 */
 .footerLogo {
-    float: left;
     width: 180px;
-    margin-top: 36px;
     margin-right: 20px;
 }
 
@@ -526,11 +709,6 @@ footer {
 }
 
 /* 주소,연락처 */
-.adrTxt {
-    float: left;
-    margin-top: 36px;
-}
-
 .adrTxt strong {
     padding-right: 10px;
 }
@@ -545,9 +723,9 @@ footer {
 }
 
 /* SNS */
-.snsArea .snsList {
-    float: right;
-    margin-top: 36px;
+.snsArea {
+    width: 240px;
+    padding: 0;
 }
 
 .snsList li {
@@ -557,4 +735,511 @@ footer {
 
 .snsList li img {
     width: 15px;
+}
+
+
+
+/*==== 태블릿용 css ====*/
+@media screen and (max-width: 1023px) {
+    /*========== content ==========*/
+    /* mianVideo */
+     .videoBox video {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        margin-right: -50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        display: block;
+        height: 100vh;
+        width: auto;
+    } 
+
+    .videoTxt { 
+        bottom: 5%; 
+        left: 2%; 
+    }
+
+    .videoTxt h2 {
+        font-size: 4.5vw; 
+    }
+    
+    .videoTxt span {
+        font-size: 2.5vw; 
+    }
+
+    .videoTxt span>a {
+        font-size: 2.5vw;
+    }
+
+
+    .aboutSalt p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 2.3vw; 
+        line-height: 30px;
+    }
+
+    /* latest release */
+    .slider {
+        margin-bottom: 20px;
+    }
+
+    @keyframes move {
+        from{ left: -100px; }/* 초기 */
+        to{ left: 50px; } /* 마지막 */
+    }
+
+    .circle01 {
+        width: 300px;
+        height: 300px;
+        margin-top: 80px;
+        line-height: 80px;
+    }
+
+    .circle02 {
+        width: 150px;
+        height: 150px;
+        margin-top: 40px;
+        line-height: 40px;
+    }
+
+    .content {
+        margin-top: 13%;
+        width: 46%;
+        padding-left: 10%;
+    }
+
+    .content .contentTtl {
+        font-size: 25px;
+    }
+    
+    .content span {
+        padding-bottom: 10px;
+        font-size: 13px;
+    }
+    
+    .content p {
+        font-size: 17px;
+        margin: 0;
+        padding-bottom: 20px;
+        line-height: 1.5em;
+        text-align: justify;
+    }
+    
+    .content a {
+        float: left;
+        padding: 10px 15px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        background: #1f4da0;
+    }
+
+    /* our artists */
+    .ourArtists .ttl {
+        margin-top: 150px;
+    }
+
+    .artistList li a::before {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background: #6f6f6f;
+        content: "";
+        opacity: .5;
+    }
+
+    .artistList h3 {
+        top: 90%;
+        font-size: 1.5vw;
+        opacity: 1;
+    }
+
+    /* salt sharing */
+    .sharingList {
+        width: 100vw;
+        padding: 0 5vw;
+        padding-left: 0;
+    }
+    
+    .sharingList li {
+        flex-basis: 50%;
+        padding: 0 2%;
+        margin-bottom: 40px;
+    }
+
+    .sharingTxt {
+        width: 95%;
+        background-color: #f1f1fa;
+        padding: 15px;
+    }
+    
+
+    /* follow us */
+    .followBox {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .followList {
+        width: 100vw;
+        padding-right: 10vw;
+        justify-content: flex-start;
+    }
+
+    .followList .followCnt {
+        flex-basis: 33.333333%;
+        margin-bottom: 3%; 
+        padding: 0.3%;
+    }
+
+    .followCnt a {
+        width: 95%;
+    }
+
+
+     /*========== footer ==========*/
+     footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footerArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 푸터로고 */
+    .footerLogo {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .footerLogo h2 img {
+        width: 120px;
+    }
+
+    /* 주소,연락처 */
+    .adrTxt address,
+    .adrTxt span {
+        display: none;
+    }
+
+    /* 카피라이트 */
+    .copyright {
+        margin-bottom: 20px;
+    }
+    
+    /* SNS */
+    .snsArea {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
+/*==== 모바일용 css ====*/
+@media screen and (max-width: 767px){
+      /*========== header ==========*/
+    header {
+        position: relative;
+        height: 55px;
+    }
+
+    .logoMenu {
+        position: fixed;
+        top: 0;
+        height: 55px;
+        z-index: 1;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    /* mobileBtn */
+    .mobileBtn {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 5%;
+        content: "";
+        padding-top: 25px;
+        cursor: pointer;
+    }
+
+    .mobileBtn span {
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:nth-child(2).closeBar::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:first-child,
+    .mobileBtn span:last-child {
+        transition: all 0.2s;
+    }
+
+    .rotate {
+        transform: rotate(45deg);
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+
+    /* 로고 */
+    .logo {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .logo .mobileLogo {
+        display: block;
+        text-align: center;
+    }
+
+    .logo .mobileLogo img{
+        width: 100px;
+    }
+
+    /* 메인메뉴 */
+    .mainMenu .gnb {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        height: auto;
+        line-height: 45px;
+        background: #fff;
+        transition: all 0.3s;
+    }
+
+    .gnb li {
+        width: 100%;
+    }
+
+    .gnb li>a {
+        color: #000;
+        width: 100%;
+    }
+
+    .gnb li a::after {
+        display: none;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup {
+        position: relative;
+        top: 0;
+        margin: 10px 0 0;
+        font-weight: bold;
+        line-height: 0;
+        z-index: 2;
+    }
+
+    .loginSignup ul {
+        justify-content: center;
+    }
+
+    .loginSignup li>a {
+        color: #000;
+    }
+
+    /*========== content ==========*/
+    /* 메인 비디오 */
+    .videoBox {
+        top: 55px;
+    }
+    
+    .videoTxt { 
+        bottom: 13%; 
+        left: 5%; 
+    }
+
+    .videoTxt h2 {
+        font-size: 4.7vw; 
+    }
+    
+    .videoTxt span {
+        font-size: 2.8vw; 
+    }
+
+    .videoTxt span>a {
+        font-size: 2.8vw;
+    }
+
+    .aboutSalt p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .ttl {
+        margin-bottom: 4vw;
+        margin-top: 18vw;
+        font-size: 22px;
+    }
+
+    /* latest release */
+    .slider {
+        margin-bottom: 10px;
+    }
+
+    @keyframes move {
+        from{ left: -50px; }/* 초기 */
+        to{ left: 50px; } /* 마지막 */
+    }
+
+    .circle01 {
+        width: 140px;
+        height: 140px;
+        margin-top: 40px;
+        line-height: 40px;
+    }
+
+    .circle02 {
+        width: 70px;
+        height: 70px;
+        margin-top: 20px;
+        line-height: 20px;
+    }
+    
+    .content {
+        margin-top: 5%;
+        width: 50%;
+        padding-left: 4%;
+    }
+
+    .content .contentTtl {
+        font-size: 21px;
+        margin: 0 0 10px 0;
+    }
+    
+    .content span {
+        padding-top: 5px;
+    }
+    
+    .content p {
+        font-size: 13px;
+        text-align: justify;
+    }
+    
+    .content a {
+        border-radius: 50px;
+        background: #1f4da0;
+    }
+    
+    .content a:hover {
+        background: #cecece;
+        color: #1f4da0;
+    }
+
+
+    /* our artists */
+    .ourArtists .ttl {
+        margin-top: 150px;
+    }
+
+    .ourArtists .artistList {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .artistList li {
+        height: 43vw;
+        overflow: hidden;
+    }
+
+    .artistList li a::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background: #6f6f6f;
+        content: "";
+        opacity: .5;
+    }
+
+    .artistList h3 {
+        top: 54%;
+        font-size: 2.5vw;
+        opacity: 1;
+    }
+
+    /* salt sharing */
+    .sharingList li {
+        flex-basis: 100%;
+        padding: 0 3%;
+        margin-bottom: 30px;
+    }
+
+    .sharingTxt {
+        width: 90%;
+    }
+    
+    .sharingTxt h3 {
+        cursor: pointer;
+        font-size: 19px;
+    }
+    
+    .sharingTxt .link02 {
+        display: block;
+    }
+
+    /* follow us */
+    .followList {
+        width: 100vw;
+        padding: 0 2vw;
+        justify-content: flex-start;
+    }
+
+    .followList .followCnt {
+        flex-basis: 45.80%;
+        margin-bottom: 4%; 
+        padding: 0.2%;
+    }
+
+    .followCnt a {
+        width: 85%;
+    }
+
+    .instaAdd {
+        margin-top: 10px;
+    }
+}
+
+
+/*==== 모바일용 css 425이하 ====*/
+@media screen and (max-width: 424px) {
+
 }

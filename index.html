@@ -4,301 +4,402 @@
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
     <meta name="Author" content="Estella">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">
-    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-    <script src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
-    <script src="./js/carousel.js"></script>
-    <script src="./js/snsBanner.js"></script>
-    
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/scrollAnimation.js"></script>
+    <script src="./js/responsive.js"></script>
+    <script src="./js/mobile.js" defer></script>
+    <script src="./js/owl.carousel.js"></script>
     <title>SALT Entertainment</title>
 </head>
 <body>
     <div id="container">
         <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+            <div class="logoMenu">
+                <div class="confix">
+                    <div class="logo">
+                        <h1><a href="./index.html"><img src="./images/logoWhite.png" alt="로고"></a></h1>
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="#">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+                        <div class="mobileLogo">
+                            <a href="./index.html"><img src="./images/logo.png" alt="로고"></a>
+                        </div>
+                    </div><!-- logo end -->
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li> 
-                    </ul>
-                </div>
+                    <div class="mobileBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <nav class="mainMenu">
+                        <ul class="gnb">
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="#">ARTISTS</a></li>
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">AUDITION</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="loginSignup">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Sign up</a></li> 
+                        </ul>
+                    </div>
+                </div><!-- confix end -->
             </div><!-- logoMenu end -->
         </header>
         
         <main>
             <article class="mainVideo">
                 <div class="videoBox">
-                    <video autoplay loop muted>
+                    <video autoplay loop muted id="saltVideo">
                         <source src="./videos/video01.mp4" type="video/mp4">
                     </video>
                     <div class="videoTxt">
                         <h2>welcome to SALT Entertainment</h2>
                         <span>about Salt <a href="#"> Read more ▶</a></span>
-                      </div>
+                    </div>
                 </div>
-            </article>
+            </article><!-- mainVideo end -->
             
             <section class="mainContents">
                 <h2 class="none">Salt main contents</h2>
-                <div class="aboutSalt sa sa-left">
+                <div class="aboutSalt scrAni scrAni-right">
                     <p>Salt works together with artists with infinite potential<br>to create enjoyable content.<br>We are aiming for "healthy management" that knows the importance of sharing<br>and has a "good influence" on a society in which we live together.</p>
                 </div><!-- aboutSalt end-->
 
                 <div class="latestRelease confix">
-                    <h2 class="ttl">Latest release</h2>
-                    <div class="posters">
-                        <div class="column01">
-                            <div>
-                                <a href="https://tv.kakao.com/channel/3701537/cliplink/416779514?metaObjectType=Channel" target="_blank">
-                                    <img src="images/lr01.jpg" alt="도시남녀의 사랑법">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 김지원</span>
-                                        <h3>[드라마] 도시남녀의 사랑법</h3>
-                                        <span>See more ▶</span>
+                    <h2 class="ttl scrAni scrAni-up">LATEST RELEASE</h2>
+                    <div class="contentsBox">
+                        <input type="radio" name="select" id="slide_1" checked>
+                        <input type="radio" name="select" id="slide_2">
+                        <input type="radio" name="select" id="slide_3">
+                        <input type="radio" name="select" id="slide_4">
+                        <input type="radio" name="select" id="slide_5">
+                        <input type="radio" name="select" id="slide_6">
+                        <!-- <input type="checkbox" id="slideImg"> -->
+                    
+                        <div class="slider owl-carousel owl-theme owl-loaded scrAni scrAni-left">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage">
+                                    <div class="owl-item">
+                                        <label for="slide_1" class="slide slide_1"><img src="images/lr01.jpg" alt="도시남녀의 사랑법"></label>
                                     </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://tickets.interpark.com/goods/19013430" target="_blank">
-                                    <img src="images/lr04.jpg" alt="돌아서서 떠나라">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 김주헌</span>
-                                        <h3>[연극] 돌아서서 떠나라</h3>
-                                        <span>See more ▶</span>
+                                    <div class="owl-item">
+                                        <label for="slide_2" class="slide slide_2"><img src="images/lr02.jpg" alt="갯마을 차차차"></label>
                                     </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://movie.naver.com/movie/bi/mi/basic.naver?code=185378" target="_blank">
-                                    <img src="images/lr05.jpg" alt="앙상블">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 김정화</span>
-                                        <h3>[영화] 앙상블</h3>
-                                        <span>See more ▶</span>
+                                    <div class="owl-item">
+                                        <label for="slide_3" class="slide slide_3"><img src="images/lr03.jpg" alt="시지프스"></label>
                                     </div>
-                                </a>
-                            </div>
-                        </div><!-- column01 end-->
-                        <div class="column02">
-                            <div>
-                                <a href="http://program.tving.com/tvn/chachacha" target="_blank">
-                                    <img src="images/lr02.jpg" alt="갯마을차차차">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 김선호</span>
-                                        <h3>[드라마] 갯마을 차차차</h3>
-                                        <span>See more ▶</span>
+                                    <div class="owl-item">
+                                        <label for="slide_4" class="slide slide_4"><img src="images/lr04.jpg" alt="돌아서서 떠나라"></label>
                                     </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://tv.jtbc.joins.com/replay/pr10011273/pm10061750" target="_blank">
-                                    <img src="images/lr03.jpg" alt="시지프스">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 박신혜</span>
-                                        <h3>[드라마] 시지프스</h3>
-                                        <span>See more ▶</span>
+                                    <div class="owl-item">
+                                        <label for="slide_5" class="slide slide_5"><img src="images/lr05.jpg" alt="앙상블"></label>
                                     </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://www.harpersbazaar.co.kr/article/46669" target="_blank">
-                                    <img src="images/lr06.jpg" alt="하퍼스 바자">
-                                    <div class="posterDetails">
-                                        <span class="aName">배우 김지원</span>
-                                        <h3>[화보] Harper's BAZAAR</h3>
-                                        <span>See more ▶</span>
+                                    <div class="owl-item">
+                                        <label for="slide_6" class="slide slide_6"><img src="images/lr06.jpg" alt="하퍼스 비자"></label>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                        </div><!-- column02 end-->
-                    </div><!-- posters end -->
-                </div><!-- latestRelease -->
+                        </div><!-- slider owl-carousel end -->
+                        
+                        <div class="bgCircle scrAni scrAni-scaleUp">
+                            <div class="circle01"></div>
+                            <div class="circle02"></div>
+                        </div><!-- bgCircle end -->
 
-                <div class="ourArtists">
-                    <h2 class="ttl confix">Our artists</h2>
-                    <div class="artistList">
-                        <div>
-                            <a href="#김선호"><img src="./images/ksh.jpg" alt="김선호"></a>
-                        </div>
-                        <div>
-                            <a href="#박신혜"><img src="./images/psh.jpg" alt="박신혜"></a>
-                        </div>
-                        <div>
-                            <a href="#김정화"><img src="./images/kjh.jpg" alt="김정화"></a>
-                        </div>
-                        <div>
-                            <a href="#장도하"><img src="./images/jdh.jpg" alt="장도하"></a>
-                        </div>
-                        <div>
-                            <a href="#김주헌"><img src="./images/jh.jpg" alt="김주헌"></a>
-                        </div>
-                        <div>
-                            <a href="#홍승범"><img src="./images/hsb.jpg" alt="홍승범"></a>
-                        </div>
-                        <div>
-                            <a href="#박지원"><img src="./images/pjw.jpg" alt="박지원"></a>
-                        </div>
-                        <div>
-                            <a href=#이준경><img src="./images/ljk.jpg" alt="이준경"></a>
-                        </div>
-                    </div>
+                        <div class="contentDetails scrAni scrAni-left">
+                            <div class="content content_1">
+                                <h3 class="contentTtl">도시남녀의 사랑법</h3>
+                                <span>드라마 | 박신우 | 2020.12.22</span>
+                                <p class="contentTxt">
+                                    복잡한 도시 속 내 안에 또 다른 나를 품고 치열하게 살아가는 청춘들의 리얼 연애담
+                                </p>
+                                <a href="https://tv.kakao.com/channel/3701537/cliplink/416779514?metaObjectType=Channel" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_1" src="./images/lr01.jpg" alt="도시남녀의 사랑법">
+                            </label>
+                        </div><!-- contentDetails end -->
+
+                        <div class="contentDetails">
+                            <div class="content content_2">
+                                <h3 class="contentTtl">갯마을 차차차</h3>
+                                <span>드라마 | 유제원 | 2021.08.28</span>
+                                <p class="contentTxt">
+                                    현실주의 치과의사 윤혜진과 만능 백수 홍반장이 짠내 사람내음 가득한 바닷마을 ‘공진’에서 벌이는 티키타카 힐링 로맨스
+                                </p>
+                                <a href="http://program.tving.com/tvn/chachacha" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_2" src="./images/lr02.jpg" alt="갯마을 차차차">
+                            </label>
+                        </div><!-- contentDetails end -->
+                                                            
+                        <div class="contentDetails">
+                            <div class="content content_3">
+                                <h3 class="contentTtl">시지프스</h3>
+                                <span>드라마 | 진혁, 김승호 | 2021.02.17</span>
+                                <p class="contentTxt">
+                                    우리의 세상에 정체를 숨기고 살아가고 있는 존재를 밝혀내려는 천재공학자와 그를 위해 멀고도 위험한 길을 거슬러온 구원자의 여정을 그린 판타지 미스터리 드라마
+                                </p>
+                                <a href="https://tv.jtbc.joins.com/replay/pr10011273/pm10061750" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_3" src="./images/lr03.jpg" alt="시지프스">
+                            </label>
+                        </div><!-- contentDetails end -->
+                        
+                        <div class="contentDetails">
+                            <div class="content content_4">
+                                <h3 class="contentTtl">돌아서서 떠나라</h3>
+                                <span>연극 | 2019.10.09 ~</span>
+                                <p class="contentTxt">
+                                    이별을 앞둔 ‘공상두’가 마지막으로 사랑하는 연인 ‘채희주’를 만나러 가서 벌어지는 하룻밤 이야기를 다루며, 그들의 사랑을 통해 인간의 삶과 사랑에 대한 깊은 성찰을 담아낸다.   
+                                </p>
+                                <a href="https://tickets.interpark.com/goods/19013430" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_4" src="./images/lr04.jpg" alt="돌아서서 떠나라">
+                            </label>
+                        </div><!-- contentDetails end -->
+
+                        <div class="contentDetails">
+                            <div class="content content_5">
+                                <h3 class="contentTtl">앙상블</h3>
+                                <span>영화 | 정형석 | 2020.11.05</span>
+                                <p class="contentTxt">
+                                    사랑에 실패한 후 의기소침해진 극단 연출자 ‘영로’와 그런 그에게 힘이 되고 싶은 ‘세영’ 새로운 사랑은 없을 것 같은 ‘민우’와 운명 같은 순간을 꿈꾸는 ‘주영’ 변치 않은 사랑을 꿈꾼 ‘혜영’과 다시 한번 이어가고 싶은 ‘만식’ “여기서라면 우린, 괜찮을 거야” 
+                                </p>
+                                <a href="https://movie.naver.com/movie/bi/mi/basic.naver?code=185378" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_5" src="./images/lr05.jpg" alt="앙상블">
+                            </label>
+                        </div><!-- contentDetails end -->
+
+                        <div class="contentDetails">
+                            <div class="content content_6">
+                                <h3 class="contentTtl">하퍼스 바자</h3>
+                                <span>화보 | 2020.05.22</span>
+                                <p class="contentTxt">
+                                    ‘Blue Bird‘. 청명한 블루 컬러를 테마로, 사랑스럽고, 때론 신비로운 김지원의 모습이 마치 동화 속 파랑새를 떠올리게 한다.
+                                </p>
+                                <a href="https://www.harpersbazaar.co.kr/article/46669" target="_blank">Read More</a>
+                            </div>
+                            <label for="slideImg" class="img">
+                                <img class="img_6" src="./images/lr06.jpg" alt="하퍼스 바자">
+                            </label>
+                        </div><!-- contentDetails end -->
+                    </div><!-- contentsBox end -->
+                </div><!-- latestRelease confix end-->
+
+                <div class="ourArtists vBox">
+                    <h2 class="ttl confix scrAni scrAni-up">OUR ARTISTS</h2>
+                    <ul class="artistList">
+                        <li class="scrAni scrAni-right">
+                            <a href="#">
+                                <img src="./images/art01.jpg" alt="장도하">
+                                <h3>Jang Do Ha</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-right">
+                            <a href="#">
+                                <img src="./images/art02.jpg" alt="김정화">
+                                <h3>Kim Jung Hwa</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-right">
+                            <a href="#">
+                                <img src="./images/art03.jpg" alt="이준경">
+                                <h3>Lee Jun Kyung</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-right">
+                            <a href="#">
+                                <img src="./images/art04.jfif" alt="홍승범">
+                                <h3>Hong Seung Bum</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-left">
+                            <a href="#">
+                                <img src="./images/art05.jpg" alt="김지원">
+                                <h3>Kim Ji Won</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-left">
+                            <a href="#">
+                                <img src="./images/art06.jpg" alt="김선호">
+                                <h3>Kim Seon Ho</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-left">
+                            <a href="#">
+                                <img src="./images/art07.jpg" alt="박신혜">
+                                <h3>Park Shin Hye</h3>
+                            </a>
+                        </li>
+                        <li class="scrAni scrAni-left">
+                            <a href="#">
+                                <img src="./images/art08.jpg" alt="김주헌">
+                                <h3>Kim Ju Hun</h3>
+                            </a>
+                        </li>
+                    </ul>
                 </div><!-- ourArtists end -->
 
-                <div class="goToSns confix">
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/_leejunkyung" target="_blank">
-                            <img src="./images/sns01.jpg" alt="이준경sns">
-                            <div class="txtBox">
-                                <span>LEE JUN KYUNG</span>
-                                <span>이준경</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/ssinz7" target="_blank">
-                            <img src="./images/sns02.jpg" alt="박신혜sns">
-                            <div class="txtBox">
-                                <span>PARK SHIN HYE</span>
-                                <span>박신혜</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/geewonii" target="_blank">
-                            <img src="./images/sns03.jpg" alt="김지원sns">
-                            <div class="txtBox">
-                                <span>KIM JI WON</span>
-                                <span>김지원</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/junghwa_jjung" target="_blank">
-                            <img src="./images/sns04.jpg" alt="김정화sns">
-                            <div class="txtBox">
-                                <span>KIM JUNG HWA</span>
-                                <span>김정화</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/seonho__kim" target="_blank">
-                        <img src="./images/sns05.jpg" alt="김선호sns">
-                        <div class="txtBox">
-                            <span>KIM SEON HO</span>
-                            <span>김선호</span>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/zu_hun_kim" target="_blank">
-                        <img src="./images/sns06.jpg" alt="김주헌sns">
-                        <div class="txtBox">
-                            <span>KIM JU HUN</span>
-                            <span>김주헌</span>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="artistBox">
-                        <a href="https://www.instagram.com/jangdoha_" target="_blank">
-                        <img src="./images/sns07.jpg" alt="장도하sns">
-                        <div class="txtBox">
-                            <span>Jang Do Ha</span>
-                            <span>장도하</span>
-                        </div>
-                        </a>
-                    </div>
-                </div><!-- goToSns confix end -->
-
                 <div class="saltSharing confix">
-                    <h2 class="ttl">Salt sharing</h2>
+                    <h2 class="ttl scrAni scrAni-up">SALT SHARING</h2>
                     <ul class="sharingList">
-                        <li class="sharing01 sa sa-up">
-                            <a href="https://www.insight.co.kr/news/275981" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr01.jpg" alt="시민 응원 프로젝트 참여">
-                                </div>
-                                <div class="sharingTxt">
+                        <li class="sharing01 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="https://www.insight.co.kr/news/275981" target="_blank">
+                                <span></span><span></span><span></span><span></span>
                                     <h3>[솔트] MBC 라디오 &lt;시민 응원 프로젝트&gt; 참여</h3>
-                                    <p>코로나19 확산으로 힘겨운 일상을 보내고 계신 여러분을 위해 MBC 라디오가 기획한 MBC 라디오 &lt;시민 응원 프로젝트&gt;에 솔트 엔터테인먼트가 함께했습니다.</p>
-                                </div>
-                            </a>
+                                    <p>코로나19 확산으로 힘겨운 일상을 보내고 계신 여러분을 위해 MBC 라디오가 기획한 MBC 라디오 &lt;시민 응원 프로젝트&gt;에 솔트 엔터테인먼트가 함께했습니다.<br> 김정화, 박신혜, 김지원, 김선호,주헌 배우가 목소리 재능기부로 전한 따뜻한 메시지, 모두 들으셨나요?!<br> 지난 4월 초, 서울 지하철 승강장에서도 들을 수 있었지만, '사회적 거리 두기'로 인해 현장에서 응원 메시지를 듣지 못한 분들을 위해 배우들의 응원 메시지를 공개했습니다.소속 배우들의 목소리 나눔이, 국민 여러분께 작게나마 힘이 되길 바라봅니다.</p>
+                                </a>
+                                <a class="link02" href="https://www.insight.co.kr/news/275981" target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
-                        <li class="sharing02 sa sa-up">
-                            <a href="https://www.wikitree.co.kr/articles/476237" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr02.png" alt="박신혜 수익금 기부">
-                                </div>
-                                <div class="sharingTxt">
+
+                        <li class="sharing02 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="https://www.chosun.com/site/data/html_dir/2019/10/30/2019103000804.html" target="_blank">
+                                    <span></span><span></span><span></span><span></span>
                                     <h3>[박신혜] '2019 박신혜 팬미팅-Voice of Angel' 수익금 기부</h3>
-                                    <p>지난 12월 8일 진행된 '2019 박신혜 팬미팅-Voice of Angel' 수익금을 '희망친구 기아대책-별빛천사 프로젝트'와 'WWF'에 기부하였습니다.</p>
-                                </div>
-                            </a>
+                                    <p>지난 12월 8일 진행된 '2019 박신혜 팬미팅-Voice of Angel' 수익금을 '희망친구 기아대책-별빛천사 프로젝트'와 'WWF'에 기부하였습니다.<br>박신혜 배우와 전 세계 팬 여러분, 희망친구 기아대책, 솔트 엔터테인먼트가 함께 만들어가고 있는 '별빛천사 프로젝트'에 1천만 원이 기부되었으며, 기부된 금액은 국내외 아이들을 위해 사용될 예정입니다.<br>박신혜 배우가 프레젠터로 함께한 MBC 창사특집 다큐멘터리 &lt;휴머니멀&gt; 기획에 참여한 'WWF(세계자연기금)'에 1천만 원이 기부되었으며, 기부된 금액은 인간과 동물의 공존을 위한 여정에 사용될 예정입니다.</p>
+                                </a>
+                                <a class="link02" href="https://www.chosun.com/site/data/html_dir/2019/10/30/2019103000804.html"  target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
-                        <li class="sharing03 sa sa-up">
-                            <a href="https://www.chosun.com/site/data/html_dir/2017/12/01/2017120100849.html" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr03.jpg" alt="사랑의 김장 나눔">
-                                </div>
-                                <div class="sharingTxt">
-                                    <h3>[박신혜] 별빛천사 프로젝트- 사랑의 김장 나눔</h3>
-                                    <p>​2017년 12월, '박신혜의 별빛천사 프로젝트, 2017 사랑의 김장 나눔' 행사를 진행했습니다. 2017년 11월 지진 피해를 입은 포항 지역 아동들을 위해 ​박신혜 배우와 팬 여러분, 솔트 엔터테인먼트와 기아대책의 임직원 등 60여 명이 참가했습니다.</p>
-                                </div>
-                            </a>
+
+                        <li class="sharing03 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="https://www.chosun.com/site/data/html_dir/2017/12/01/2017120100849.html" target="_blank">
+                                    <span></span><span></span><span></span><span></span>
+                                    <h3>[박신혜] 별빛천사 프로젝트 - 사랑의 김장 나눔</h3>
+                                    <p>​2017년 12월, '박신혜의 별빛천사 프로젝트, 2017 사랑의 김장 나눔' 행사를 진행했습니다.<br> 2017년 11월 지진 피해를 입은 포항 지역 아동들을 위해 ​박신혜 배우와 팬 여러분, 솔트 엔터테인먼트와 기아대책의 임직원 등 60여 명이 참가했습니다.<br>이날 만든 김치 700포기는 지진 피해를 입은 포항지역 내 기아대책 결연 아동을 포함해 250여 가정에 전달됐습니다.<br> 매 순간이 감동이었던 나눔의 순간,<br> 함께해주셔서 감사합니다.</p>
+                                </a>
+                                <a class="link02" href= href="https://www.chosun.com/site/data/html_dir/2017/12/01/2017120100849.html" target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
-                        <li class="sharing04 sa sa-up">
-                            <a href="http://stoo.asiae.co.kr/article.php?aid=67814680331" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr04.jpg" alt=" 홈스쿨 개보수 지원사업">
-                                </div>
-                                <div class="sharingTxt">
+
+                        <li class="sharing04 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="http://stoo.asiae.co.kr/article.php?aid=67814680331" target="_blank">
+                                    <span></span><span></span><span></span><span></span>
                                     <h3>[솔트X박신혜] 화도행복한홈스쿨 개보수 지원사업</h3>
-                                    <p>2017년, 박신혜 배우와 솔트 엔터테인트는 국내 아이들의 꿈을 응원하기 위해 경기도 남양주에 위치한 기아대책 지역아동센터인 '화도 행복한 홈스쿨 개보수 지원 사업'을 진행하였습니다.</p>
-                                </div>
-                            </a>
+                                    <p>2017년, 박신혜 배우와 솔트 엔터테인트는 국내 아이들의 꿈을 응원하기 위해 경기도 남양주에 위치한 기아대책 지역아동센터인 '화도 행복한 홈스쿨 개보수 지원 사업'을 진행하였습니다.<br>2017년 5월 리모델링이 완료된 ​'화도 행복한 홈스쿨'은 전보다 더 깨끗하고 쾌적한 학습공간으로 거듭났고,많은 아이들이 이곳에서 ​아름다운 꿈을 키워가고 있습니다.<br> 국내외를 불문하고 도움이 필요한 지구촌 아이들을 위해 함께 정성과 마음을 모아주시는 팬 여러분께 다시 한번 감사드립니다.</p>
+                                </a>
+                                <a class="link02" href="http://stoo.asiae.co.kr/article.php?aid=67814680331"" target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
-                        <li class="sharing05 sa sa-up">
-                            <a href="https://entertain.v.daum.net/v/20190424070518973" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr05.jpg" alt="기아대책 필란트로피클럽 위촉">
-                                </div>
-                                <div class="sharingTxt">
+
+                        <li class="sharing05 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="https://entertain.v.daum.net/v/20190424070518973" target="_blank">
+                                    <span></span><span></span><span></span><span></span>
                                     <h3>[솔트X김정화X박신혜] 기아대책 필란트로피클럽 위촉</h3>
-                                    <p>2016년 11월, 박신혜 배우가 기아대책 고액후원자 모임인 '필란트로피클럽'에 위촉됐습니다. 2009년에 힘겹게 살아가는 네팔 아이들을 만난 것을 계기로 2011년부터 기아대책 홍보대사로 활동하기 시작해 '별빛천사 프로젝트'를 비롯한 많은 선행 활동을 해온 박신혜 배우.</p>
-                                </div>
-                            </a>
+                                    <p>2016년 11월, 박신혜 배우가 기아대책 고액후원자 모임인 '필란트로피클럽'에 위촉됐습니다. 2009년에 힘겹게 살아가는 네팔 아이들을 만난 것을 계기로 2011년부터 기아대책 홍보대사로 활동하기 시작해 '별빛천사 프로젝트'를 비롯한 많은 선행 활동을 해오고 있습니다.<br>2019년 11월, 김정화 배우 또한 필란트로피클럽'에 위촉되며 지속적인 나눔을 이어가고 있습니다.<br> 김정화 배우는 2009년 기아대책과 우간다를 방문한 후 2010년부터 기아대책 홍보대사로 활동해 왔으며 후원 아동과의 이야기를 담은 음반과 책 '안녕, 아그네스!'를 발매하고, 관련 수익금을 기부하는 등 꾸준히 선행을 이어오고 있습니다.</p>
+                                </a>
+                                <a class="link02" href="https://entertain.v.daum.net/v/20190424070518973" target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
-                        <li class="sharing06 sa sa-up">
-                            <a href="https://www.christiantoday.co.kr/news/336938" target="_blank">
-                                <div class="sharingImg">
-                                <img src="./images/shr06.jpg" alt="별빛천사 프로젝트">
-                                </div>
-                                <div class="sharingTxt">
+                        
+                        <li class="sharing06 scrAni scrAni-up">
+                            <div class="sharingTxt">
+                                <a class="link01" href="https://www.christiantoday.co.kr/news/336938" target="_blank">
+                                    <span></span><span></span><span></span><span></span>
                                     <h3>[박신혜] 별빛천사 프로젝트 - 가나 신혜센터, 필리핀 신혜센터</h3>
-                                    <p>2011년부터 기아대책 홍보대사로 활동해오던 박신혜 배우는 어려운 환경에서 살아가는 아이들을 돕기 위해 2012년부터 기아대책을 통해 전세계 팬여러분, 솔트 엔터테인먼트와 함께 '별빛천사 프로젝트'를 시작하였습니다.</p>
-                                </div>
-                            </a>
+                                    <p>2011년부터 기아대책 홍보대사로 활동해오던 박신혜 배우는 어려운 환경에서 살아가는 아이들을 돕기 위해 2012년부터 기아대책을 통해 전세계 팬여러분, 솔트 엔터테인먼트와 함께 '별빛천사 프로젝트'를 시작하였습니다.<br> 2013년 12월 완공된 다목적 교육지원센터인 가나 신혜센터는 가나 보코 지역 아동 1000여명의 급식과 교육, 놀이공간으로 활용되고 있으며, 지역 주민들은 마을 회관으로 사용하고 있습니다. <br> 2017년 9월 완공된 '필리핀 신혜센터'는필리핀 쌈빨록 지역에서 어린이 무료 도서관, 지역 공동체 센터 등의 역할을 하며4,000여명의 아동과 청소년, 지역 주민의 기쁨이 되고 있습니다.</p>
+                                </a>
+                                <a class="link02" href="https://www.christiantoday.co.kr/news/336938" target="_blank">관련 기사 보기 ▶</a>
+                            </div>
                         </li>
                     </ul><!-- sharingList end -->
                 </div><!-- saltSharing end -->
 
+                <div class="followUs">
+                    <div class="confix">
+                        <h2 class="ttl scrAni scrAni-up">FOLLOW US</h2>
+                        <div class="followBox">
+                            <ul class="followList">
+                                <li class="followCnt scrAni scrAni-rotateL">
+                                    <a class="instaImg" href="https://www.instagram.com/_leejunkyung" target="_blank">
+                                        <img src="./images/ljk.jpg" alt="이준경sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/_leejunkyung" target="_blank">
+                                        <strong>@_leejunkung</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateL">
+                                    <a class="instaImg" href="https://www.instagram.com/ssinz7" target="_blank">
+                                        <img src="./images/psh.jpg" alt="박신혜sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/ssinz7" target="_blank">
+                                        <strong>@ssinz7</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateR">
+                                    <a class="instaImg" href="https://www.instagram.com/geewonii" target="_blank">
+                                        <img src="./images/kjw.jpg" alt="김지원sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/geewonii" target="_blank">
+                                        <strong>@geewonii</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateR">
+                                    <a class="instaImg" href="https://www.instagram.com/junghwa_jjung" target="_blank">
+                                        <img src="./images/kjh.jpg" alt="김정화sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/junghwa_jjung" target="_blank">
+                                        <strong>@junghwa_jjung</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateL">
+                                    <a class="instaImg" href="https://www.instagram.com/seonho__kim" target="_blank">
+                                        <img src="./images/ksh.jpg" alt="김선호sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/seonho__kim" target="_blank">
+                                        <strong>@seonho__kim</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateL">
+                                    <a class="instaImg" href="https://www.instagram.com/zu_hun_kim" target="_blank">
+                                        <img src="./images/jh.jpg" alt="김주헌sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/zu_hun_kim" target="_blank">
+                                        <strong>@zu_hun_kim</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateR">
+                                    <a class="instaImg" href="https://www.instagram.com/jangdoha_" target="_blank">
+                                        <img src="./images/jdh.jpg" alt="장도하sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/jangdoha_" target="_blank">
+                                        <strong>@jangdoha_</strong>
+                                    </a>
+                                </li>
+                                <li class="followCnt scrAni scrAni-rotateR">
+                                    <a class="instaImg" href="https://www.instagram.com/hongseungbum_" target="_blank">
+                                        <img src="./images/hsb.jpg" alt="홍승범sns">
+                                    </a>
+                                    <a class="instaAdd" href="https://www.instagram.com/hongseungbum_" target="_blank">
+                                        <strong>@hongseungbum_</strong>
+                                    </a>
+                                </li>
+                                
+                            </ul><!-- followList end -->
+                        </div> <!--followBox end-->
+                    </div><!-- confix end -->
+                </div><!-- followUs end -->
             </section><!-- mainContents end -->
         </main>
 
@@ -343,23 +444,5 @@
             </div><!-- footerArea -->
         </footer>
     </div><!-- container end -->
-    <script>
-        // Scroll Animation (sa, 스크롤 애니메이션)
-        const saTriggerMargin = 300;
-        const saElementList = document.querySelectorAll('.sa');
-  
-        const saFunc = function() {
-          for (const element of saElementList) {
-            if (!element.classList.contains('show')) {
-              if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
-                element.classList.add('show');
-              }
-            }
-          }
-        }
-  
-        window.addEventListener('load', saFunc);
-        window.addEventListener('scroll', saFunc);
-    </script>
-</body>
+ </body>
 </html>
