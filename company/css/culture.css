@@ -23,6 +23,13 @@ header {
   height: 75px;
 }
 
+.headerConfix {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* 로고 */
 .logo {
   float: left;
@@ -138,6 +145,10 @@ main {
   }
 }
 
+.scrollDown strong {
+  display: none;
+}
+
 .z1>h2 {
   display: none;
 }
@@ -203,7 +214,7 @@ main {
 .cultureTitle {
   display: flex;
   margin-left: 2.5%;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
 }
 
 .cultureTitle>h3 {
@@ -224,49 +235,60 @@ main {
 /* culture 리스트 */
 .cultureList {
   display: flex;
-  height: 580px;
-  flex-wrap: wrap;
-  align-content: space-between;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.cultureList div {
-  max-width: 100%;
-  min-width: 23.72881%;
-  height: 280px;
-  background-color: white;
+/* boxList */
+.boxList {
+  width: 23.33333%;
+  margin-bottom: 2%;
   border: 1px solid #ccc;
-}
-
-.cultureList img {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  margin-top: 55px;
-  margin-bottom: 35px;
-}
-
-.cultureList div p {
-  text-align: center;
-  line-height: 20px;
-}
-
-.cultureList div p strong {
-  display: block;
-  margin-top: 10px;
-  font-size: 16px;
+  background-color: white;
 }
 
 .box {
   position: relative;
+  /* overflow: hidden; */
+  width: 100%;
+  padding-top: 100%;
+  cursor: pointer;
 }
 
-.hiden {
+.box img, .box p {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  /* z-index: 3; */
+}
+
+.box img {
+  top: 15%;
+  width: 28.57142%;
+}
+
+.box p {
   width: 100%;
+  top: 55%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.box p strong {
+  display: block;
+  margin-top: 7%;
+  font-size: 18px;
+}
+
+.box:hover {
+  background-color: #1f4da0;
+  color: #fff;
+}
+
+/* hiden */
+.hiden {
   opacity: 0;
 }
 
@@ -275,58 +297,60 @@ main {
   position: absolute;
   background-color: #fff;
   transition: all .7s;
+  z-index: 20;
 }
 
-.hiden span:nth-child(1) {
-  top: 13px;
-  left: 13px;
-  height: 2px;
-  width: 0;
-}
-
-.hiden span:nth-child(2) {
-  top: 13px;
-  right: 13px; 
-  width: 2px;
-  height: 0;
-}
-
+.hiden span:nth-child(1),
 .hiden span:nth-child(3) {
-  bottom: 13px;
-  right: 13px;
   width: 0;
-  height: 2px;
 }
 
+.hiden span:nth-child(2),
 .hiden span:nth-child(4) {
-  bottom: 13px;
-  left: 13px;
+  height: 0;
+}
+
+.box:hover .hiden {
+  opacity: 1;
+}
+
+.box:hover .hiden span:nth-child(1) {
+  top: 5%;
+  left: 5%;
+  height: 2px;
+  width: 0;
+}
+
+.box:hover .hiden span:nth-child(2) {
+  top: 5%;
+  right: 5%;
   width: 2px;
   height: 0;
 }
 
-.hiden:hover span:nth-child(1) {
+.box:hover .hiden span:nth-child(3) {
+  bottom: 5%;
+  left: 5%;
+  width: 0;
+  height: 2px;
+}
+
+.box:hover .hiden span:nth-child(4) {
+  bottom: 5%;
+  left: 5%;
+  width: 2px;
+  height: 0;
+}
+
+.box:hover .hiden span:nth-child(1),
+.box:hover .hiden span:nth-child(3) {
   width: 90%;
 }
 
-.hiden:hover span:nth-child(2) {
+.box:hover .hiden span:nth-child(2),
+.box:hover .hiden span:nth-child(4) {
   height: 90%;
 }
-
-.hiden:hover span:nth-child(3) {
-  width: 90%;
-}
-
-.hiden:hover span:nth-child(4) {
-  height: 90%;
-}
-
-.hiden:hover {
-  opacity: 1;
-  background-color: #1f4da0;
-  color: white;
-}
-
 
 
 /*========== footer area ==========*/
@@ -395,8 +419,8 @@ footer {
 @media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */  
   /* 서브 메뉴 */
   .subMenu {
-    margin-top: 150px;
-    margin-bottom: 120px;
+    margin-top: 130px;
+    margin-bottom: 110px;
   }
 
   .subMenu li>a {
@@ -413,46 +437,18 @@ footer {
   }
 
   /* 컬쳐 리스트 */
-  .cultureList {
-    height: 440px;
+  
+  .boxList p {
+    font-size: 1.25vw;
   }
   
-  .cultureList div {
-    height: 210px;
-  }
-
-  .cultureList img {
-    width: 50px;
-    height: 50px;
-    margin-top: 33px;
-    margin-bottom: 25px;
+  .boxList p strong {
+    font-size: 1.3vw;
   }
   
-  .cultureList div p {
-    font-size: 11px;
+  .box p {
+    line-height: 2vh;
   }
-  
-  .cultureList div p strong {
-    font-size: 13px;
-  }
-  
-  .hiden:hover span:nth-child(1) {
-    width: 87%;
-  }
-  
-  .hiden:hover span:nth-child(2) {
-    height: 87%;
-  }
-  
-  .hiden:hover span:nth-child(3) {
-    width: 87%;
-  }
-  
-  .hiden:hover span:nth-child(4) {
-    height: 87%;
-  }
-
-
 
   /*========== footer ==========*/
   footer {
@@ -495,6 +491,7 @@ footer {
 }
 
 
+
 @media screen and (min-width:320px) and (max-width:767px) {  /* 모바일 버전 768px 이하 */
   /*========== header ==========*/
   header {
@@ -510,6 +507,10 @@ footer {
       background: #fff;
       overflow: hidden;
       transition: all 0.3s;
+  }
+  
+  .headerConfix {
+    width: 100%;
   }
 
   /* mobileBtn */
@@ -614,12 +615,16 @@ footer {
 
 
   /*========== main ==========*/
+  .parallax {
+    background-position: 0 55px;
+  }
+
   .z1>h2 {
     display: block;
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
-    transform: translate(-45%, -50%);
+    transform: translate(-50%, -50%);
     font-size: 46px;
     color: #fff;
     opacity: .6;
@@ -635,7 +640,65 @@ footer {
     }
   }
 
+  .z1 .scrollDown {
+    z-index: 11;
+    position: absolute;
+    width: 33px;
+    height: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 120px;
+  }
+
+  .scrollDown strong {
+    display: block;
+    margin-top: 50px;
+    color: white;
+  }
+
+  .z1 .scrollDown::before, .scrollDown::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 15px;
+    width: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: moveArrow 1s ease-in-out infinite;
+  }
+
+  .scrollDown::after {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes moveArrow {
+    0% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      top: 90%
+    }
+    
+  }
+
   /* 서브 메뉴 */
+  .subMenu {
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+  
   .subMenu ul {
     display: inline-block;
   }
@@ -698,67 +761,28 @@ footer {
   }
   
   /* 컬쳐 리스트 */
-  .cultureList {
-    width: 74%;
-    height: 870px;
-    margin: 0 auto;  
-    justify-content: center;
-  }
-  
-  .cultureList div {
-    min-width: 36.457627%;
-    margin-right: 40px;
-    height: 185px;
+  .boxList {
+    width: 48.66666%;
   }
 
-  .cultureList div:nth-child(even) {
-    margin-right: 0;
+  /* 컬쳐 리스트 */  
+  .boxList p {
+    font-size: 2.5vw;
+  }
+  
+  .boxList p strong {
+    font-size: 3vw;
+  }
+  
+  .box p {
+    line-height: 2.4vh;
+  }
+  .box:hover {
+    background-color: white;
+    color: black;
   }
 
-  .cultureList img {
-    width: 40px;
-    height: 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-
-  .cultureList div p {
-    font-size: 10px;
-  }
-
-  .cultureList div p strong {
-    font-size: 11px;
-  }
-
-  .hiden span:nth-child(1) {
-    height: 1px;
-  }
-  
-  .hiden span:nth-child(2) {
-    width: 1px;
-  }
-  
-  .hiden span:nth-child(3) {
-    height: 1px;
-  }
-  
-  .hiden span:nth-child(4) {
-    width: 1px;
-  }
-
-  .hiden:hover span:nth-child(1) {
-    width: 85%;
-  }
-  
-  .hiden:hover span:nth-child(2) {
-    height: 85%;
-  }
-  
-  .hiden:hover span:nth-child(3) {
-    width: 85%;
-  }
-  
-  .hiden:hover span:nth-child(4) {
-    height: 85%;
+  .hiden {
+    display: none;
   }
 }

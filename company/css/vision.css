@@ -23,6 +23,13 @@ header {
   height: 75px;
 }
 
+.headerConfix {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* 로고 */
 .logo {
   float: left;
@@ -138,6 +145,10 @@ main {
   }
 }
 
+.scrollDown strong {
+  display: none;
+}
+
 .z1>h2 {
   display: none;
 }
@@ -197,13 +208,13 @@ main {
 
 /*  메인 내용  */
 .vision {
-  padding-bottom: 15%;
+  padding-bottom: 13%;
 }
 
 .visionBox {
   display: flex;
   margin-left: 2.5%;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
 }
 
 .visionBox>h3 {
@@ -252,19 +263,20 @@ main {
 
 .coreValueTxt h3{
   margin-top: 8.5%;
-  margin-bottom: 3.5%;
-  font-size: 36px;
+  margin-bottom: 4%;
+  font-size: 30px;
   color: white;
 }
 
 .coreValueTxt h4 {
-  margin-bottom: 3.8%;
-  font-size: 46px;
+  margin-bottom: 4%;
+  line-height: 34px;
+  font-size: 42px;
   color: white;
 }
 
 .cvEn {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .coreValueTxt p {
@@ -279,7 +291,7 @@ main {
   position: absolute;
   max-width: 1180px;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 .manualBtn {
@@ -372,11 +384,11 @@ footer {
 
 /*================== 반응형 웹 =====================*/
 
-@media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */
+@media screen and (max-width:1024px) {  /* 태블릿 버전 769px ~ 1024px */
   /* 서브 메뉴 */
   .subMenu {
-    margin-top: 150px;
-    margin-bottom: 120px;
+    margin-top: 130px;
+    margin-bottom: 110px;
   }
 
   .subMenu li>a {
@@ -385,6 +397,13 @@ footer {
 
 
   /*  메인 내용  */
+  .vision {
+    padding-bottom: 3.5vh;
+  }
+  .visionBox {
+    margin-bottom: 7%;
+  }
+
   .visionBox>h3 {
     font-size: 28px;
   }
@@ -395,28 +414,25 @@ footer {
 
 
   /* 슬라이드 이미지 */
-  .visionSlider {
-    height: 400px;
-  }
-
-  /* 이미지 텍스트 */
   .coreValueTxt h3{
-    font-size: 26px;
+    margin-top: 7.5%;
+    margin-bottom: 4%;
+    font-size: 3vw;
   }
-
+  
   .coreValueTxt h4 {
-    font-size: 30px;
+    margin-bottom: 4%;
+    line-height: 26px;
+    font-size: 4.2vw;
   }
-
+  
   .cvEn {
-    font-size: 16px;
+    font-size: 1.8vw;
   }
-
+  
   .coreValueTxt p {
-    font-size: 10px;
+    font-size: 1.4vw;
   }
-
-
 
   /*========== footer ==========*/
   footer {
@@ -459,7 +475,7 @@ footer {
 }
 
 
-@media screen and (max-width:767px) {  /* 모바일 버전 768px 이하 */
+@media screen and (min-width:320px) and (max-width:767px) {  /* 모바일 버전 768px 이하 */
   /*========== header ==========*/
   header {
     height: 55px;
@@ -474,6 +490,10 @@ footer {
     background: #fff;
     overflow: hidden;
     transition: all 0.3s;
+  }
+  
+  .headerConfix {
+    width: 100%;
   }
 
   /* mobileBtn */
@@ -578,16 +598,73 @@ footer {
 
 
   /*========== main ==========*/
+  .parallax {
+    background-position: 0 55px;
+  }
+
   .z1>h2 {
     display: block;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
-    transform: translate(-45%, -50%);
+    transform: translate(-50%, -50%);
     font-size: 46px;
     color: #fff;
     opacity: .6;
     text-shadow: 1px 1px 5px #000;
+  }
+
+  .z1 .scrollDown {
+    z-index: 11;
+    position: absolute;
+    width: 33px;
+    height: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10px;
+  }
+
+  .scrollDown strong {
+    display: block;
+    margin-top: 50px;
+    color: white;
+  }
+
+  .z1 .scrollDown::before, .scrollDown::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 15px;
+    width: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: moveArrow 1s ease-in-out infinite;
+  }
+
+  .scrollDown::after {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes moveArrow {
+    0% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      top: 90%
+    }
+    
   }
 
   @keyframes movebg {
@@ -600,7 +677,12 @@ footer {
   }
 
 
-    /* 서브 메뉴 */
+  /* 서브 메뉴 */
+  .subMenu {
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+
   .subMenu ul {
     display: inline-block;
   }
@@ -608,7 +690,7 @@ footer {
   .subMenu li {
     display: inline-block;
     max-width: 48.39716%;
-    min-width: 47.73399%;
+    min-width: 47.66399%;
     margin-top: 10%;
     margin-right: 3.27756%;
   }
@@ -640,6 +722,10 @@ footer {
 
 
   /* 메인 내용 */
+  .vision {
+    padding-bottom: 7%;
+  }
+  
   .visionBox {
     display: block;
     margin-left: 0;
@@ -648,7 +734,7 @@ footer {
   
   .visionBox>h3 {
     width: 100%;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
     text-align: center;
     font-size: 26px;
   }
@@ -668,24 +754,14 @@ footer {
   }
   
   /* 이미지 텍스트 */
-  .coreValueTxt {
-    margin-top: -43%;
-  }
-
   .coreValueTxt h3{
-    font-size: 20px;
+    margin-top: 6%;
+    margin-bottom: 3%;
   }
-
+  
   .coreValueTxt h4 {
-    font-size: 26px;
-  }
-
-  .cvEn {
-    font-size: 12px;
-  }
-
-  .coreValueTxt p {
-    font-size: 8px;
+    margin-bottom: 3%;
+    line-height: 18px;
   }
 
   /* navigationManual */

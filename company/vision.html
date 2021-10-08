@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/vision.css" type="text/css">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png">
     <script src="./js/jquery.js"></script>
     <script src="./js/mobile.js" defer></script>
     <script src="./js/headerScroll.js"></script>
@@ -36,7 +37,7 @@
   <div id="container">
     <header>
       <div class="logoMenu">
-        <div class="confix">
+        <div class="headerConfix">
           <div class="logo">
             <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
           </div><!-- logo end -->
@@ -49,17 +50,17 @@
           
           <nav class="mainMenu">
             <ul class="gnb">
-              <li><a href="#">COMPANY</a></li>
-              <li><a href="#">ARTISTS</a></li>
-              <li><a href="#">NOTICE</a></li>
-              <li><a href="#">AUDITION</a></li>
-            </ul>
-          </nav>
+              <li><a href="sub/company/about.html">COMPANY</a></li>
+                <li><a href="sub/artists/artists.html">ARTISTS</a></li>
+                <li><a href="sub/notice/notice.html">NOTICE</a></li>
+                <li><a href="sub/audition/audition.html">AUDITION</a></li>
+              </ul>
+            </nav>
 
-          <div class="loginSignup">
-            <ul>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Sign up</a></li> 
+            <div class="loginSignup">
+              <ul>
+                <li><a href="sub/login.html">Login</a></li>
+                <li><a href="sub/singUp.html">Sign up</a></li>  
             </ul>
           </div>
         </div> <!-- confix -->
@@ -70,6 +71,7 @@
       <article>
         <div class="parallax z1">
           <h2>COMPANY</h2>
+          <div class="scrollDown"><strong>Down</strong></div>
         </div>
       </article>
         
@@ -94,13 +96,13 @@
               <div class="visionBox" data-aos="fade-up" data-aos-duration="2000">
                 <h3>VISION</h3>
                 <div class="visionTxt">
-                  <p>소속 연기자가 작품 활동과 개인의 삶, 두 가지 모두를 행복하게 영위할 수 있도록<br>신뢰를 바탕으로 서로 존중하며 곁에서 함께 노력합니다. 또한 내면의 아름다움을 지닌 배우들과 뜻을 같이 해<br>'나눔'의 소중함을 알고 더불어 사는 사회에 '선한 영향력'을 미치는 '건강한 매니지먼트'를 지향합니다.</p>
+                  <p>소속 연기자가 작품 활동과 개인의 삶, 두 가지 모두를 행복하게 영위할 수 있도록 신뢰를 바탕으로 서로 존중하며 곁에서 함께 노력합니다. 또한 내면의 아름다움을 지닌 배우들과 뜻을 같이 해 '나눔'의 소중함을 알고 더불어 사는 사회에 '선한 영향력'을 미치는 '건강한 매니지먼트'를 지향합니다.</p>
                 </div> <!-- visionTxt-->
               </div> <!-- visionBox -->
 
               <div class="visionSlider">
                 <div class="visionslides">
-                  <div class="slide first">
+                  <div class="slide">
                     <img src="images/img1.jpg" alt="나눔">
                     <div class="coreValueTxt">
                       <h3>Core Value</h3>
@@ -137,7 +139,7 @@
                   </div> <!-- slide -->
                 </div> <!-- visionSlides -->
 
-                <div class="navigationManual">
+                <div class="navigationManual vBox">
                   <input type="radio" checked name="slide" id="slide1">
                   <label for="slide1" class="manualBtn"></label>
 

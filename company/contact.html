@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/contact.css" type="text/css">
+    <link rel="shortcut icon" href="./images/icon.png">
     <script src="./js/jquery.js"></script>
     <script src="./js/mobile.js" defer></script>
     <script src="./js/headerScroll.js"></script>
@@ -16,7 +17,7 @@
   <div id="container">
     <header>
       <div class="logoMenu">
-        <div class="confix">
+        <div class="headerConfix">
           <div class="logo">
             <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
           </div><!-- logo end -->
@@ -29,17 +30,17 @@
 
           <nav class="mainMenu">
             <ul class="gnb">
-              <li><a href="#">COMPANY</a></li>
-              <li><a href="#">ARTISTS</a></li>
-              <li><a href="#">NOTICE</a></li>
-              <li><a href="#">AUDITION</a></li>
-            </ul>
-          </nav>
+              <li><a href="sub/company/about.html">COMPANY</a></li>
+                <li><a href="sub/artists/artists.html">ARTISTS</a></li>
+                <li><a href="sub/notice/notice.html">NOTICE</a></li>
+                <li><a href="sub/audition/audition.html">AUDITION</a></li>
+              </ul>
+            </nav>
 
-          <div class="loginSignup">
-            <ul>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Sign up</a></li> 
+            <div class="loginSignup">
+              <ul>
+                <li><a href="sub/login.html">Login</a></li>
+                <li><a href="sub/singUp.html">Sign up</a></li> 
             </ul>
           </div>
         </div> <!-- confix -->
@@ -50,6 +51,7 @@
       <article>
         <div class="parallax z1">
           <h2>COMPANY</h2>
+          <div class="scrollDown"><strong>Down</strong></div>
         </div>
       </article>    
 
@@ -70,14 +72,16 @@
 
         <section>
           <div class="confix">
-            <div class="contactUS">
+            <div class="contact">
               <h3>CONTACT US</h3>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.193271601543!2d127.04877205119878!3d37.55051003270386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca51dbc6d100d%3A0x8b0f73ddc042a0ea!2z7IaU7Yq47JeU7YSw7YWM7J2466i87Yq4!5e0!3m2!1sko!2skr!4v1631773066731!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <div class="contactUS">
+                <iframe class="contactMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.193271601543!2d127.04877205119878!3d37.55051003270386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca51dbc6d100d%3A0x8b0f73ddc042a0ea!2z7IaU7Yq47JeU7YSw7YWM7J2466i87Yq4!5e0!3m2!1sko!2skr!4v1631773066731!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div> <!-- contactUS -->
               <div class="contactTxt">
                 <div class="saltTxt">
                   <h4 class="addres">주소</h4>
-                  <p>[04791] 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호<br>
-                  B-908, Iberhouse, 190, Gwangnaru-ro, Seongdong-gu,<br>
+                  <p>[04791] 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호
+                  B-908, Iberhouse, 190, Gwangnaru-ro, Seongdong-gu,
                   Seoul Korea (zip code : 04791)</p>
                 </div>
                 <div class="saltTxt">
@@ -93,7 +97,7 @@
                   <p>salt_ent@naver.com</p>
                   </div>
               </div> <!-- contactTxt -->
-            </div> <!-- contactUS-->
+            </div> <!-- contact -->
           </div> <!-- confix -->
         </section>
       </div> <!-- parallax z2 -->

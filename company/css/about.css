@@ -23,6 +23,13 @@ header {
   height: 75px;
 }
 
+.headerConfix {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* 로고 */
 .logo {
   float: left;
@@ -138,6 +145,10 @@ main {
   }
 }
 
+.scrollDown strong {
+  display: none;
+}
+
 .z1>h2 {
   display: none;
 }
@@ -206,7 +217,7 @@ main {
 }
 
 .brandStory {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
 }
 
 .logoContent {
@@ -219,13 +230,14 @@ main {
 }
 
 .brandStoryTxt , .logoContentTxt {
-  width: 77%;
+  width: 60%;
 }
 
 .brandStoryTxt>p, .logoContentTxt>p {
   margin-bottom: 25px;
   line-height: 30px;
   font-size: 18px;
+  word-break: keep-all;
 }
 
 
@@ -243,7 +255,7 @@ main {
 }
 
 .logoImg img:last-child {
-  width: 23%;
+  max-width: 23%;
 }
 
 
@@ -311,11 +323,11 @@ footer {
 
 /*================== 반응형 웹 =====================*/
 
-@media screen and (max-width:1023px) {  /* 태블릿 버전 769px ~ 1023px */
+@media screen and (max-width:1024px) {  /* 태블릿 버전 769px ~ 1023px */
   /* 서브 메뉴 */
   .subMenu {
-    margin-top: 150px;
-    margin-bottom: 120px;
+    margin-top: 130px;
+    margin-bottom: 110px;
   }
 
   .subMenu li>a {
@@ -324,13 +336,22 @@ footer {
 
 
   /* 메인 내용 */
+  .brandStory {
+    margin-bottom: 9%;
+  }
+
   .brandStory>h3, .logoContent>h3 {
     font-size: 28px;
+  }
+
+  .brandStoryTxt , .logoContentTxt {
+    width: 66%;
   }
 
   .brandStoryTxt>p, .logoContentTxt>p {
     font-size: 16px;
   }
+  
 
 
 
@@ -390,6 +411,10 @@ footer {
       background: #fff;
       overflow: hidden;
       transition: all 0.3s;
+  }
+
+  .headerConfix {
+    width: 100%;
   }
 
   /* mobileBtn */
@@ -494,6 +519,10 @@ footer {
 
 
   /*========== main ==========*/
+  .parallax {
+    background-position: 0 55px;
+  }
+  
   .z1>h2 {
     display: block;
     position: absolute;
@@ -504,6 +533,59 @@ footer {
     color: #fff;
     opacity: .6;
     text-shadow: 1px 1px 5px #000;
+  }
+
+  .z1 .scrollDown {
+    z-index: 11;
+    position: absolute;
+    width: 33px;
+    height: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10px;
+  }
+
+  .scrollDown strong {
+    display: block;
+    margin-top: 50px;
+    color: white;
+  }
+
+  .z1 .scrollDown::before, .scrollDown::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 15px;
+    width: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: moveArrow 1s ease-in-out infinite;
+  }
+
+  .scrollDown::after {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes moveArrow {
+    0% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      top: 90%
+    }
+    
   }
 
   @keyframes movebg {
@@ -517,6 +599,11 @@ footer {
 
 
   /* 서브 메뉴 */
+  .subMenu {
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+  
   .subMenu ul {
     display: inline-block;
   }
@@ -559,7 +646,10 @@ footer {
   .brandStory, .logoContent {
     display: block;
     margin-left: 0;
-    word-break: keep-all;
+  }
+
+  .brandStory {
+    margin-bottom: 15%;
   }
   
   .brandStory>h3, .logoContent>h3 {
@@ -575,11 +665,12 @@ footer {
   
   .brandStoryTxt>p, .logoContentTxt>p {
     text-align: center;
+    line-height: 25px;
     font-size: 14px;
   }
 
   .logoImg {
-    width: 70%;
+    max-width: 70%;
     margin: 0 auto;
     margin-top: 60px;
   }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/culture.css" type="text/css">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png">
     <script src="./js/jquery.js"></script>
     <script src="./js/mobile.js" defer></script>
     <script src="./js/headerScroll.js"></script>
@@ -17,33 +18,37 @@
   <div id="container">
     <header>
       <div class="logoMenu">
-        <div class="confix">
+        <div class="headerConfix">
           <div class="logo">
-            <h1><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+              <h1><a href="../index.html"><img src="./images/audition/logoWhite.png" alt="로고"></a></h1>
+
+              <div class="mobileLogo">
+                  <a href="../index.html"><img src="./images/audition/logo.png" alt="로고"></a>
+              </div>
           </div><!-- logo end -->
 
           <div class="mobileBtn">
-            <span></span>
-            <span></span>
-            <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
           </div>
-
+          
           <nav class="mainMenu">
-            <ul class="gnb">
-              <li><a href="#">COMPANY</a></li>
-              <li><a href="#">ARTISTS</a></li>
-              <li><a href="#">NOTICE</a></li>
-              <li><a href="#">AUDITION</a></li>
-            </ul>
-          </nav>
+              <ul class="gnb">
+                <li><a href="sub/company/about.html">COMPANY</a></li>
+                <li><a href="sub/artists/artists.html">ARTISTS</a></li>
+                <li><a href="sub/notice/notice.html">NOTICE</a></li>
+                <li><a href="sub/audition/audition.html">AUDITION</a></li>
+              </ul>
+            </nav>
 
-          <div class="loginSignup">
-            <ul>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Sign up</a></li> 
-            </ul>
+            <div class="loginSignup">
+              <ul>
+                <li><a href="sub/login.html">Login</a></li>
+                <li><a href="sub/singUp.html">Sign up</a></li> 
+              </ul>
           </div>
-        </div> <!-- confix -->
+      </div> <!-- headerConfix -->
       </div><!-- logoMenu end -->
     </header>
       
@@ -51,6 +56,7 @@
       <article>
         <div class="parallax z1">
           <h2>COMPANY</h2>
+          <div class="scrollDown"><strong>Down</strong></div>
         </div>
       </article>
 
@@ -81,86 +87,101 @@
               </div> <!-- cultureTitle -->
               
               <div class="cultureList">
-                <div class="box rice">
-                  <img src="images/rice.png" alt="밥">
-                  <p>한국 사람은 밥심!<br>맛있는 간식도 함께!<br><strong>식대 및 간식 제공</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/riceHover.png" alt="히든밥">
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/rice.png" alt="밥">
                     <p>한국 사람은 밥심!<br>맛있는 간식도 함께!<br><strong>식대 및 간식 제공</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- rice -->
 
-                <div class="box bus">
-                  <img src="images/bus.png" alt="버스">
-                  <p>풍성한 명절을<br>보낼 수 있는<br><strong>선물과 귀향비</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/busHover.png" alt="히든버스">
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/riceHover.png" alt="히든밥">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/bus.png" alt="버스">
                     <p>풍성한 명절을<br>보낼 수 있는<br><strong>선물과 귀향비</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- bus -->
 
-                <div class="box gifts">
-                  <img src="images/gifts.png" alt="선물상자">
-                  <p>당신은 사랑받기 위해<br>태어난 사람<br><strong>생일 선물비 지원</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/giftsHover.png" alt="히든선물">
-                    <p>당신은 사랑받기 위해<br>태어난 사람<br><strong>생일 선물비 지원</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- gifts -->
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/busHover.png" alt="히든버스">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
 
-                <div class="box cake">
-                  <img src="images/cake.png" alt="케이크">
-                  <p>생일은 뭐하는 날?<br>즐겁게 노는 날!<br><strong>생일 휴가 1일 추가</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/cakeHover.png" alt="히든케이크">
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/gifts.png" alt="선물상자">
+                    <p>당신은 사랑받기 위해<br>태어난 사람<br><strong>생일 선물비 지원</strong></p>  
+
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/giftsHover.png" alt="히든선물">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/cake.png" alt="케이크">
                     <p>생일은 뭐하는 날?<br>즐겁게 노는 날!<br><strong>생일 휴가 1일 추가</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- cake -->
 
-                <div class="box airplane">
-                  <img src="images/airplane.png" alt="비행기">
-                  <p>즐거운 휴가를<br>보낼 수 있도록,<br><strong>휴가 보너스 지급</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/airplaneHover.png" alt="히든비행기">
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/cakeHover.png" alt="히든케이크">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/airplane.png" alt="비행기">
                     <p>즐거운 휴가를<br>보낼 수 있도록,<br><strong>휴가 보너스 지급</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- airplane -->
 
-                <div class="box team">
-                  <img src="images/team.png" alt="사람들">
-                  <p>함께해서<br>더 즐거운 문화 생활!<br><strong>솔트 데이</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/teamHover.png" alt="히든사람들">
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/airplaneHover.png" alt="히든비행기">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/team.png" alt="사람들">
                     <p>함께해서<br>더 즐거운 문화 생활!<br><strong>솔트 데이</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- team -->
 
-                <div class="box hospital">
-                  <img src="images/hospital.png" alt="병원">
-                  <p>무엇보다<br>건강이 최고죠,<br><strong>종합 건강 검진비 지원</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/hospitalHover.png" alt="히든병원">
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/teamHover.png" alt="히든사람들">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/hospital.png" alt="병원">
                     <p>무엇보다<br>건강이 최고죠,<br><strong>종합 건강 검진비 지원</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- hospital -->
 
-                <div class="box money">
-                  <img src="images/money.png" alt="머니">
-                  <p>매년 12월,<br>수고한 당신에게!<br><strong>연말 보너스 지급</strong></p>
-                  <div class="hiden">
-                    <span></span><span></span><span></span><span></span>
-                    <img src="images/moneyHover.png" alt="히든머니">
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/hospitalHover.png" alt="히든병원">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
+
+                <div class="boxList">
+                  <div class="box">
+                    <img src="images/money.png" alt="머니">
                     <p>매년 12월,<br>수고한 당신에게!<br><strong>연말 보너스 지급</strong></p>
-                  </div> <!-- hiden -->
-                </div> <!-- money -->
 
+                    <div class="hiden">
+                      <span></span><span></span><span></span><span></span>
+                      <img src="images/moneyHover.png" alt="히든머니">
+                    </div> <!-- hiden -->
+                  </div> <!-- box -->
+                </div> <!-- boxList -->
               </div> <!-- cultureList -->
             </div> <!-- culture -->
           </div> <!-- confix -->
