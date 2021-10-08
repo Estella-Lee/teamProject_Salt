@@ -95,7 +95,7 @@
 
     .mainImg img {
         width: 100%;
-        min-height: 700px;
+        margin-top: 55px;
     }
     .description .descTxt  {
         font-size: 1.5rem;
@@ -374,14 +374,14 @@
     .loginSignup li>a {
         color: #000;
     }
+
+    .mainImg img {
+        width: 100%;
+        margin-top: 55px;
+    }
 }
 
 @media screen and (max-width:425px)  {
-    .mainImg img {
-        width: 100%;
-        min-height: 400px;
-    }
-
     .profile {
         float: none;
         display: flex;
@@ -402,14 +402,14 @@
     }
 
     .photoLine .open img{
-        width: 200px;
-        height: 200px;
-        transform: translate(-20%, 0%);
+        width: 100%;
+        height: auto;
+        /* transform: translate(-20%, 0%); */
     }
 
     .photoLine .open img:hover{
         transform: scale(1.0);
-        transform: translate(-20%, 0%);
+        /* transform: translate(-20%, 0%); */
     }
 
     .video1 {
@@ -418,14 +418,21 @@
     
     .video1 img {
         width: 98%;
-        min-height: 150px;
+        min-height: 120px;
+        object-fit: cover;
     }
 
     .videoLine span {
         position: absolute;
-        top: 114%;
+        top: 125%;
         left: 0%;
         width: 100%;
+        padding-top: 10px;
+        /* padding-bottom: 0px; */
+        font-size: 1.9rem;
     }
 }
 
+@media screen and (max-width:320px) {
+
+}

@@ -37,10 +37,15 @@ $(window).load(function () {
         lastScroll = scrollMove;
     });
 
-
     if (window.matchMedia("(max-width:768px)").matches) {
-        $(".logoMenu2").css("display", "none");
+        $(".logoMenu2").hide();
     }
+
+    $(window).resize(function () {
+        if (window.matchMedia("(max-width:768px)").matches) {
+            $(".logoMenu2").hide();
+        }
+    });
 });
 
 

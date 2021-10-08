@@ -1,6 +1,7 @@
 @charset "utf-8";
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 
@@ -27,7 +28,7 @@ header {
     left: 0;
     height: 75px;
     width: 100%;
-    z-index: 1;
+    z-index: 11;
     /* background-color: #fff; */
 }
 
@@ -314,7 +315,7 @@ input:checked + label {
 .photoLine {
     position: relative;
     top: -350px;
-    z-index: 9999;
+    z-index: 10;
 }
 
 
@@ -335,6 +336,7 @@ input:checked + label {
     width: 100%;
     min-height: 165px;
     height: auto;
+    object-fit: cover;
     transform: scale(1);
     transition: 0.5s;
 }
@@ -443,6 +445,9 @@ footer {
 }
 
 .footerArea {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
