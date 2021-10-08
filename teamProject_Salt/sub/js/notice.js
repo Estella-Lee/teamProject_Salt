@@ -1,7 +1,7 @@
 const newsAllList = document.getElementById('newsAllList');
 const newsList = document.getElementsByClassName('newsList');
 const newsSlideBtn = document.getElementsByClassName('newsSlideBtn');
-const more = document.querySelectorAll('.newsCon .contents a');
+const more = document.querySelectorAll('.newsCon .contents span');
 
 const articleCloseBtn = document.querySelectorAll('.articleFullText .closeBtn');
 const articleFullText = document.querySelectorAll('.articleFullText .fullText');
@@ -45,12 +45,14 @@ for (let i=0; i<noticeList.length; i++) {
 }
 
 function moreArticle(i) {
+    articleFullText[i].style.zIndex = '1000';
     articleFullText[i].style.transform = 'translateY(0%)';
     articleFullText[i].style.overflowY = 'scroll';
     document.body.style.overflowY = 'hidden';
 }
 
 function moreNotice(i) {
+    noticeFullText[i].style.zIndex = '1000';
     noticeFullText[i].style.transform = 'translateY(0%)';
     noticeFullText[i].style.overflowY = 'scroll';
     document.body.style.overflowY = 'hidden';
@@ -132,3 +134,16 @@ moreBtn.onclick = () => {
         listChange(7);
     }
 }
+
+
+
+// 모바일 슬라이드
+$(function() {
+    $(document).ready(function () {
+        var owl = $('.owl-carousel'); 
+        owl.owlCarousel({
+            items:1,                 
+            loop:true            
+        });
+    })
+})

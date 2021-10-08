@@ -24,6 +24,13 @@ header {
     /* background-color: pink; */
 }
 
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* 로고 */
 .logo {
     float: left;
@@ -251,6 +258,26 @@ footer {
 }
 
 @media screen and (max-width:1024px) { /*======== 1024 =======*/
+    /*========== main ==========*/
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
     /*========== footer ==========*/
     footer {
         padding: 20px 0;
@@ -306,6 +333,10 @@ footer {
         background: #fff;
         overflow: hidden;
         transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
     }
 
     /* mobileBtn */

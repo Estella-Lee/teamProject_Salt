@@ -16,8 +16,7 @@
     clear: both;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
     overflow-x: hidden;
 }
 
@@ -28,6 +27,13 @@ header {
     width: 100%;
     z-index: 1;
     /* background-color: #fff; */
+}
+
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 로고 */
@@ -347,6 +353,25 @@ footer {
 
 @media screen and (max-width:1024px) { /*======== 1024 =======*/
     /*========== main ==========*/
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
     /*==== mainVideo ====*/
     .mainVideo .intro a {
         padding: 13px 20px;
@@ -408,6 +433,10 @@ footer {
         background: #fff;
         overflow: hidden;
         transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
     }
 
     /* mobileBtn */

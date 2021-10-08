@@ -14,8 +14,10 @@
 }
 
 html, body {
+    max-width: 100%;
     font-size: 15px;
     font-family:  'NEXON Lv2 Gothic';
+    scroll-behavior: smooth;
 }
 
 ul, ol, li {

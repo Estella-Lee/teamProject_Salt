@@ -24,6 +24,13 @@ header {
     /* background-color: pink; */
 }
 
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* 로고 */
 .logo {
     float: left;
@@ -184,6 +191,7 @@ main {
 
 .signUp form input[type=checkbox] + label {
     padding-left: 25px;    
+    font-size: 14px;
     background: url(../images/signUp/nonCheck.png) no-repeat;
     cursor: pointer;
 }
@@ -267,7 +275,6 @@ main {
 
 .signUp form .agree>div {
     display: block;
-    padding-top: 20px;
     margin-bottom: 0;
     text-align: left;
 }
@@ -285,15 +292,16 @@ main {
 /* title */
 .agree .title {
     display: flex;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     border-bottom: 1px solid #000;
 }
 
 .agree .title label + img {
     margin-right: 10px;
-    width: 25px;
+    width: 20px;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -317,13 +325,14 @@ main {
 /* allAgree */
 .agree .allAgree {
     display: flex;
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 2px solid #000;
 }
 
-/* over14 */
-.over14 .title {
-    padding-bottom: 25px;
+.signUp form #allAgree + label {
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /*==== button ====*/
@@ -402,6 +411,26 @@ footer {
 
 
 @media screen and (max-width:1024px) { /*======== 1024 =======*/
+    /*========== main ==========*/
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
     /*========== footer ==========*/
     footer {
         padding: 20px 0;
@@ -457,6 +486,10 @@ footer {
         background: #fff;
         overflow: hidden;
         transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
     }
 
     /* mobileBtn */
@@ -565,7 +598,7 @@ footer {
     }
 
     .signUp form input[type=checkbox] + label {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     /* 폼 구역 안 구분 공통 */
@@ -576,6 +609,15 @@ footer {
     .signUp form>div>div p {
         min-width: 100px;
         font-size: 12px;
+    }
+
+    /* title */
+    .agree .title label {
+        height: 16px;
+    }
+
+    .agree .title label + img {
+        width: 16px;
     }
 }
 
@@ -629,11 +671,6 @@ footer {
     }
 
     /*==== agree ==== */
-    /* title */
-    .agree .title label + img {
-        width: 20px;
-    }
-
     /* contents */
     .agree .contents p {
         line-height: 23px;
