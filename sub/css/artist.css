@@ -161,6 +161,7 @@ section h1 {
 
 .item img{
     width:100vw;
+    object-fit: cover;
 }
 
 .container ul{
@@ -709,4 +710,485 @@ footer {
 .artist8English{
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+
+@media screen and (min-width: 1025px) {
+    .artistPhotoArea {
+        height: 5300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 8px;
+        
+    }
+
+    .confix { 
+        position: relative;
+        width: 90%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .wrapper {
+        width: 100vw;
+        overflow: hidden;
+    }
+    .slideContainer {
+        height: 400px;
+    }
+
+    .item{
+        width:100vw;
+        height:600px;
+    }
+    
+    .item img{
+        width:100vw;
+        min-height: 600px;
+    }
+
+    .artistBgText {
+        top: 150px;
+        height: 250px;
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .artistLineUp {
+        clear: both;
+        position: relative;
+        width: 100%;
+        top: -200px;
+        font-size: 2.4rem;
+        z-index: 9999;
+    }
+
+    .artistLineUp ul {
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        margin-top: 370px;
+        width: 100%;
+    }
+
+    .artistLineUp ul li {
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        padding: 0;
+        padding-top: 12px;
+        /* background-color: lightgray; */
+    }
+
+    .artistLineUp ul li> a {
+        width: 90%;
+        height: 90%;
+        /* background-color: red; */
+    }
+
+
+    .artistLineUp ul li:first-child a {
+        border-top: none;
+        padding-top: 0px;
+    }
+
+    .artistPhotoArea {
+        position: relative;
+        width: 100%;
+        margin-top: -180px;
+    }
+
+    .artistPhotoArea .confix {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .artist {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 32%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .artist a {
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+    }
+    .artist img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 300px;
+        z-index: 0;
+        object-fit: cover;
+    }
+
+    .artist span  {
+        position: relative;
+        display: block;
+        text-align: center;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 20px;
+        font-size: 2.6rem;
+        z-index: 0;
+        pointer-events: none; 
+        transform: rotate(0);
+    }
+
+
+
+    .bg {
+        display: none;
+    }
+
+
+    /*========== footer ==========*/
+    footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footerArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 푸터로고 */
+    .footerLogo {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .footerLogo h2 img {
+        width: 120px;
+    }
+
+    /* 주소,연락처 */
+    .adrTxt address,
+    .adrTxt span {
+        display: none;
+    }
+
+    /* 카피라이트 */
+    .copyright {
+        margin-bottom: 20px;
+    }
+    
+    /* SNS */
+    .snsArea {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+    .slideContainer {
+        height: 350px;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 55px;
+        z-index: 99;
+    }
+    
+    .item{
+        width:100vw;
+    }
+    
+    .item img{
+        width:100vw;
+        min-height: 400px;
+    }
+    
+    .logoMenu {
+        position: fixed;
+        top: 0;
+        height: 55px;
+        z-index: 2;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    /* mobileBtn */
+    .mobileBtn {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 5%;
+        content: "";
+        padding-top: 25px;
+        cursor: pointer;
+    }
+
+    .mobileBtn span {
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:nth-child(2).closeBar::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:first-child,
+    .mobileBtn span:last-child {
+        transition: all 0.2s;
+    }
+
+    .rotate {
+        transform: rotate(45deg);
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+
+    /* 로고 */
+    .logo {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .logo .mobileLogo {
+        display: block;
+        text-align: center;
+    }
+
+    .logo .mobileLogo img{
+        width: 100px;
+    }
+
+    /* 메인메뉴 */
+    .mainMenu .gnb {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        height: auto;
+        line-height: 45px;
+        background: #fff;
+        transition: all 0.3s;
+    }
+
+    .gnb li {
+        width: 100%;
+    }
+
+    .gnb li>a {
+        color: #000;
+        width: 100%;
+    }
+
+    .gnb li a::after {
+        display: none;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup {
+        position: relative;
+        top: 0;
+        margin: 10px 0 0;
+        font-weight: bold;
+        line-height: 0;
+        z-index: 2;
+    }
+
+    .loginSignup ul {
+        justify-content: center;
+    }
+
+    .loginSignup li>a {
+        color: #000;
+    }
+
+    .confix { 
+        position: relative;
+        width: 90%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .artistBgText {
+        top: 130px;
+        height: 25%;
+        display: block;
+        margin-bottom: 0px;
+        z-index: 1;
+    }
+
+    .artistBgText h2 {
+        display: none;
+    }
+    .artistBgText p {
+        font-size: 17vw;
+    }
+
+    .artistLineUp {
+        position: relative;
+        width: 100%;
+        top: -15px;
+        font-size: 2.4rem;
+        z-index: 1;
+    }
+
+    .artistLineUp ul {
+        float: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        margin-top: 270px;
+        width: 100%;
+    }
+
+    .artistLineUp ul li {
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        padding: 0;
+        padding-top: 25px;
+
+    }
+
+    .artistLineUp ul li> a {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .artistLineUp ul li:first-child a {
+        border-top: none;
+        padding-top: 0px;
+    }
+
+    .artistPhotoArea {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .artistPhotoArea .confix {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .artist {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 49%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .artist a {
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+    }
+    .artist img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .artist span  {
+        position: relative;
+        display: block;
+        text-align: center;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 20px;
+        font-size: 2.6rem;
+        z-index: 1;
+        pointer-events: none; 
+        transform: rotate(0);
+    }
+}
+
+@media screen and (max-width:425px)  {
+
+    .slideContainer {
+        height: 250px;
+        margin-top: 55px;
+    }
+    .artist {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 99%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .artist a {
+        overflow: hidden;
+        width: 100%;
+        height: 60%;
+    }
+    .artist img {
+        object-fit: cover;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 }
