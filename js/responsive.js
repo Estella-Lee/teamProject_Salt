@@ -7,7 +7,8 @@ $(document).ready(function () {
         margin:25,
         responsive : {
             0 : {
-                items : 3,
+                items: 3,
+                margin: 15
             },
             768 : {
                 items : 4,

@@ -410,17 +410,7 @@ input {
     transition: .6s; 
 }
 
-#slide_1:checked ~ .contentDetails .content_1,
-#slide_2:checked ~ .contentDetails .content_2,
-#slide_3:checked ~ .contentDetails .content_3,
-#slide_4:checked ~ .contentDetails .content_4,
-#slide_5:checked ~ .contentDetails .content_5,
-#slide_6:checked ~ .contentDetails .content_6 {
-    opacity: 1;
-    margin-left: 0;
-    z-index: 100;
-    transition-delay: .3s;
-}
+
 
 .content .contentTtl {
     font-size: 30px;
@@ -451,7 +441,7 @@ input {
     letter-spacing: 1px;
     border-radius: 50px;
     background: #1f4da0;
-    white-space: normal;
+    opacity: 0;
 }
 
 .content a:hover {
@@ -459,6 +449,29 @@ input {
     color: #1f4da0;
 }
 
+#slide_1:checked ~ .contentDetails .content_1,
+#slide_2:checked ~ .contentDetails .content_2,
+#slide_3:checked ~ .contentDetails .content_3,
+#slide_4:checked ~ .contentDetails .content_4,
+#slide_5:checked ~ .contentDetails .content_5,
+#slide_6:checked ~ .contentDetails .content_6 {
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: .3s;
+}
+
+#slide_1:checked ~ .contentDetails a,
+#slide_2:checked ~ .contentDetails a,
+#slide_3:checked ~ .contentDetails a,
+#slide_4:checked ~ .contentDetails a,
+#slide_5:checked ~ .contentDetails a,
+#slide_6:checked ~ .contentDetails a {
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: .3s;
+}
 
 /* Our artists */
 .ourArtists .ttl {
@@ -782,6 +795,14 @@ footer {
         line-height: 30px;
     }
 
+    
+    /* 컨텐츠 공통 - 제목 */
+    .ttl {
+        margin-bottom: 2vw;
+        margin-top: 10vw;
+        font-size: 28px;
+    }
+
     /* latest release */
     .slider {
         margin-bottom: 20px;
@@ -840,10 +861,6 @@ footer {
     }
 
     /* our artists */
-    .ourArtists .ttl {
-        margin-top: 150px;
-    }
-
     .artistList li a::before {
         position: absolute;
         top: 85%;
@@ -895,12 +912,16 @@ footer {
 
     .followList .followCnt {
         flex-basis: 33.333333%;
-        margin-bottom: 3%; 
+        margin-bottom: 5%; 
         padding: 0.3%;
     }
 
     .followCnt a {
         width: 95%;
+    }
+
+    .instaAdd {
+        margin-top: 12px;
     }
 
 
@@ -1097,17 +1118,31 @@ footer {
         font-size: 2.8vw;
     }
 
+    /* 메인 텍스트 */
+    .aboutSalt {
+        margin-top: 55px;
+    }
+
     .aboutSalt p {
-        width: 90%;
+        width: 88%;
         margin: 0 auto;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 28px;
     }
 
     .ttl {
         margin-bottom: 4vw;
         margin-top: 18vw;
-        font-size: 22px;
+        font-size: 21px;
+    }
+
+    .ttl::before {
+        content: "";
+        display: block;
+        margin-bottom: 8px;
+        width: 80px;
+        height: 6px;
+        background-color: #1f4da0;
     }
 
     /* latest release */
@@ -1141,7 +1176,7 @@ footer {
     }
 
     .content .contentTtl {
-        font-size: 21px;
+        font-size: 20px;
         margin: 0 0 10px 0;
     }
     
@@ -1156,6 +1191,7 @@ footer {
     
     .content a {
         border-radius: 50px;
+        font-size: 14px;
         background: #1f4da0;
     }
     
@@ -1167,7 +1203,7 @@ footer {
 
     /* our artists */
     .ourArtists .ttl {
-        margin-top: 150px;
+        margin-top: 130px;
     }
 
     .ourArtists .artistList {
@@ -1209,7 +1245,7 @@ footer {
     
     .sharingTxt h3 {
         cursor: pointer;
-        font-size: 19px;
+        font-size: 17px;
     }
     
     .sharingTxt .link02 {
@@ -1220,6 +1256,7 @@ footer {
     .followList {
         width: 100vw;
         padding: 0 2vw;
+        padding-bottom: 30px;
         justify-content: flex-start;
     }
 
@@ -1234,12 +1271,189 @@ footer {
     }
 
     .instaAdd {
-        margin-top: 10px;
+        margin-top: 8px;
     }
 }
 
 
-/*==== 모바일용 css 425이하 ====*/
+/*==== 모바일용 css (425이하) ====*/
 @media screen and (max-width: 424px) {
+    /* 메인 텍스트 */
+    .aboutSalt {
+        margin-top: 50px;
+    }
 
+    .aboutSalt p {
+        width: 88%;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .ttl {
+        margin-bottom: 4vw;
+        margin-top: 14vw;
+        font-size: 19px;
+    }
+
+    .ttl::before {
+        margin-bottom: 7px;
+        width: 55px;
+        height: 5px;
+    }
+
+    /* latest release */
+    .slider {
+        margin-bottom: 10px;
+    }
+
+    @keyframes move {
+        from{ left: -50px; }/* 초기 */
+        to{ left: 50px; } /* 마지막 */
+    }
+
+    .circle01 {
+        width: 140px;
+        height: 140px;
+        margin-top: 40px;
+        line-height: 40px;
+    }
+
+    .circle02 {
+        width: 70px;
+        height: 70px;
+        margin-top: 20px;
+        line-height: 20px;
+    }
+
+    .content {
+        margin-top: 5%;
+        width: 50%;
+        padding-left: 4%;
+    }
+
+    .content .contentTtl {
+        font-size: 17px;
+        margin: 0 0 7px 0;
+    }
+
+    .content span {
+        padding-top: 4px;
+        font-size: 10px;
+    }
+
+    .content p {
+        padding-bottom: 8px;
+        font-size: 11px;
+        text-align: justify;
+    }
+
+    .content a {
+        border-radius: 50px;
+        font-size: 10px;
+    }
+
+
+    .contentDetails .img {
+        top: 5%;
+        right: 7%;
+        width: 35%;
+        z-index: 2;
+    }
+    
+    /* our artists */
+    .ourArtists .ttl {
+        margin-top: 75px;
+    }
+
+    .artistList li {
+        height: 43vw;
+        overflow: hidden;
+    }
+
+    .artistList li a::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background: #6f6f6f;
+        content: "";
+        opacity: .5;
+    }
+
+    .artistList h3 {
+        top: 54%;
+        font-size: 2.5vw;
+        opacity: 1;
+    }
+
+    /* salt sharing */
+    .sharingList li {
+        flex-basis: 100%;
+        padding: 0 2%;
+        margin-bottom: 22px;
+    }
+
+    .sharingTxt {
+        width: 90%;
+    }
+
+    .sharingTxt h3 {
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+
+    .sharingTxt p {
+        font-size: 12px;
+        line-height: 18px;
+        padding-bottom: 20px;
+    }
+
+    .sharingTxt .link02 {
+        display: block;
+    }
+
+    /* follow us */
+    .followList {
+        width: 100vw;
+        padding: 0 2vw;
+        padding-bottom: 30px;
+        justify-content: flex-start;
+    }
+
+    .followList .followCnt {
+        flex-basis: 45.80%;
+        margin-bottom: 6%; 
+        padding: 0.2%;
+    }
+
+    .followCnt a {
+        width: 85%;
+    }
+
+    .instaAdd {
+        margin-top: 6px;
+        font-size: 13px;
+    }
+    /*========== footer ==========*/
+    /* 카피라이트 */
+    .copyright {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*==== 모바일용 css (320) ====*/
+@media screen and (max-width: 420px) {
+    /*========== footer ==========*/
+    /* 카피라이트 */
+    .copyright {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 }

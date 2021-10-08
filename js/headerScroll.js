@@ -8,7 +8,7 @@ $(window).on('load', function() {
         "position" : "fixed",
         "top" : "0",
         "opacity" : "0",
-        "zIndex" : "999999",
+        "zIndex" : "999",
         "transition" : "all 0.3s"
     })
 
@@ -39,7 +39,7 @@ $(window).on('load', function() {
 
     $(window).resize(function () {
         if (window.matchMedia("(max-width:768px)").matches) {
-            $(".logoMenu2").css("display", "none");
+            $(".logoMenu2").hide();
         }
     });
 });
