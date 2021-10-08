@@ -1,0 +1,431 @@
+@media screen and (max-width:1320px) {
+    html {
+        font-size: 9px;
+    }
+    /* ================film================= */
+
+    .film {
+        margin-top: 50px;
+    }
+
+    input {
+        display: none;
+    }
+    .rightArrow {
+        display: none;
+    }
+    .rightArrow img {
+        transform: rotate(270deg);
+        width: 14px;
+    }
+
+    label {
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+        width: 32%;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'NEXON Lv2 Gothic Bold';
+        border-bottom: 5px solid black;
+    }
+
+
+
+    label:hover {
+        cursor: pointer;
+        border-bottom: 5px solid #1f4da0;
+    }
+
+    input:checked + label {
+        border-bottom: 5px solid #1f4da0;
+    }
+
+    .career {
+        display: none;
+        float: none;
+        position: relative;
+        margin-bottom: 100px;
+        top: 0;
+        left: 0;
+        font-size: 1.4rem;
+        width: 100%;
+        height: 550px;
+    }
+
+    .career ul{
+        position: absolute;
+        top: 0;
+        transform: translateY(0%);
+        width: 100%;
+        height: 200px;
+        overflow-y: scroll;
+        text-indent: 10px;
+        border-radius: 10px;
+        background-color: rgb(238, 238, 238);
+    }
+    .career ul li {
+        width: 100%;
+        margin: 12px 0px;
+        color: #383838;
+    }
+
+    #movie:checked ~ #movieText,
+    #drama:checked ~ #dramaText,
+    #etc:checked ~ #etcText {
+        display: block;
+    }  
+
+    .videoLine .video1::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1024px) { /*======== 1024 =======*/
+    html {
+        font-size: 9px;
+    }
+    .confix { 
+        position: relative;
+        width: 90%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .mainImg img {
+        width: 100%;
+        min-height: 700px;
+    }
+    .description .descTxt  {
+        font-size: 1.5rem;
+    }
+    .rightBox {
+        margin-top: 200px;
+        margin-left: 0px;
+    }
+
+    .profile {
+        float: none;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 200px;
+    }
+    
+    .profile> h1 {
+        font-size: 3rem;
+        font-family: 'NEXON Lv2 Gothic Bold';
+        letter-spacing: -1px;
+    }
+    
+    .profile p {
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+    }
+    
+    .profileLeftBox span, .profileRightBox span {
+        display: block;
+        margin-bottom: 12px;
+        letter-spacing: -1px;
+    }
+    
+    .profile a {
+        margin-top: 45px;
+        display: inline-block;
+        padding-top: 20px;
+        border-top: 10px solid #1f4da0;
+        color: #535353;
+    }
+
+    .profileRightBox {
+        text-align: right;
+    }
+    
+    .share {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
+        font-family: 'NEXON Lv2 Gothic Bold';
+    }
+    
+    .profile button {
+        background: none ; 
+        border:none; 
+        padding:0; 
+        color: #535353;
+        cursor:pointer;
+    }
+
+    .description {
+        padding-top: 100px;
+    }
+
+    .videoWrapper2 {
+        margin-top: 100px;
+    }
+
+    .videoLine span {
+        position: absolute;
+        top: 110%;
+        left: 0%;
+        width: 100%;
+        text-align: center;
+        transform: translate(0%);
+        font-size: 2.2rem;
+        color: black;
+        opacity: 1;
+        z-index: 5;
+        transition: none;
+    }
+    
+    .videoLine .date {
+        position: absolute;
+        top: 103%;
+        left: 0%;
+        transform: translate(0%);
+        font-size: 1.4rem;
+        color: black;
+        opacity: 1;
+        z-index: 5;
+        transition: none;
+    }
+
+    .videoLine .more, .videoLine .close {
+        margin-top: 65px;
+        float: right;
+        border:none; 
+        padding:0; 
+        background: none;
+    }
+
+
+    /*========== footer ==========*/
+    footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footerArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 푸터로고 */
+    .footerLogo {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .footerLogo h2 img {
+        width: 120px;
+    }
+
+    /* 주소,연락처 */
+    .adrTxt address,
+    .adrTxt span {
+        display: none;
+    }
+
+    /* 카피라이트 */
+    .copyright {
+        margin-bottom: 20px;
+    }
+    
+    /* SNS */
+    .snsArea {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:768px) { /*======== 768 =======*/
+    /*========== header ==========*/
+    header {
+        position: relative;
+        height: 55px;
+        z-index: 99;
+    }
+
+    .description .descTxt {
+        width: 100%;
+        padding-right: 30px;
+    }
+    
+    .logoMenu {
+        position: fixed;
+        top: 0;
+        height: 55px;
+        z-index: 2;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    /* mobileBtn */
+    .mobileBtn {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 5%;
+        content: "";
+        padding-top: 25px;
+        cursor: pointer;
+    }
+
+    .mobileBtn span {
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:nth-child(2).closeBar::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:first-child,
+    .mobileBtn span:last-child {
+        transition: all 0.2s;
+    }
+
+    .rotate {
+        transform: rotate(45deg);
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+
+    /* 로고 */
+    .logo {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .logo .mobileLogo {
+        display: block;
+        text-align: center;
+    }
+
+    .logo .mobileLogo img{
+        width: 100px;
+    }
+
+    /* 메인메뉴 */
+    .mainMenu .gnb {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        height: auto;
+        line-height: 45px;
+        background: #fff;
+        transition: all 0.3s;
+    }
+
+    .gnb li {
+        width: 100%;
+    }
+
+    .gnb li>a {
+        color: #000;
+        width: 100%;
+    }
+
+    .gnb li a::after {
+        display: none;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup {
+        position: relative;
+        top: 0;
+        margin: 10px 0 0;
+        font-weight: bold;
+        line-height: 0;
+        z-index: 2;
+    }
+
+    .loginSignup ul {
+        justify-content: center;
+    }
+
+    .loginSignup li>a {
+        color: #000;
+    }
+}
+
+@media screen and (max-width:425px)  {
+    .mainImg img {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .profile {
+        float: none;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 150px;
+    }
+
+    .description {
+        padding-top: 0px;
+    }
+
+    .photoLine .open {
+        overflow: hidden;
+        width: 32%;
+        height: 33%;
+        cursor: pointer;
+    }
+
+    .photoLine .open img{
+        width: 200px;
+        height: 200px;
+        transform: translate(-20%, 0%);
+    }
+
+    .photoLine .open img:hover{
+        transform: scale(1.0);
+        transform: translate(-20%, 0%);
+    }
+
+    .video1 {
+        position: relative;
+    }
+    
+    .video1 img {
+        width: 98%;
+        min-height: 150px;
+    }
+
+    .videoLine span {
+        position: absolute;
+        top: 114%;
+        left: 0%;
+        width: 100%;
+    }
+}
+

@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
-    <meta name="Author" content="Estella">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="ycs">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="stylesheet" href="./css/responsive_detail.css">
+    <script src="./js/jquery.js"></script>
     <title>Jang Do-Ha</title>
 </head>
 
@@ -46,14 +47,17 @@
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Jang Do-Ha</h1>
-                        <p>장도하</p>
-                        <span>1995년 2월 19일</span>
-                        <span>182cm</span>
-
-                        <a href="https://www.instagram.com/jangdoha_/" target="_blank">instagram</a>
-                        <span class="share">Share this page</span>
-                        <button>Copy URL</button>
+                        <div class="profileLeftBox">
+                            <h1>Jang Do-Ha</h1>
+                            <p>장도하</p>
+                            <span>1995년 2월 19일</span>
+                            <span>182cm</span>
+                        </div>
+                        <div class="profileRightBox">
+                            <a href="https://www.instagram.com/jangdoha_/" target="_blank">instagram</a>
+                            <span class="share">Share this page</span>
+                            <button onclick="clip()">Copy URL</button>
+                        </div>
                     </aside>
                     <div class="rightBox">
                         <article class="description">
@@ -114,7 +118,7 @@
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div class="imgWrapper">
-                                <div class="open1">
+                                <div class="open open1">
                                     <img src="images/Jang_Do_Ha/detail1.jpg" alt="">
                                 </div>
                                 <div class="modal1 hidden">
@@ -123,7 +127,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open2">
+                                <div class="open open2">
                                     <img src="images/Jang_Do_Ha/detail2.jpg" alt="">
                                 </div>
                                 <div class="modal2 hidden">
@@ -132,7 +136,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open3">
+                                <div class="open open3">
                                     <img src="images/Jang_Do_Ha/detail3.jpg" alt="">
                                 </div>
                                 <div class="modal3 hidden">
@@ -143,7 +147,7 @@
                             </div>
 
                             <div class="imgWrapper2 hidden">
-                                <div class="open4">
+                                <div class="open open4">
                                     <img src="images/Jang_Do_Ha/detail4.jpg" alt="">
                                 </div>
                                 <div class="modal4 hidden">
@@ -152,7 +156,7 @@
                                     </div>
                                 </div>
 
-                                <div class=" open5">
+                                <div class="open open5">
                                     <img src="images/Jang_Do_Ha/detail5.jpg" alt="">
                                 </div>
                                 <div class="modal5 hidden">
@@ -161,7 +165,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open6">
+                                <div class="open open6">
                                     <img src="images/Jang_Do_Ha/detail6.jpg" alt="">
                                 </div>
                                 <div class="modal6 hidden">
@@ -173,6 +177,7 @@
                             <button class="more"><img src="images/expand-button.png" alt=""></button>
                             <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+                        <!--photoLine end-->
 
 
                         <div class="videoLine">
@@ -195,28 +200,20 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="videoWrapper2 hidden">
-                                <div class="">
-                                    <a href="https://www.youtube.com/watch?v=9ecnAiIYH-w&feature=emb_title&ab_channel=%ED%8B%B0%EB%A5%B4%ED%8B%B0%EB%A5%B4TIRTIR"
-                                        target="_blank" class="video1">
-                                        <img src="images/Jang_Do_Ha/video3.jpg" alt="">
-                                        <span class="date">2020.01.10</span>
-                                        <span>'TIRTIR' 광고</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="more"><img src="images/expand-button.png" alt=""></button>
-                            <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+                        <!--videoLine end-->
                     </div>
+                    <!--rightBox end-->
                 </div>
+                <!--confix end-->
             </div>
+            <!--wrap end-->
         </main>
 
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -263,6 +260,9 @@
         </footer>
     </div><!-- container end -->
     <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/copy_url.js"></script>
+    <script src="./js/mobile.js"></script>
 </body>
 
 </html>

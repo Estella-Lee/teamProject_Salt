@@ -4,38 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
-    <meta name="Author" content="Estella">
+    <meta name="Author" content="ycs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="stylesheet" href="./css/responsive_detail.css">
+    <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/copy_url.js"></script>
+    <script src="./js/mobile.js"></script>
     <title>Kim Ji-Won</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+            <div class="logoMenu">
+                <div class="confix">
+                    <div class="logo">
+                        <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                        <div class="mobileLogo">
+                            <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                        </div>
+                    </div><!-- logo end -->
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="artist.html">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+                    <div class="mobileBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
+                    <nav class="mainMenu">
+                        <ul class="gnb">
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="./artist.html">ARTISTS</a></li>
+                            <li><a href="./notice.html">NOTICE</a></li>
+                            <li><a href="./audition.html">AUDITION</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="loginSignup">
+                        <ul>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./signUp.html">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- confix -->
             </div><!-- logoMenu end -->
         </header>
 
@@ -43,26 +60,34 @@
             <div class="mainImg">
                 <img src="images/Kim_Ji_Won/main_detail.jpg" alt="">
             </div>
+            <!--mainImg end-->
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Kim Ji-Won</h1>
-                        <p>김지원</p>
-                        <span>1992년 10월 19일</span>
-                        <span>163cm</span>
-
-                        <a href="https://www.instagram.com/geewonii/" target="_blank">instagram</a>
-                        <span class="share">Share this page</span>
-                        <button>Copy URL</button>
+                        <div class="profileLeftBox">
+                            <h1>Kim Ji-Won</h1>
+                            <p>김지원</p>
+                            <span>1992년 10월 19일</span>
+                            <span>163cm</span>
+                        </div>
+                        <div class="profileRightBox">
+                            <a href="https://www.instagram.com/geewonii/" target="_blank">instagram</a>
+                            <span class="share">Share this page</span>
+                            <button onclick="clip()">Copy URL</button>
+                        </div>
                     </aside>
+                    <!--profile End-->
                     <div class="rightBox">
                         <article class="description">
                             <p class="subtitle">Actor</p>
                             <h2>다채롭고 아름다운 배우. 김지원</h2>
                             <p class="descTxt">
-                                김지원은 봄꽃같다. 대세를 뛰어넘은 인기에 대해서는 활짝 핀 꽃과 같은 미소로 기쁨을 대신했고, 배우로서의 계획에 대해 물었을 때에는 겨우내 찬바람을 견딘
-                                나무처럼 흔들림없는 주관으로 마음을 움직이는 답변들을 전했다. 진솔한 답변들 속에는 연기에 대한 진지한 자세와 가족, 주변사람들을 생각하는 따뜻함이 스며
-                                나왔다. 봄에 피는 꽃들은 그냥 지나칠 수 없는 아름다움을 가지고 있다. '인터뷰하기 위해 꾸미고 나온 것만으로도 봄나들이 온 것 같다'고 웃는 김지원은 그
+                                김지원은 봄꽃같다. 대세를 뛰어넘은 인기에 대해서는 활짝 핀 꽃과 같은 미소로 기쁨을 대신했고, 배우로서의 계획에 대해 물었을 때에는 겨우내 찬바람을
+                                견딘
+                                나무처럼 흔들림없는 주관으로 마음을 움직이는 답변들을 전했다. 진솔한 답변들 속에는 연기에 대한 진지한 자세와 가족, 주변사람들을 생각하는 따뜻함이
+                                스며
+                                나왔다. 봄에 피는 꽃들은 그냥 지나칠 수 없는 아름다움을 가지고 있다. '인터뷰하기 위해 꾸미고 나온 것만으로도 봄나들이 온 것 같다'고 웃는
+                                김지원은 그
                                 자체가 봄꽃같았다. 포근한 봄날, 김지원의 배우 인생에도 꽃이 만발했다.
                             </p>
                         </article>
@@ -120,7 +145,7 @@
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div class="imgWrapper">
-                                <div class="open1">
+                                <div class="open open1">
                                     <img src="images/Kim_Ji_Won/detail1.jpg" alt="">
                                 </div>
                                 <div class="modal1 hidden">
@@ -129,7 +154,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open2">
+                                <div class="open open2">
                                     <img src="images/Kim_Ji_Won/detail2.jpg" alt="">
                                 </div>
                                 <div class="modal2 hidden">
@@ -138,7 +163,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open3">
+                                <div class="open open3">
                                     <img src="images/Kim_Ji_Won/detail3.jpg" alt="">
                                 </div>
                                 <div class="modal3 hidden">
@@ -149,7 +174,7 @@
                             </div>
 
                             <div class="imgWrapper2 hidden">
-                                <div class="open4">
+                                <div class="open open4">
                                     <img src="images/Kim_Ji_Won/detail4.jpg" alt="">
                                 </div>
                                 <div class="modal4 hidden">
@@ -158,7 +183,7 @@
                                     </div>
                                 </div>
 
-                                <div class=" open5">
+                                <div class="open open5">
                                     <img src="images/Kim_Ji_Won/detail5.jpg" alt="">
                                 </div>
                                 <div class="modal5 hidden">
@@ -167,7 +192,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open6">
+                                <div class="open open6">
                                     <img src="images/Kim_Ji_Won/detail6.jpg" alt="">
                                 </div>
                                 <div class="modal6 hidden">
@@ -179,6 +204,7 @@
                             <button class="more"><img src="images/expand-button.png" alt=""></button>
                             <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+                        <!--rightBox end-->
 
 
                         <div class="videoLine">
@@ -223,15 +249,19 @@
                             <button class="more"><img src="images/expand-button.png" alt=""></button>
                             <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
                         </div>
+                        <!--videoLine-->
                     </div>
+                    <!--videoLine end-->
                 </div>
+                <!--confix end-->
             </div>
+            <!--wrap end-->
         </main>
 
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -277,7 +307,6 @@
             </div><!-- footerArea -->
         </footer>
     </div><!-- container end -->
-    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 
 </html>

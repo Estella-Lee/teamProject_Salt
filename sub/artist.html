@@ -8,201 +8,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/artist.css" type="text/css">
-    <link rel="stylesheet" href="./css/animation.css" type="text/css">
+    <link rel="stylesheet" href="./css/animation.css" type="text/css" media="screen and (min-width:1024px)">
+    <link rel="stylesheet" href="./css/responsive.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/jquery.js"></script>
     <title>Artists</title>
 </head>
 
 <body>
     <div id="container">
-        <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
-
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="#">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
-
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
-            </div><!-- logoMenu end -->
-        </header>
-
-        <main>
-            <section class="card">
-                <h1>메인 이미지</h1>
-                <div class="card_part card_part-one"></div>
-                <div class="card_part card_part-two"></div>
-                <div class="card_part card_part-three"></div>
-                <div class="card_part card_part-four"></div>
-            </section>
-
-            <section class="artistCon">
-                <h1>아티스트</h1>
-                <div class="artistBgText">
-                    <h2>SALT ENTERTAINMENT</h2>
-                    <p>ARTIST</p>
-                </div>
-
-                <aside class="artistLineUp">
+        <div id="container">
+            <header>
+                <div class="logoMenu">
                     <div class="confix">
-                        <ul>
-                            <li><a href="artist1_detail.html">김정화</a></li>
-                            <li><a href="artist2_detail.html">박신혜</a></li>
-                            <li><a href="artist3_detail.html">김지원</a></li>
-                            <li><a href="artist4_detail.html">김선호</a></li>
-                            <li><a href="artist5_detail.html">김주헌</a></li>
-                            <li><a href="artist6_detail.html">홍승범</a></li>
-                            <li><a href="artist7_detail.html">이준경</a></li>
-                            <li><a href="artist8_detail.html">장도하</a></li>
+                        <div class="logo">
+                            <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                            <div class="mobileLogo">
+                                <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                            </div>
+                        </div><!-- logo end -->
+
+                        <div class="mobileBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <nav class="mainMenu">
+                            <ul class="gnb">
+                                <li><a href="#">COMPANY</a></li>
+                                <li><a href="./artist.html">ARTISTS</a></li>
+                                <li><a href="./notice.html">NOTICE</a></li>
+                                <li><a href="./audition.html">AUDITION</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="loginSignup">
+                            <ul>
+                                <li><a href="./login.html">Login</a></li>
+                                <li><a href="./signUp.html">Sign up</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- confix -->
+                </div><!-- logoMenu end -->
+            </header>
+
+            <main>
+                <section class="wrapper">
+                    <h1>메인 이미지</h1>
+                    <div class="slideContainer">
+                        <ul class="slider">
+                            <li class="item"><img src="./images/mainImg1.jpg" alt=""></li>
+                            <li class="item"><img src="./images/mainImg2.jpg" alt=""></li>
+                            <li class="item"><img src="./images/mainImg3.jpg" alt=""></li>
+                            <li class="item"><img src="./images/mainImg4.jpg" alt=""></li>
                         </ul>
                     </div>
-                </aside>
+                </section>
 
-                <section class="artistPhotoArea">
-                    <h1>아티스트 사진목록</h1>
-                    <div class="confix">
-                        <div class="artist1" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist1_detail.html"><img src="images/Kim_Jung_Hwa/artist1.jpg"
-                                    alt="Kim_Jung_Hwa"></a>
-                            <div class="artist1Bg" onclick="location.href='artist1_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist1Korean">김정화</span>
-                            <span class="artist1English">KIM JUNG HWA</span>
-                        </div>
-
-                        <div class="artist2" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist2_detail.html"><img src="images/Park_Shin_Hye/4.jpg" alt=""></a>
-                            <div class="artist2Bg" onclick="location.href='artist2_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist2Korean">박신혜</span>
-                            <span class="artist2English">PARK SIN HYE</span>
-                        </div>
-
-                        <div class="artist3" data-aos="fade-up" data-aos-duration="1000">
-                            <a href=" artist3_detail.html"><img src="images/Kim_Ji_Won/artist3.jpg" alt=""></a>
-                            <div class="artist3Bg" onclick="location.href='artist3_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist3Korean">김지원</span>
-                            <span class="artist3English">KIM JI WON</span>
-                        </div>
-
-                        <div class="artist4" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist4_detail.html"><img src="images/Kim_Seon_Ho/artist4.jpg" alt=""></a>
-                            <div class="artist4Bg" onclick="location.href='artist4_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist4Korean">김선호</span>
-                            <span class="artist4English">KIM SUN HO</span>
-                        </div>
-
-                        <div class="artist5" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist5_detail.html"><img src="images/Kim_Ju_Hun/artist5.jpg" alt=""></a>
-                            <div class="artist5Bg" onclick="location.href='artist5_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist5Korean">김주헌</span>
-                            <span class="artist5English">KIM JU HUN</span>
-                        </div>
-
-                        <div class="artist6" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist6_detail.html"><img src="images/Hong_Seung_Bum/artist6.jpg" alt=""></a>
-                            <div class="artist6Bg" onclick="location.href='artist6_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist6Korean">홍승범</span>
-                            <span class="artist6English">HONG SEUNG BUM</span>
-                        </div>
-
-                        <div class="artist7" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist7_detail.html"><img src="images/Lee_Jun_Kyung/artist7.jpg" alt=""></a>
-                            <div class="artist7Bg" onclick="location.href='artist7_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist7Korean">이준경</span>
-                            <span class="artist7English">LEE JUN KYUNG</span>
-                        </div>
-
-                        <div class="artist8" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="artist8_detail.html"><img src="images/Jang_Do_Ha/artist8.jpg" alt=""></a>
-                            <div class="artist8Bg" onclick="location.href='artist8_detail.html'"
-                                style="cursor: pointer;">
-                            </div>
-                            <span class="artist8Korean">장도하</span>
-                            <span class="artist8English">JANG DO HA</span>
-                        </div>
+                <section class="artistCon">
+                    <h1>아티스트</h1>
+                    <div class="artistBgText">
+                        <h2>SALT ENTERTAINMENT</h2>
+                        <p>ARTIST</p>
                     </div>
-                </section> <!-- artistPhotoArea -->
-            </section> <!-- artistCon -->
-        </main>
 
-    <footer>
-        <div class="footerArea confix">
-            <div class="footerLogo">
-                <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
-            </div>
+                    <aside class="artistLineUp">
+                        <div class="confix">
+                            <ul>
+                                <li><a href="artist1_detail.html">김정화</a></li>
+                                <li><a href="artist2_detail.html">박신혜</a></li>
+                                <li><a href="artist3_detail.html">김지원</a></li>
+                                <li><a href="artist4_detail.html">김선호</a></li>
+                                <li><a href="artist5_detail.html">김주헌</a></li>
+                                <li><a href="artist6_detail.html">홍승범</a></li>
+                                <li><a href="artist7_detail.html">이준경</a></li>
+                                <li><a href="artist8_detail.html">장도하</a></li>
+                            </ul>
+                        </div>
+                    </aside>
 
-            <div class="adrTxt">
-                <address><strong>(주) 솔트엔터테인먼트</strong> 04791 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호(성수동1가 13-12)
-                </address>
-                <span><b>이메일</b> : salt_ent@naver.com</span>
-                <span><b>대표 전화</b> : 070-8129-0513</span>
-                <p class="copyright">Copyright &copy; <strong>SALT Entertainment.</strong> All rights reserved.</p>
-            </div><!-- adrTxt end -->
+                    <section class="artistPhotoArea">
+                        <h1>아티스트 사진목록</h1>
+                        <div class="confix">
+                            <div class="artist artist1" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist1_detail.html"><img src="images/Kim_Jung_Hwa/artist1.jpg"
+                                        alt="Kim_Jung_Hwa"></a>
+                                <div class="artist1Bg bg" onclick="location.href='artist1_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist1Korean">김정화</span>
+                                <span class="artist1English">KIM JUNG HWA</span>
+                            </div>
 
-            <div class="snsArea confix">
-                <ul class="snsList">
-                    <li>
-                        <a href="https://www.instagram.com/salt_ent/" target="_blank"><img src="images/instagram.png"
-                                alt="instagram"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/salt0513/" target="_blank"><img src="images/facebook.png"
-                                alt="facebook"></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/2013_SALT" target="_blank"><img src="images/twitter.png"
-                                alt="twitter"></a>
-                    </li>
-                    <li>
-                        <a href="https://m.post.naver.com/profile.nhn?authorId=salt_ent" target="_blank"><img
-                                src="images/naver.png" alt="naver"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.vlive.tv/channel/B818E3" target="_blank"><img src="images/v.png"
-                                alt="v"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCMMVbKz97CxrFMvGZZmT4kw" target="_blank"><img
-                                src="images/youtube.png" alt="youtube"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@salt_ent?" target="_blank"><img src="images/tiktok.png"
-                                alt="tiktok"></a>
-                    </li>
-                </ul>
-            </div><!-- snsArea end -->
-        </div><!-- footerArea -->
-    </footer>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
-        AOS.init();
-    </script>
+                            <div class="artist artist2" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist2_detail.html"><img src="images/Park_Shin_Hye/4.jpg" alt=""></a>
+                                <div class="artist2Bg bg" onclick="location.href='artist2_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist2Korean">박신혜</span>
+                                <span class="artist2English">PARK SIN HYE</span>
+                            </div>
+
+                            <div class="artist artist3" data-aos="fade-up" data-aos-duration="1000">
+                                <a href=" artist3_detail.html"><img src="images/Kim_Ji_Won/artist3.jpg" alt=""></a>
+                                <div class="artist3Bg bg" onclick="location.href='artist3_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist3Korean">김지원</span>
+                                <span class="artist3English">KIM JI WON</span>
+                            </div>
+
+                            <div class="artist artist4" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist4_detail.html"><img src="images/Kim_Seon_Ho/artist4.jpg" alt=""></a>
+                                <div class="artist4Bg bg" onclick="location.href='artist4_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist4Korean">김선호</span>
+                                <span class="artist4English">KIM SUN HO</span>
+                            </div>
+
+                            <div class="artist artist5" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist5_detail.html"><img src="images/Kim_Ju_Hun/artist5.jpg" alt=""></a>
+                                <div class="artist5Bg bg" onclick="location.href='artist5_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist5Korean">김주헌</span>
+                                <span class="artist5English">KIM JU HUN</span>
+                            </div>
+
+                            <div class="artist artist6" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist6_detail.html"><img src="images/Hong_Seung_Bum/artist6.jpg" alt=""></a>
+                                <div class="artist6Bg bg" onclick="location.href='artist6_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist6Korean">홍승범</span>
+                                <span class="artist6English">HONG SEUNG BUM</span>
+                            </div>
+
+                            <div class="artist artist7" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist7_detail.html"><img src="images/Lee_Jun_Kyung/artist7.jpg" alt=""></a>
+                                <div class="artist7Bg bg" onclick="location.href='artist7_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist7Korean">이준경</span>
+                                <span class="artist7English">LEE JUN KYUNG</span>
+                            </div>
+
+                            <div class="artist artist8" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="artist8_detail.html"><img src="images/Jang_Do_Ha/artist8.jpg" alt=""></a>
+                                <div class="artist8Bg bg" onclick="location.href='artist8_detail.html'"
+                                    style="cursor: pointer;">
+                                </div>
+                                <span class="artist8Korean">장도하</span>
+                                <span class="artist8English">JANG DO HA</span>
+                            </div>
+                        </div>
+                    </section> <!-- artistPhotoArea -->
+                </section> <!-- artistCon -->
+            </main>
+
+            <footer>
+                <div class="footerArea confix">
+                    <div class="footerLogo">
+                        <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    </div>
+
+                    <div class="adrTxt">
+                        <address><strong>(주) 솔트엔터테인먼트</strong> 04791 서울특별시 성동구 광나루로 190, 이에스에이리버하우스 B동 908호(성수동1가 13-12)
+                        </address>
+                        <span><b>이메일</b> : salt_ent@naver.com</span>
+                        <span><b>대표 전화</b> : 070-8129-0513</span>
+                        <p class="copyright">Copyright &copy; <strong>SALT Entertainment.</strong> All rights reserved.
+                        </p>
+                    </div><!-- adrTxt end -->
+
+                    <div class="snsArea confix">
+                        <ul class="snsList">
+                            <li>
+                                <a href="https://www.instagram.com/salt_ent/" target="_blank"><img
+                                        src="images/instagram.png" alt="instagram"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/salt0513/" target="_blank"><img
+                                        src="images/facebook.png" alt="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/2013_SALT" target="_blank"><img src="images/twitter.png"
+                                        alt="twitter"></a>
+                            </li>
+                            <li>
+                                <a href="https://m.post.naver.com/profile.nhn?authorId=salt_ent" target="_blank"><img
+                                        src="images/naver.png" alt="naver"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.vlive.tv/channel/B818E3" target="_blank"><img src="images/v.png"
+                                        alt="v"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCMMVbKz97CxrFMvGZZmT4kw" target="_blank"><img
+                                        src="images/youtube.png" alt="youtube"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@salt_ent?" target="_blank"><img src="images/tiktok.png"
+                                        alt="tiktok"></a>
+                            </li>
+                        </ul>
+                    </div><!-- snsArea end -->
+                </div><!-- footerArea -->
+            </footer>
+            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+            <script>AOS.init();</script>
+            <script src="./js/slide.js"></script>
+            <script src="./js/mobile.js"></script>
+            <script src="./js/headerScroll.js"></script>
 </body>
 
 </html>

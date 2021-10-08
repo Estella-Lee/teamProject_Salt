@@ -1,6 +1,3 @@
-
-
-
 /* ========modal1=========== */
 .modal1 {
     position: fixed;
@@ -164,7 +161,6 @@
     border:none; 
     padding:0; 
     background: none;
-
 }
 
 .more img, .close img {
@@ -186,6 +182,7 @@
 .appear {
     animation: fade-in 0.5s;
     animation-fill-mode: forwards;
+    display: flex;
 }
 
 .disappear {

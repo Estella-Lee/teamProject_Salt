@@ -4,38 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
-    <meta name="Author" content="Estella">
+    <meta name="Author" content="ycs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="stylesheet" href="./css/responsive_detail.css">
+    <script src="./js/jquery.js"></script>
     <title>Hong Seung-Bum</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+            <div class="logoMenu">
+                <div class="confix">
+                    <div class="logo">
+                        <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                        <div class="mobileLogo">
+                            <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                        </div>
+                    </div><!-- logo end -->
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="artist.html">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+                    <div class="mobileBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
+                    <nav class="mainMenu">
+                        <ul class="gnb">
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="./artist.html">ARTISTS</a></li>
+                            <li><a href="./notice.html">NOTICE</a></li>
+                            <li><a href="./audition.html">AUDITION</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="loginSignup">
+                        <ul>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./signUp.html">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- confix -->
             </div><!-- logoMenu end -->
         </header>
 
@@ -46,14 +59,18 @@
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Hong Seung-Bum</h1>
-                        <p>홍승범</p>
-                        <span>1991년 12월 28일</span>
-                        <span>171cm</span>
+                        <div class="profileLeftBox">
+                            <h1>Hong Seung-Bum</h1>
+                            <p>홍승범</p>
+                            <span>1991년 12월 28일</span>
+                            <span>171cm</span>
+                        </div>
+                        <div class="profileRightBox">
 
-                        <a href="https://www.instagram.com/hongseungbum_/" target="_blank">instagram</a>
-                        <span class="share">Share this page</span>
-                        <button>Copy URL</button>
+                            <a href="https://www.instagram.com/hongseungbum_/" target="_blank">instagram</a>
+                            <span class="share">Share this page</span>
+                            <button onclick="clip()">Copy URL</button>
+                        </div>
                     </aside>
                     <div class="rightBox">
                         <article class="description">
@@ -110,7 +127,7 @@
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div class="imgWrapper">
-                                <div class="open1">
+                                <div class="open open1">
                                     <img src="images/Hong_Seung_Bum/detail1.jpg" alt="">
                                 </div>
                                 <div class="modal1 hidden">
@@ -119,7 +136,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open2">
+                                <div class="open open2">
                                     <img src="images/Hong_Seung_Bum//detail2.jpg" alt="">
                                 </div>
                                 <div class="modal2 hidden">
@@ -128,7 +145,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open3">
+                                <div class="open open3">
                                     <img src="images/Hong_Seung_Bum//detail3.jpg" alt="">
                                 </div>
                                 <div class="modal3 hidden">
@@ -139,7 +156,7 @@
                             </div>
 
                             <div class="imgWrapper2 hidden">
-                                <div class="open4">
+                                <div class="open open4">
                                     <img src="images/Hong_Seung_Bum//detail4.jpg" alt="">
                                 </div>
                                 <div class="modal4 hidden">
@@ -148,7 +165,7 @@
                                     </div>
                                 </div>
 
-                                <div class=" open5">
+                                <div class="open open5">
                                     <img src="images/Hong_Seung_Bum//detail5.jpg" alt="">
                                 </div>
                                 <div class="modal5 hidden">
@@ -157,7 +174,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open6">
+                                <div class="open open6">
                                     <img src="images/Hong_Seung_Bum//detail6.jpg" alt="">
                                 </div>
                                 <div class="modal6 hidden">
@@ -175,10 +192,20 @@
                             <h2>VIDEO</h2>
                             <div class="videoWrapper">
                                 <div>
-                                    <a href="https://tv.naver.com/v/21927893" target="_blank" class="video1">
+                                    <a href="https://tv.naver.com/v/21927893" target="_blank" class="video1"
+                                        id="HSBVideo1">
                                         <img src="images/Hong_Seung_Bum/video1.jpg" alt="">
                                         <span class="date">2021.09.24</span>
                                         <span>영화 '쇼미더고스트'</span>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=7Qnmh6Fs12w&ab_channel=saluteforrookies%EC%8B%A0%EC%9D%B8%EC%97%90%EA%B2%8C%EA%B2%BD%EB%B0%B0%EB%A5%BC"
+                                        target="_blank" class="video1">
+                                        <img src="images/Hong_Seung_Bum/video2.PNG" alt="">
+                                        <span class="date">2019.4.23</span>
+                                        <span>콘텐츠와이 배우 홍승범 인터뷰</span>
                                     </a>
                                 </div>
                             </div>
@@ -191,7 +218,7 @@
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -238,6 +265,9 @@
         </footer>
     </div><!-- container end -->
     <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/copy_url.js"></script>
+    <script src="./js/mobile.js"></script>
 </body>
 
 </html>

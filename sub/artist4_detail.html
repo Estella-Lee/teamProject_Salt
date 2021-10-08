@@ -10,32 +10,45 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="stylesheet" href="./css/responsive_detail.css">
+    <script src="./js/jquery.js"></script>
     <title>Kim Seon-Ho</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+            <div class="logoMenu">
+                <div class="confix">
+                    <div class="logo">
+                        <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                        <div class="mobileLogo">
+                            <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                        </div>
+                    </div><!-- logo end -->
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="artist.html">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+                    <div class="mobileBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
+                    <nav class="mainMenu">
+                        <ul class="gnb">
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="./artist.html">ARTISTS</a></li>
+                            <li><a href="./notice.html">NOTICE</a></li>
+                            <li><a href="./audition.html">AUDITION</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="loginSignup">
+                        <ul>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./signUp.html">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- confix -->
             </div><!-- logoMenu end -->
         </header>
 
@@ -46,14 +59,17 @@
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Kim Seon Ho</h1>
-                        <p>김선호</p>
-                        <span>1986년 5월 8일</span>
-                        <span>183cm</span>
-
-                        <a href="https://www.instagram.com/seonho__kim/" target="_blank">instagram</a>
-                        <span class="share">Share this page</span>
-                        <button>Copy URL</button>
+                        <div class="profileLeftBox">
+                            <h1>Kim Seon Ho</h1>
+                            <p>김선호</p>
+                            <span>1986년 5월 8일</span>
+                            <span>183cm</span>
+                        </div>
+                        <div class="profileRightBox">
+                            <a href="https://www.instagram.com/seonho__kim/" target="_blank">instagram</a>
+                            <span class="share">Share this page</span>
+                            <button onclick="clip()">Copy URL</button>
+                        </div>
                     </aside>
                     <div class="rightBox">
                         <article class="description">
@@ -73,11 +89,11 @@
                             <label for="movie">MOVIE<span class="rightArrow"><img src="images/expand-button.png"
                                         alt=""></span></label>
 
-                            <input id="drama" type="radio" name="tabs">
+                            <input id="drama" type="radio" name="tabs" checked>
                             <label for="drama">DRAMA<span class="rightArrow"><img src="images/expand-button.png"
                                         alt=""></span></label>
 
-                            <input id="etc" type="radio" name="tabs" checked>
+                            <input id="etc" type="radio" name="tabs">
                             <label for="etc">etc<span class="rightArrow"><img src="images/expand-button.png"
                                         alt=""></span></label>
 
@@ -128,7 +144,7 @@
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div class="imgWrapper">
-                                <div class="open1">
+                                <div class="open open1">
                                     <img src="images/Kim_Seon_Ho/detail6.jpg" alt="">
                                 </div>
                                 <div class="modal1 hidden">
@@ -137,7 +153,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open2">
+                                <div class="open open2">
                                     <img src="images/Kim_Seon_Ho/detail5.jpg" alt="">
                                 </div>
                                 <div class="modal2 hidden">
@@ -146,7 +162,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open3">
+                                <div class="open open3">
                                     <img src="images/Kim_Seon_Ho/detail4.jpg" alt="">
                                 </div>
                                 <div class="modal3 hidden">
@@ -157,7 +173,7 @@
                             </div>
 
                             <div class="imgWrapper2 hidden">
-                                <div class="open4">
+                                <div class="open open4">
                                     <img src="images/Kim_Seon_Ho/detail3.jpg" alt="">
                                 </div>
                                 <div class="modal4 hidden">
@@ -166,7 +182,7 @@
                                     </div>
                                 </div>
 
-                                <div class=" open5">
+                                <div class="open open5">
                                     <img src="images/Kim_Seon_Ho/detail2.jpg" alt="">
                                 </div>
                                 <div class="modal5 hidden">
@@ -175,7 +191,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open6">
+                                <div class="open open6">
                                     <img src="images/Kim_Seon_Ho/detail1.jpg" alt="">
                                 </div>
                                 <div class="modal6 hidden">
@@ -239,7 +255,7 @@
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -286,6 +302,9 @@
         </footer>
     </div><!-- container end -->
     <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/copy_url.js"></script>
+    <script src="./js/mobile.js"></script>
 </body>
 
 </html>

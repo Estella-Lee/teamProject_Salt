@@ -1,12 +1,16 @@
 @charset "utf-8";
+html {
+    font-size: 10px;
+}
+
 
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    height: 100%;
 }
 
 .vBox::before, .vBox::after {
@@ -20,18 +24,18 @@
 header {
     position: absolute;
     top: 0;
-    left: 50%;
-    z-index: 99;
-    transform: translateX(-50%);
+    left: 0;
     height: 75px;
     width: 100%;
-    background: rgba(255,255,255,0.3);
+    z-index: 1;
+    /* background-color: #fff; */
 }
 
 /* 로고 */
 .logo {
     float: left;
     width: 180px;
+    width: 15%;
     margin-top: 15px;
     margin-right: 20px;
 }
@@ -40,37 +44,68 @@ header {
     width: 130px;
 }
 
+.logo .mobileLogo {
+    display: none;
+}
+
+/* mobileBtn */
+.mobileBtn {
+    display: none;
+}
+
 /* 메인메뉴 */
 .mainMenu .gnb {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 820px;
+    width: 68.333%;
     height: 75px;
     line-height: 75px;
 }
 
-.gnb li{
+.gnb li {
     width: 180px;
+    width: 22.304%;
     margin: 0 10px;
     text-align: center;
 }
 
 .gnb li>a {
-    font-size: 16px;
+    position: relative;
+    font-size: 1.6rem;
     font-weight: bold;
+    transition: all 0.4s;
+    color: #fff;
 }
 
 .gnb li:hover a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1.7rem;
 }
+
+.gnb li a::after {
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 2px;
+    width: 0;
+    transition: all 0.4s;
+    background-color: #1f4da0;
+}
+
+.gnb li:hover a::after {
+    width: 100%;
+}
+
 
 /* 로그인, 회원가입 */
 .loginSignup {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
-    transform: translateY(-50%);
+    line-height: 50px;
+    /* transform: translateY(-50%); */
 }
 
 .loginSignup ul{
@@ -82,13 +117,13 @@ header {
 }
 
 .loginSignup li>a {
-    font-size: 12px;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 .loginSignup li:hover a {
     font-weight: bold;
 }
-
 
 /*=============== main============= */
 .mainImg {
@@ -113,8 +148,8 @@ header {
     top: 200px;
 }
 
-.profile> h1 {
-    font-size: 30px;
+.profile h1 {
+    font-size: 3rem;
     font-family: 'NEXON Lv2 Gothic Bold';
     letter-spacing: -1px;
 }
@@ -123,11 +158,11 @@ header {
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: -1px;
 }
 
-.profile>span {
+.profileLeftBox span, .profileRightBox span {
     display: block;
     margin-bottom: 12px;
     letter-spacing: -1px;
@@ -144,7 +179,7 @@ header {
 .share {
     margin-top: 30px;
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
@@ -166,7 +201,7 @@ header {
 }
 
 .description .subtitle {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -182,12 +217,15 @@ header {
 }
 
 .description h2 {
-    font-size: 28px;
+    font-size: 2.8rem;
     margin-bottom: 30px;
 }
 
 .description .descTxt {
     line-height: 30px;
+    height: 150px;
+    /* width: 80%; */
+    overflow-y: scroll;
 }
 
 /* ================film================= */
@@ -212,7 +250,7 @@ label {
     padding-bottom: 10px;
     margin-bottom: 40px;
     width: 265px;
-    font-size: 20px;
+    font-size: 2rem;
     font-family: 'NEXON Lv2 Gothic Bold';
     border-bottom: 5px solid black;
 }
@@ -234,7 +272,7 @@ input:checked + label {
     bottom: 390px;
     right: 40px;
     float: right;
-    font-size: 14px;
+    font-size: 1.4rem;
     width: 400px;
     height: 550px;
     /* background-color: red; */
@@ -267,40 +305,33 @@ input:checked + label {
 
 .photoLine h2,
 .videoLine h2 {
-    font-size: 20px;
+    font-size: 2.0rem;
     margin-bottom: 30px;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-.imgWrapper {
-    display: flex;
-    justify-content: space-between;
-}
 
 .photoLine {
     position: relative;
     top: -350px;
+    z-index: 9999;
 }
 
 
-.photoLine .open1,
-.photoLine .open2,
-.photoLine .open3,
-.photoLine .open4,
-.photoLine .open5,
-.photoLine .open6{
+.photoLine .open{
     overflow: hidden;
-    width: 250px;
+    width: 32%;
     height: 165px;
     cursor: pointer;
 }
 
-.photoLine .open1 img,
-.photoLine .open2 img,
-.photoLine .open3 img,
-.photoLine .open4 img,
-.photoLine .open5 img,
-.photoLine .open6 img {
+.imgWrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.photoLine .open img{
     width: 100%;
     min-height: 165px;
     height: auto;
@@ -309,12 +340,7 @@ input:checked + label {
 }
 
 
-.photoLine .open1 img:hover,
-.photoLine .open2 img:hover,
-.photoLine .open3 img:hover,
-.photoLine .open4 img:hover,
-.photoLine .open5 img:hover,
-.photoLine .open6 img:hover {
+.photoLine .open img:hover{
     transform: scale(1.05);
 }
 
@@ -330,11 +356,12 @@ input:checked + label {
 .videoLine {
     position: relative;
     top: -250px;
-    width: 786px;
+    z-index: 0;
 }
 .videoWrapper {
     display: flex;
     justify-content: space-between;
+
 }
 
 .videoWrapper2 {
@@ -347,10 +374,11 @@ input:checked + label {
     position: relative;
 }
 
-.video1>img {
-    width: 381px;
-    height: 204px;
+.video1 img {
+    width: 98%;
+    min-height: 204px;
 }
+
 
 .videoLine span {
     position: absolute;
@@ -359,7 +387,7 @@ input:checked + label {
     width: 100%;
     text-align: center;
     transform: translate(-50%);
-    font-size: 22px;
+    font-size: 2.2rem;
     color: white;
     opacity: 0;
     z-index: 5;
@@ -371,7 +399,7 @@ input:checked + label {
     top: 65%;
     left: 50%;
     transform: translate(-50%);
-    font-size: 14px;
+    font-size: 1.4rem;
     color: white;
     opacity: 0;
     z-index: 5;
@@ -383,8 +411,8 @@ input:checked + label {
     position: absolute;
     top: 0;
     left: 0;
-    width: 381px;
-    height: 204px;
+    width: 98%;
+    height: 100%;
     background-color: black;
     opacity: 0;
     transition: 0.5s;
@@ -400,29 +428,29 @@ input:checked + label {
 }
 
 
-
-
-
-
-
-/* ==================footer================== */
-
+/*========== footer area ==========*/
 footer {
     position: relative;
-    height: 140px;
+    width: 100vw;
+    padding: 33px 0;
+    min-height: 140px;
     line-height: 23px;
     border-top: 1px solid #bdbdbd;
     font-size: 12px;
+    word-break: keep-all;
     color: #6f6f6f;
     background-color: #f5f5f5;
 }
 
+.footerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 /* 푸터로고 */
 .footerLogo {
-    float: left;
     width: 180px;
-    margin-top: 36px;
     margin-right: 20px;
 }
 
@@ -431,18 +459,12 @@ footer {
 }
 
 /* 주소,연락처 */
-.adrTxt {
-    float: left;
-    margin-top: 36px;
-}
-
 .adrTxt strong {
     padding-right: 10px;
 }
 
 .adrTxt span {
     padding-right: 35px;
-    font-size: 12px;
 }
 
 /* 카피라이트 */
@@ -451,9 +473,9 @@ footer {
 }
 
 /* SNS */
-.snsArea .snsList {
-    float: right;
-    margin-top: 36px;
+.snsArea {
+    width: 240px;
+    padding: 0;
 }
 
 .snsList li {
@@ -464,3 +486,4 @@ footer {
 .snsList li img {
     width: 15px;
 }
+

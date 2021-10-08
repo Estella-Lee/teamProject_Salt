@@ -1,12 +1,15 @@
 @charset "utf-8";
+html {
+    font-size: 10px;
+}
 
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    height: 100%;
 }
 
 .vBox::before, .vBox::after {
@@ -19,20 +22,17 @@
 /*========== header area ==========*/
 header {
     position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 99;
-    transform: translateX(-50%);
     height: 75px;
     width: 100%;
     z-index: 9999;
-    background: rgba(255,255,255,0.3);
+    /* background-color: #fff; */
 }
 
 /* 로고 */
 .logo {
     float: left;
     width: 180px;
+    width: 15%;
     margin-top: 15px;
     margin-right: 20px;
 }
@@ -41,37 +41,68 @@ header {
     width: 130px;
 }
 
+.logo .mobileLogo {
+    display: none;
+}
+
+/* mobileBtn */
+.mobileBtn {
+    display: none;
+}
+
 /* 메인메뉴 */
 .mainMenu .gnb {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 820px;
+    width: 68.333%;
     height: 75px;
     line-height: 75px;
 }
 
-.gnb li{
+.gnb li {
     width: 180px;
+    width: 22.304%;
     margin: 0 10px;
     text-align: center;
 }
 
 .gnb li>a {
+    position: relative;
     font-size: 16px;
     font-weight: bold;
+    transition: all 0.4s;
+    color: #fff;
 }
 
 .gnb li:hover a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 17px;
 }
+
+.gnb li a::after {
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 2px;
+    width: 0;
+    transition: all 0.4s;
+    background-color: #1f4da0;
+}
+
+.gnb li:hover a::after {
+    width: 100%;
+}
+
 
 /* 로그인, 회원가입 */
 .loginSignup {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
-    transform: translateY(-50%);
+    line-height: 50px;
+    /* transform: translateY(-50%); */
 }
 
 .loginSignup ul{
@@ -83,12 +114,14 @@ header {
 }
 
 .loginSignup li>a {
+    color: #fff;
     font-size: 12px;
 }
 
 .loginSignup li:hover a {
     font-weight: bold;
 }
+
 
 /*============ main ============*/
 main {
@@ -100,61 +133,41 @@ section h1 {
     font-size: 0;
 }
 /* ============ card ========== */
-.card {
+.wrapper{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-  }
-  
-  
-  .card_part {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 7;
-  
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    
-    /* transform: translateX( 700px ); */
-    background-image: url( ../images/mainImg1.jpg);
-    animation: slide 12s linear infinite;
-  }
-  
-  
-  .card_part.card_part-two {
-    z-index: 6;
-    background-image: url( ../images/mainImg2.jpg);
-    animation-delay: 3s;
-  }
-  
-  .card_part.card_part-three {
-    z-index: 5;
-    background-image: url( ../images/mainImg3.jpg );
-    animation-delay: 6s;
-  }
-  
-  .card_part.card_part-four {
-    z-index: 4;
-    background-image: url( ../images/mainImg4.jpg );
-    animation-delay: 9s;
-  }
-  
-  
-  @keyframes slide {
-    3% { transform: translateX( 0 ); }
-    25% { transform: translateX( 0 ); }
-    28% { transform: translateX( -1920px); }
-    100% { transform: translateX( -1920px ); }
-  }
-  
+    overflow: hidden;
+    }
+.slideContainer{
+    width:100vw;
+    height:600px;
+    position: relative;
+    overflow: hidden;
+}
+.slider{
+    display: flex;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+}
+.item{
+    width:100vw;
+    /* height:600px; */
+}
 
+.item img{
+    width:100vw;
+}
 
+.container ul{
+    -webkit-transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+    -o-transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+    transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+}
 
 /* ===========artistBgText============== */
 .artistBgText {
@@ -177,18 +190,18 @@ section h1 {
 
 .artistBgText h2 {
     letter-spacing: 20px;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 .artistBgText p {
-    font-size: 10vw;
+    font-size: 12vw;
 }
 
 /* artistLineUp */
 .artistLineUp {
     position: sticky;
-    top: -200px;
-    font-size: 20px;
+    top: -100px;
+    font-size: 2rem;
     z-index: 1;
 }
 
@@ -211,10 +224,6 @@ section h1 {
 }
 
 /*== artistPhotoArea == */
-.artistPhotoArea {
-    position: relative;
-    height: 5300px;
-}
 
 
 /* artist1 */
@@ -260,7 +269,7 @@ section h1 {
     display: inline-block;
     left: -65px;
     bottom: 620px;
-    font-size: 36px;
+    font-size: 3.6rem;
     font-family: 'NEXON Lv2 Gothic Bold';
     z-index: 1;
     pointer-events: none; 
@@ -307,7 +316,7 @@ section h1 {
     position: relative;
     left: -120px;
     bottom: 770px;
-    font-size: 36px;
+    font-size: 3.6rem;
     z-index: 1;
     pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -354,7 +363,7 @@ section h1 {
     position: relative;
     left: 216px;
     bottom: 925px;
-    font-size: 36px;
+    font-size: 3.6rem;
     z-index: 1;
     pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -402,7 +411,7 @@ section h1 {
     display: inline-block;
     bottom: 710px;
     left: 310px;
-    font-size: 36px;
+    font-size: 3.6rem;
     z-index: 1;
     pointer-events: none; 
     transform: rotate(90deg);
@@ -449,7 +458,7 @@ section h1 {
     position: relative;
     right: 182px;
     bottom: 1000px;
-    font-size: 36px;
+    font-size: 3.6rem;
     z-index: 1;
     pointer-events: none; 
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -495,7 +504,7 @@ section h1 {
     position: relative;
     left: -30px;
     bottom: 855px;
-    font-size: 36px;
+    font-size: 3.6rem;
     pointer-events: none; 
     z-index: 1;
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -542,7 +551,7 @@ section h1 {
     position: relative;
     right: 100px;
     bottom: 630px;
-    font-size: 36px;
+    font-size: 3.6rem;
     pointer-events: none; 
     z-index: 1;
     transform: rotate(-90deg);
@@ -590,7 +599,7 @@ section h1 {
     position: relative;
     bottom: 440px;
     right: 150px;
-    font-size: 36px;
+    font-size: 3.6rem;
     pointer-events: none; 
     z-index: 2;
     font-family: 'NEXON Lv2 Gothic Bold';
@@ -603,20 +612,26 @@ section h1 {
 /*========== footer area ==========*/
 footer {
     position: relative;
-    height: 140px;
+    width: 100vw;
+    padding: 33px 0;
+    min-height: 140px;
     line-height: 23px;
     border-top: 1px solid #bdbdbd;
     font-size: 12px;
+    word-break: keep-all;
     color: #6f6f6f;
     background-color: #f5f5f5;
 }
 
+.footerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 /* 푸터로고 */
 .footerLogo {
-    float: left;
     width: 180px;
-    margin-top: 36px;
     margin-right: 20px;
 }
 
@@ -625,18 +640,12 @@ footer {
 }
 
 /* 주소,연락처 */
-.adrTxt {
-    float: left;
-    margin-top: 36px;
-}
-
 .adrTxt strong {
     padding-right: 10px;
 }
 
 .adrTxt span {
     padding-right: 35px;
-    font-size: 12px;
 }
 
 /* 카피라이트 */
@@ -645,9 +654,9 @@ footer {
 }
 
 /* SNS */
-.snsArea .snsList {
-    float: right;
-    margin-top: 36px;
+.snsArea {
+    width: 240px;
+    padding: 0;
 }
 
 .snsList li {

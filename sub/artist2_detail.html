@@ -4,38 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
-    <meta name="Author" content="Estella">
+    <meta name="Author" content="ycs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="stylesheet" href="./css/responsive_detail.css">
+    <script src="./js/jquery.js"></script>
     <title>Park Shin-Hye</title>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <div class="logoMenu confix">
-                <div class="logo">
-                    <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
-                </div><!-- logo end -->
+            <div class="logoMenu">
+                <div class="confix">
+                    <div class="logo">
+                        <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                        <div class="mobileLogo">
+                            <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                        </div>
+                    </div><!-- logo end -->
 
-                <nav class="mainMenu">
-                    <ul class="gnb">
-                        <li><a href="#">COMPANY</a></li>
-                        <li><a href="artist.html">ARTISTS</a></li>
-                        <li><a href="#">NOTICE</a></li>
-                        <li><a href="#">AUDITION</a></li>
-                    </ul>
-                </nav>
+                    <div class="mobileBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                <div class="loginSignup">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </div>
+                    <nav class="mainMenu">
+                        <ul class="gnb">
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="./artist.html">ARTISTS</a></li>
+                            <li><a href="./notice.html">NOTICE</a></li>
+                            <li><a href="./audition.html">AUDITION</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="loginSignup">
+                        <ul>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./signUp.html">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- confix -->
             </div><!-- logoMenu end -->
         </header>
 
@@ -46,25 +59,32 @@
             <div class="wrap">
                 <div class="confix">
                     <aside class="profile">
-                        <h1>Park Shin-Hye</h1>
-                        <p>박신혜</p>
-                        <span>1990년 2월 18일</span>
-                        <span>168cm</span>
-
-                        <a href="https://www.instagram.com/ssinz7/" target="_blank">instagram</a>
-                        <span class="share">Share this page</span>
-                        <button>Copy URL</button>
+                        <div class="profileLeftBox">
+                            <h1>Park Shin-Hye</h1>
+                            <p>박신혜</p>
+                            <span>1990년 2월 18일</span>
+                            <span>168cm</span>
+                        </div>
+                        <div class="profileRightBox">
+                            <a href="https://www.instagram.com/ssinz7/" target="_blank">instagram</a>
+                            <span class="share">Share this page</span>
+                            <button onclick="clip()">Copy URL</button>
+                        </div>
                     </aside>
-                    <div class="rightBox">
+                    <div class=" rightBox">
                         <article class="description">
                             <p class="subtitle">Actor</p>
                             <h2>한류를 대표하는 배우. 박신혜</h2>
                             <p class="descTxt">
-                                이제는 한류를 대표하는 배우가 된 박신혜는 2003년 SBS 수목드라마 &lt;천국의 계단&gt;에서 '어린 한정서' 역으로 연기자로 데뷔하며 본격적인 SBS
-                                드라마 &lt;미남이시네요&gt;에서 고미남/고미녀 역을 통해 일본 및 중화권에서 그녀의 인지도를 올리며 아시아 여신으로 등극하게 되었고, 2016년 중국이
-                                촬영장에서는 분위기 메이커로 통하며 바쁜 스케줄 속에서도 언제나 씩씩한 박신혜는 사람으로서도 배울 점이 많은 배우이다. 2016년 12월 서문시장 화재 피해
+                                이제는 한류를 대표하는 배우가 된 박신혜는 2003년 SBS 수목드라마 &lt;천국의 계단&gt;에서 '어린 한정서' 역으로 연기자로 데뷔하며
+                                본격적인 SBS
+                                드라마 &lt;미남이시네요&gt;에서 고미남/고미녀 역을 통해 일본 및 중화권에서 그녀의 인지도를 올리며 아시아 여신으로 등극하게 되었고,
+                                2016년 중국이
+                                촬영장에서는 분위기 메이커로 통하며 바쁜 스케줄 속에서도 언제나 씩씩한 박신혜는 사람으로서도 배울 점이 많은 배우이다. 2016년 12월
+                                서문시장 화재 피해
                                 상인들과
-                                밥상공동체 연탄은행을 위해 각각 5천만 원을 기부하였고 이전에 꾸준히 행해왔던 선행활동들도 재조명을 받으며 많은 이들의 찬사를 받았다. 현재까지도 꾸준히
+                                밥상공동체 연탄은행을 위해 각각 5천만 원을 기부하였고 이전에 꾸준히 행해왔던 선행활동들도 재조명을 받으며 많은 이들의 찬사를 받았다.
+                                현재까지도 꾸준히
                                 선행활동을
                                 하고 있으며 이를 통해 사람을 안아줄 줄 아는 모습도 보여주고 있다.
                                 한류 배우로서의 입지도 단단하게 다지며 보다 살기 좋은 세상을 위해 노력하는 박신혜가 앞으로 한류에 끼칠 긍정적인 영향력이 더욱 기대된다.
@@ -134,7 +154,7 @@
                         <div class="photoLine">
                             <h2>PHOTO</h2>
                             <div class="imgWrapper">
-                                <div class="open1">
+                                <div class="open open1">
                                     <img src="images/Park_Shin_Hye/detail1.jpg" alt="">
                                 </div>
                                 <div class="modal1 hidden">
@@ -143,7 +163,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open2">
+                                <div class="open open2">
                                     <img src="images/Park_Shin_Hye/detail2.jpg" alt="">
                                 </div>
                                 <div class="modal2 hidden">
@@ -152,7 +172,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open3">
+                                <div class="open open3">
                                     <img src="images/Park_Shin_Hye/detail3.jpg" alt="">
                                 </div>
                                 <div class="modal3 hidden">
@@ -163,7 +183,7 @@
                             </div>
 
                             <div class="imgWrapper2 hidden">
-                                <div class="open4">
+                                <div class="open open4">
                                     <img src="images/Park_Shin_Hye/detail4.jpg" alt="">
                                 </div>
                                 <div class="modal4 hidden">
@@ -172,7 +192,7 @@
                                     </div>
                                 </div>
 
-                                <div class=" open5">
+                                <div class="open open5">
                                     <img src="images/Park_Shin_Hye/detail5.jpg" alt="">
                                 </div>
                                 <div class="modal5 hidden">
@@ -181,7 +201,7 @@
                                     </div>
                                 </div>
 
-                                <div class="open6">
+                                <div class="open open6">
                                     <img src="images/Park_Shin_Hye/detail6.jpg" alt="">
                                 </div>
                                 <div class="modal6 hidden">
@@ -245,7 +265,7 @@
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="./index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -289,10 +309,12 @@
                     </ul>
                 </div><!-- snsArea end -->
             </div><!-- footerArea -->
-
         </footer>
     </div><!-- container end -->
-    <script src="./js/modal.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/copy_url.js"></script>
+    <script src="./js/mobile.js"></script>
 </body>
 
 </html>
