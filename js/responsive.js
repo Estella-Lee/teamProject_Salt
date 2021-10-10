@@ -48,7 +48,6 @@ function resizeFunction() {
         })
     } else if (window.innerWidth < 1024) { //태블릿
         $(function () {
-        
             // === salt sharing === //
             $(".sharingTxt h3").off("click");
             $(".sharingTxt p").show();
@@ -62,10 +61,6 @@ function resizeFunction() {
             // === salt sharing === //
             $(".sharingTxt h3").off("click");
             $(".sharingTxt p").show();
-            
-            var linkAdd = $(".sharingTxt .link02").attr("href");
-            $(".sharingTxt .link01").attr("href", linkAdd);
-            
         });
     }
 }

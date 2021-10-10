@@ -30,6 +30,14 @@ header {
     z-index: 100;
 }
 
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 /* 로고 */
 .logo {
     float: left;
@@ -315,9 +323,9 @@ main {
     height: 200px;
     margin-top: 60px;
     line-height: 60px;
-    border: 1px solid #1f4da0;
+    border: 1px solid #0f42a9;
     border-radius: 50%;
-    background-color: #1f4da0;
+    background-color: #0f42a9;
     opacity: .3;
     z-index: -1;
     animation-name: move;
@@ -410,8 +418,6 @@ input {
     transition: .6s; 
 }
 
-
-
 .content .contentTtl {
     font-size: 30px;
     font-weight: bold;
@@ -434,6 +440,7 @@ input {
 }
 
 .content a {
+    position: absolute;
     float: left;
     padding: 15px 20px;
     color: #fff;
@@ -441,7 +448,6 @@ input {
     letter-spacing: 1px;
     border-radius: 50px;
     background: #1f4da0;
-    opacity: 0;
 }
 
 .content a:hover {
@@ -467,7 +473,7 @@ input {
 #slide_4:checked ~ .contentDetails a,
 #slide_5:checked ~ .contentDetails a,
 #slide_6:checked ~ .contentDetails a {
-    opacity: 1;
+    display: block;
     margin-left: 0;
     z-index: 100;
     transition-delay: .3s;
@@ -754,6 +760,26 @@ footer {
 
 /*==== 태블릿용 css ====*/
 @media screen and (max-width: 1023px) {
+    /*========== header area ==========*/
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
     /*========== content ==========*/
     /* mianVideo */
      .videoBox video {
@@ -984,6 +1010,10 @@ footer {
         background: #fff;
         overflow: hidden;
         transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
     }
 
     /* mobileBtn */
@@ -1253,6 +1283,10 @@ footer {
     }
 
     /* follow us */
+    .followUs {
+        background-color: #f9f9f9;
+    }
+
     .followList {
         width: 100vw;
         padding: 0 2vw;
