@@ -1,0 +1,1069 @@
+@charset "utf-8";
+
+/* ===== 그리드 시스템 confix ===== */
+.confix { 
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* background-color: gold; */
+}
+
+.vBox::before, .vBox::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/*========== header area ==========*/
+header {
+    height: 75px;
+    /* background-color: pink; */
+}
+
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 로고 */
+.logo {
+    float: left;
+    width: 180px;
+    width: 15%;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.logo h1 img{
+    width: 130px;
+}
+
+/* mobileBtn */
+.mobileBtn {
+    display: none;
+}
+
+/* 메인메뉴 */
+.mainMenu .gnb {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 820px;
+    width: 68.333%;
+    height: 75px;
+    line-height: 75px;
+}
+
+.gnb li {
+    width: 180px;
+    width: 22.304%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.gnb li>a {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+.gnb li:hover a {
+    font-size: 17px;
+}
+
+.gnb li a::after {
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 2px;
+    width: 0;
+    transition: all 0.4s;
+    background-color: #1f4da0;
+}
+
+.gnb li:hover a::after {
+    width: 100%;
+}
+
+
+/* 로그인, 회원가입 */
+.loginSignup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 50px;
+    /* transform: translateY(-50%); */
+}
+
+.loginSignup ul{
+    display: flex;
+}
+
+.loginSignup ul li {
+    padding: 10px 10px 10px 0;
+}
+
+.loginSignup li>a {
+    font-size: 12px;
+}
+
+.loginSignup li:hover a {
+    font-weight: bold;
+}
+
+
+
+/*========== content area ==========*/
+main {
+    padding: 0 3%;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+section>h1 {
+    font-size: 0;
+}
+
+/* title */
+.title {
+    margin: 10% 0 3%;
+    padding-bottom: 10px;
+    width: 11%;
+    border-bottom: 5px solid #000;
+    transition: all 0.3s;
+}
+
+.notice .title {
+    margin-top: 0;
+}
+
+.news:hover .title,
+.notice:hover .title {
+    width: 100%;
+    color: #1f4da0;
+    border-bottom: 5px solid #1f4da0;
+}
+
+.title span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* slideBtn */
+.slideBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+.slideBtn span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #bdbdbd;
+}
+
+.slideBtn span:first-child {
+    background: #6f6f6f;
+}
+
+.slideBtn span:hover {
+    background: #6f6f6f;
+}
+
+/*==== fullText ====*/
+/* fullText */
+.fullText {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: #f9f9f9;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+/* topPart */
+.fullText .topPart {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;  
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    background: #f9f9f9;
+}
+
+/* logo */
+.topPart .logo {
+    width: 130px;
+}
+
+.topPart .logo img {
+    width: 100%;
+}
+
+/* closeBtn */
+.topPart .closeBtn {
+    margin-right: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.topPart .closeBtn:hover {
+    transform: rotate(90deg);
+}
+
+.topPart .closeBtn img {
+    width: 100%;
+}
+
+/* leftRight */
+.fullText .leftRight {
+    display: flex;
+    padding: 5% 10%;
+}
+
+/* left */
+.leftRight .left {
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
+    width: 30%;
+    line-height: 40px;
+    word-break: keep-all;
+    background: #f9f9f9;
+}
+
+.leftRight .left h2 {
+    padding-bottom: 3%;
+}
+
+.leftRight .left .date {
+    font-size: 12px;
+    font-weight: bold;
+    color: #5b5b5b;
+    width: 30%;
+    border-top: 5px solid #1f4da0;
+}
+
+/* right */
+.leftRight .right {
+    width: 70%;
+    padding-left: 5%;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.right .articleContents h3,
+.right .noticeContents h3 {
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.right .articleContents p,
+.right .noticeContents p {
+    margin-bottom: 5%;
+}
+
+.right .articleContents span,
+.right .noticeContents span {
+    display: block;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+
+.right .noticeContents p .red {
+    display: inline;
+    margin-bottom: 0;
+    color: red;
+    font-weight: bold;
+}
+
+.right .articleContents img,
+.right .noticeContents img  {
+    margin: 0 auto;
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+/* original in articleContents */
+.right .original a {
+    margin: 5% 0;
+    padding: 3px 15px;
+    color: #1f4da0;
+    font-weight: bold;
+    border: 3px solid #1f4da0;
+    transition: all 0.3s;
+}
+
+.right .original a:hover {
+    background-color: #1f4da0;
+    color: #fff;
+}
+
+/* nextPrevBtn in noticeContents */
+.right .nextPrevBtn {
+    padding: 10% 0 5%;
+    cursor: pointer;
+}
+
+.right .nextPrevBtn p {
+    display: flex;
+    margin-bottom: 0;
+    padding: 5px 0;
+    width: 100%;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.right .nextPrevBtn p:first-child {
+    border-bottom: none;
+}
+
+.right .nextPrevBtn p span {
+    display: inline;
+    padding: 0 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.right .nextPrevBtn p span:last-child {
+    font-weight: normal;
+}
+
+.right .nextPrevBtn p>a {
+    padding-left: 2%;
+    font-size: 12px;
+}
+
+/*==== news ====*/
+.news .sildeWrapper {
+    display: flex;
+    position: relative;
+    width: 99.9%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.news .sildeWrapper #newsAllList {
+    display: flex;
+    transition: all 1s;
+}
+
+/* newsList */
+.news .newsList {
+    display: flex;
+}
+
+/* newsCon */
+.newsCon {
+    position: relative;
+    width: 590px;
+    line-height: 40px;
+    text-align: justify;
+    background: #fff;
+}
+
+.newsCon:hover {
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+
+.newsCon .contents {
+    position: absolute;
+    top: 50%;
+    padding: 0 12%;
+    transform: translateY(-50%);
+}
+
+.newsCon .contents h2 {
+    margin-bottom: 3%;
+}
+
+.newsCon .contents .newsSentence {
+    margin-bottom: 20px;
+    height: 200px;
+    line-height: 30px;
+    overflow: hidden;
+    /* background: #bdbdbd; */
+}
+
+.newsCon .contents span {
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+.newsCon .contents span:hover {
+    font-weight: bold;
+}
+
+/*==== notice ====*/
+.notice {
+    position: relative;
+    padding-bottom: 2%;
+}
+
+#noticeAllList {
+    height: 730px;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.listPop {
+    animation: listPop 0.5s;
+}
+
+@keyframes listPop {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.noticeList ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2%;
+    text-align: justify;
+    cursor: pointer;
+}
+
+.noticeList ul li {
+    position: relative;
+    margin-bottom: 45px;
+    width: 28%;
+    height: 330px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.noticeList ul li:hover {
+    transform: scale(1.03);
+}
+
+.noticeList ul li h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.noticeList ul li .noticeCon {
+    height: 245px;
+    line-height: 25px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.noticeList ul li .date p {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: #5b5b5b;
+}
+
+.notice .more {
+    margin: 5% 0;
+    text-align: center;
+}
+
+.notice .more span {
+    display: inline-block;
+    padding: 10px 60px;
+    font-weight: bold;
+    color: #1f4da0;
+    border: 1px solid #1f4da0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.notice .more span:hover {
+    border: 3px solid #1f4da0;
+}
+
+/*========== footer area ==========*/
+footer {
+    position: relative;
+    padding: 33px 0;
+    min-height: 140px;
+    line-height: 23px;
+    border-top: 1px solid #bdbdbd;
+    font-size: 12px;
+    word-break: keep-all;
+    color: #6f6f6f;
+    background-color: #f5f5f5;
+}
+
+.footerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: red; */
+}
+
+/* 푸터로고 */
+.footerLogo {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.footerLogo h2 img{
+    width: 150px;
+}
+
+/* 주소,연락처 */
+.adrTxt strong {
+    padding-right: 10px;
+}
+
+.adrTxt span {
+    padding-right: 35px;
+}
+
+/* 카피라이트 */
+.copyright {
+    font-size: 12px;
+}
+
+/* SNS */
+.snsArea {
+    width: 220px;
+    padding: 0;
+}
+
+.snsList li {
+    float: left;
+    padding: 0 8px;
+}
+
+.snsList li img {
+    width: 15px;
+}
+
+
+@media screen and (max-width:1280px) { /*======== 1280 =======*/
+    /*========== main ==========*/
+    /*==== news ====*/
+    /* newsImg */
+    .newsImg img {
+        width: 46.6vw;
+    }
+
+    /* newsCon */
+    .newsCon {
+        width: 45.8vw;
+    }
+
+    /*==== notice ====*/
+    .noticeList ul li .noticeCon {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width:1024px) { /*======== 1024 =======*/
+    /*========== main ==========*/
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
+    /*==== news ====*/
+    /* newsCon */
+    .newsCon .contents h2 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .newsCon .contents .newsSentence {
+        height: 170px;
+        line-height: 30px;
+    }
+
+    .newsCon .contents .newsSentence p {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .newsCon .contents span {
+        font-size: 12px;
+    }
+
+    /* slideBtn */
+    .slideBtn {
+        width: 30%;
+    }
+
+    /*==== notice ====*/
+    #noticeAllList {
+        height: 665px;
+    }
+
+    .noticeList ul li {
+        height: 300px;
+    }
+
+    .noticeList ul li h2 {
+        font-size: 16px;
+    }
+
+    .noticeList ul li .noticeCon {
+        height: 195px;
+    }
+
+    .noticeList ul li .noticeCon p {
+        font-size: 12px;
+    }
+
+    /*========== footer ==========*/
+    footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footerArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 푸터로고 */
+    .footerLogo {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .footerLogo h2 img {
+        width: 120px;
+    }
+
+    /* 주소,연락처 */
+    .adrTxt address,
+    .adrTxt span {
+        display: none;
+    }
+
+    /* 카피라이트 */
+    .copyright {
+        margin-bottom: 20px;
+    }
+    
+    /* SNS */
+    .snsArea {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:870px) { /*======== 870 =======*/
+    /*========== main ==========*/
+    /*==== news ====*/
+    /* newsCon */
+    .newsCon {
+        width: 44.2vw;
+    }
+    
+    .newsCon .contents .newsSentence {
+        margin-bottom: 10px;
+    }
+
+    /*==== notice ====*/
+    .noticeList ul li {
+        height: 280px;
+    }
+
+    .noticeList ul li .noticeCon {
+        height: 170px;
+    }
+}
+
+@media screen and (max-width:768px) { /*======== 768 =======*/
+    /*========== header ==========*/
+    header {
+        position: relative;
+        height: 55px;
+    }
+
+    .logoMenu {
+        position: fixed;
+        top: 0;
+        height: 55px;
+        z-index: 2;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
+    }
+
+    /* mobileBtn */
+    .mobileBtn {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 5%;
+        content: "";
+        padding-top: 25px;
+        cursor: pointer;
+    }
+
+    .mobileBtn span {
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:nth-child(2).closeBar::after {
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 2px;
+        width: 25px;
+        background: #000;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+
+    .mobileBtn span:first-child,
+    .mobileBtn span:last-child {
+        transition: all 0.2s;
+    }
+
+    .rotate {
+        transform: rotate(45deg);
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+
+    /* 로고 */
+    .logo {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .logo h1 {
+        text-align: center;
+    }
+    
+    .logo h1 img{
+        width: 100px;
+    }
+
+    /* 메인메뉴 */
+    .mainMenu .gnb {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        height: auto;
+        line-height: 45px;
+        background: #fff;
+        transition: all 0.3s;
+    }
+
+    .gnb li {
+        width: 100%;
+    }
+
+    .gnb li>a {
+        width: 100%;
+    }
+
+    .gnb li a::after {
+        display: none;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup {
+        position: relative;
+        top: 0;
+        margin: 10px 0 0;
+        font-weight: bold;
+        line-height: 0;
+        z-index: 2;
+    }
+
+    .loginSignup ul {
+        justify-content: center;
+    }
+
+    /*========== main ==========*/
+    .title span {
+        font-size: 25px;
+    }
+
+    /*==== fullText ====*/
+    .fullText .topPart {
+        height: 80px;
+    }
+
+    .topPart .logo img {
+        margin-left: 20px;
+        width: 80%;
+    }
+
+    /* leftRight */
+    .fullText .leftRight {
+        flex-direction: column;
+        padding: 0 10% 5%;
+    }
+
+    /* left */
+    .leftRight .left {
+        width: 100%;
+        top: 11%;
+        padding-top: 3%;
+    }
+
+    /* right */
+    .leftRight .right {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 10%;
+    }
+
+    /*==== news ====*/
+    .news .sildeWrapper {
+        width: 98.9%;
+    }
+
+    /* newsImg */
+    .newsImg img {
+        width: 47.5vw;
+    }
+
+    /* newsCon */    
+    .newsCon .contents .newsSentence {
+        height: 120px;
+        line-height: 30px;
+    }
+
+    /* slideBtn */
+    .slideBtn {
+        width: 40%;
+    }
+
+    .slideBtn span {
+        width: 9px;
+        height: 9px;
+    }
+
+    /*==== notice ====*/
+    #noticeAllList {
+        height: 920px;
+    }
+
+    .noticeList ul li {
+        position: relative;
+        margin-bottom: 45px;
+        width: 45%;
+        height: 260px;
+        transition: all 0.3s;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:640px) { /*======== 640 =======*/
+    /*========== main ==========*/
+    /*==== news ====*/
+    /* newsList */
+    .news .newsList {
+        flex-direction: column;
+    }
+
+    /* newsImg */
+    .newsImg img {
+        width: 100%;
+    }
+
+    /* newsCon */
+    .newsCon {
+        height: 220px;
+        width: 100%;
+    }
+
+    .newsCon .contents {
+        padding: 6%;
+        width: 100%;
+        background: #fff;
+    }
+
+    .newsCon .contents .newsSentence {
+        height: 50px;
+    }
+
+    /* slideBtn */
+    .slideBtn {
+        margin-top: 10%;
+        padding-bottom: 20%;
+    }
+
+    /*==== notice ====*/
+    #noticeAllList {
+        height: 750px;
+    }
+
+    .noticeList ul li {
+        margin-bottom: 25px;
+        padding: 10px 20px;
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .noticeList ul li .noticeCon>p {
+        display: none;
+    }
+
+    .noticeList ul li .date p {
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width:550px) { /*======== 550 =======*/
+    /* nextPrevBtn in noticeContents */
+    .right .nextPrevBtn p>a {
+        width: 270px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:430px) { /*======== 430 =======*/
+    /*========== main ==========*/
+    .title span {
+        font-size: 20px;
+    }
+
+    /*==== fullText ====*/
+    /* left */
+    .leftRight .left h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* right */
+    .right .articleContents h3,
+    .right .noticeContents h3 {
+        font-size: 18px;
+        margin-bottom: 2%;
+    }
+
+    .right .articleContents p,
+    .right .noticeContents p {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .right .articleContents span,
+    .right .noticeContents span {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    /* original in articleContents */
+    .right .original a {
+        margin: 5% 0;
+        padding: 3px 12px;
+        font-size: 13px;
+    }
+
+    .right .original a:hover {
+        background-color: #1f4da0;
+        color: #fff;
+    }
+
+    /* nextPrevBtn in noticeContents */
+    .right .nextPrevBtn p>a {
+        width: 200px;
+    }
+
+    /*==== news ====*/
+    /* newsCon */
+    .newsCon {
+        height: 180px;
+    }
+
+    .newsCon .contents {
+        padding: 8%;
+    }
+
+    .newsCon .contents h2 {
+        font-size: 16px;
+    }
+
+    /* slideBtn */
+    .slideBtn {
+        width: 50%;
+    }
+
+    /*==== notice ====*/
+    .noticeList ul li h2 {
+        font-size: 15px;
+    }
+
+    .notice .more span {
+        padding: 8px 40px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) { /*======== 400 =======*/
+    /* nextPrevBtn in noticeContents */
+    .right .nextPrevBtn p>a {
+        width: 180px;
+    }
+}
