@@ -874,6 +874,10 @@ footer {
     }
 
     /*==== news ====*/
+    .news .sildeWrapper {
+        width: 98.9%;
+    }
+
     /* newsImg */
     .newsImg img {
         width: 47.5vw;
@@ -920,18 +924,18 @@ footer {
 
     /* newsImg */
     .newsImg img {
-        width: 90vw;
+        width: 100%;
     }
 
     /* newsCon */
     .newsCon {
         height: 220px;
-        width: 87vw;
+        width: 100%;
     }
 
     .newsCon .contents {
         padding: 6%;
-        width: 88.5vw;
+        width: 100%;
         background: #fff;
     }
 
@@ -1030,13 +1034,11 @@ footer {
     /*==== news ====*/
     /* newsCon */
     .newsCon {
-        width: 85.3vw;
         height: 180px;
     }
 
     .newsCon .contents {
         padding: 8%;
-        width: 86vw;
     }
 
     .newsCon .contents h2 {
