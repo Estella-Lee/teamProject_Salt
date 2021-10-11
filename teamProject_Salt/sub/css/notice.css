@@ -247,7 +247,7 @@ section>h1 {
     align-self: flex-start;
     position: -webkit-sticky;
     position: sticky;
-    top: 15%;
+    top: 75px;
     width: 30%;
     line-height: 40px;
     word-break: keep-all;
@@ -862,7 +862,7 @@ footer {
     /* left */
     .leftRight .left {
         width: 100%;
-        top: 10%;
+        top: 75px;
         padding-top: 3%;
     }
 

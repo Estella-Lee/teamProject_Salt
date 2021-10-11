@@ -166,7 +166,7 @@ section>h1 {
 .mainVideo .intro span {
     display: block;
     color: #fff;
-    font-size: 6vw;
+    font-size: 5.5vw;
     font-weight: bold;
     /* opacity: 0; */
 }
@@ -373,6 +373,10 @@ footer {
     }
 
     /*==== mainVideo ====*/
+    .mainVideo .intro span {
+        font-size: 6vw;
+    }
+
     .mainVideo .intro a {
         padding: 13px 20px;
         font-size: 14px;
@@ -562,13 +566,13 @@ footer {
     }
 
     .mainVideo .intro {
-        top: 20%;
+        top: 15%;
         left: 9%;
     } 
 
     .mainVideo .intro span {
-        line-height: 100px;
-        font-size: 10vw;
+        line-height: 80px;
+        font-size: 9vw;
     } 
 
     .mainVideo .intro a {
@@ -611,7 +615,7 @@ footer {
     } 
 
     .mainVideo .intro span {
-        line-height: 75px;
+        line-height: 70px;
     } 
 
     .mainVideo .intro a {
@@ -635,12 +639,13 @@ footer {
     /*========== main ==========*/
     /*==== mainVideo ====*/
     .mainVideo .intro {
-        top: 40%;
+        top: 45%;
         left: 5%;
     } 
 
     .mainVideo .intro span {
-        line-height: 50px;
+        font-size: 8vw;
+        line-height: 40px;
     } 
 
     .mainVideo .intro a {
@@ -676,7 +681,11 @@ footer {
     /*========== main ==========*/
     /*==== mainVideo ====*/
     .mainVideo .intro {
-        top: 30%;
+        top: 43%;
         left: 5%;
+    } 
+
+    .mainVideo .intro span {
+        line-height: 35px;
     } 
 }
