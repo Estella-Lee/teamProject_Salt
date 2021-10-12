@@ -20,7 +20,11 @@
 
 /*========== header area ==========*/
 header {
+  position: absolute;
   height: 75px;
+  width: 100%;
+  z-index: 1;
+  /* background-color: #fff; */
 }
 
 .headerConfix {
@@ -33,6 +37,7 @@ header {
 /* 로고 */
 .logo {
   float: left;
+  width: 180px;
   width: 15%;
   margin-top: 15px;
   margin-right: 20px;
@@ -40,6 +45,10 @@ header {
 
 .logo h1 img{
   width: 130px;
+}
+
+.logo .mobileLogo {
+  display: none;
 }
 
 /* mobileBtn */
@@ -50,14 +59,16 @@ header {
 /* 메인메뉴 */
 .mainMenu .gnb {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 820px;
   width: 68.333%;
   height: 75px;
   line-height: 75px;
 }
 
 .gnb li {
-  width: 20.039%;
+  width: 180px;
+  width: 22.304%;
   margin: 0 10px;
   text-align: center;
 }
@@ -67,6 +78,7 @@ header {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.4s;
+  color: #000;
 }
 
 .gnb li:hover a {
@@ -93,9 +105,10 @@ header {
 /* 로그인, 회원가입 */
 .loginSignup {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
-  transform: translateY(-50%);
+  line-height: 50px;
+  /* transform: translateY(-50%); */
 }
 
 .loginSignup ul{
@@ -107,12 +120,14 @@ header {
 }
 
 .loginSignup li>a {
+  color: #000;
   font-size: 12px;
 }
 
 .loginSignup li:hover a {
   font-weight: bold;
 }
+
 
 
 
