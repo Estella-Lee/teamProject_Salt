@@ -630,7 +630,7 @@ footer {
   }
 
   .z1 .scrollDown {
-    z-index: 11;
+    z-index: 0;
     position: absolute;
     width: 33px;
     height: 80px;
@@ -641,7 +641,7 @@ footer {
 
   .scrollDown strong {
     display: block;
-    margin-top: 50px;
+    margin-top:  80px;
     color: white;
   }
 

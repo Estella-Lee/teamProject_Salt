@@ -543,14 +543,13 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 46px;
-    z-index: 3;
     color: #fff;
     opacity: .6;
     text-shadow: 1px 1px 5px #000;
   }
 
   .z1 .scrollDown {
-    z-index: 11;
+    z-index: 0;
     position: absolute;
     width: 33px;
     height: 80px;
@@ -561,7 +560,7 @@ footer {
 
   .scrollDown strong {
     display: block;
-    margin-top: 50px;
+    margin-top:  80px;
     color: white;
   }
 
