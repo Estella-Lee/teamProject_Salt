@@ -257,6 +257,7 @@ section h1 {
     width: 550px;
     height: 378px;
     background-color: #dbe2df;
+    cursor: pointer;
 }
 
 
@@ -306,6 +307,7 @@ section h1 {
     width: 380px;
     height: 315px;
     background-color: #e8e8e8;
+    cursor: pointer;
 }
 
 .artist2 img {
@@ -353,6 +355,7 @@ section h1 {
     background-color: #dfe7e8;
     width: 590px;
     height: 395px;
+    cursor: pointer;
 }
 
 .artist3 img {
@@ -399,6 +402,7 @@ section h1 {
     width: 510px;
     height: 325px;
     background-color: #ebebeb;
+    cursor: pointer;
 }
 
 
@@ -448,6 +452,7 @@ section h1 {
     width: 440px;
     height: 540px;
     background-color: #d2dadc;
+        cursor: pointer;
 }
 
 .artist5 img {
@@ -494,6 +499,7 @@ section h1 {
     width: 410px;
     height: 410px;
     background-color: #d3d5ca;
+    cursor: pointer;
 }
 
 .artist6 img {
@@ -540,6 +546,7 @@ section h1 {
     width: 370px;
     height: 400px;
     background-color: #cdd5dc;
+    cursor: pointer;
 }
 
 
@@ -589,6 +596,7 @@ section h1 {
     width: 480px;
     height: 410px;
     background-color: #d6e2e2;
+    cursor: pointer;
 }
 
 .artist8 img {

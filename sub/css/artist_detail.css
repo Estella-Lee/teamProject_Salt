@@ -337,11 +337,17 @@ input:checked + label {
 }
 
 
+
 .photoLine .open{
     overflow: hidden;
     width: 32%;
     height: 165px;
     cursor: pointer;
+}
+
+.photoLine .close {
+    position: relative;
+    z-index: -1;
 }
 
 .imgWrapper {
