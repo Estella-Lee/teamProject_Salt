@@ -81,7 +81,7 @@ header {
 
 .gnb li>a {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: bold;
     transition: all 0.4s;
     color: #fff;
@@ -602,6 +602,25 @@ footer {
         max-width: 1024px;
         margin: 0 auto;
         padding: 0 10px;
+    }
+
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
     }
 
     .mainImg img {

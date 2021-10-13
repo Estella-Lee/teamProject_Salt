@@ -800,7 +800,7 @@ footer {
         width: 100%;
         top: -200px;
         font-size: 2.4rem;
-        z-index: 9999;
+        z-index: 998;
     }
 
     .artistLineUp ul {
@@ -846,6 +846,11 @@ footer {
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 4px;
+    }
+
+    
+    .artistPhotoArea .confix>div{
+        margin: 0 0.4%;
     }
 
     .artist {
@@ -1159,6 +1164,10 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .artistPhotoArea .confix>div{
+        margin: 0;
     }
 
     .artist {
