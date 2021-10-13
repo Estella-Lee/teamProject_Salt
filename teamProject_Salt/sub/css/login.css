@@ -130,8 +130,7 @@ main {
 /* login */
 .login {
     width: 100%;
-    padding: 100px 0;
-    padding: 16.8% 0;
+    padding: 16vh 0;
     text-align: center;
 }
 
@@ -440,10 +439,6 @@ footer {
 
     /*========== main ==========*/
     /* login */
-    .login {
-        padding: 70px 0;
-    }
-
     .login h1 {
         font-size: 28px;
     }
