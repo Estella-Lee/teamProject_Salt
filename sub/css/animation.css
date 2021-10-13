@@ -364,7 +364,7 @@
 }
 
 .artist7Bg:hover ~ .artist7English {
-    right: -145px;
+    right: -160px;
     bottom: 560px;
     transform: rotate(0deg);
     z-index: 4;
