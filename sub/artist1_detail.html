@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="Description" content="SALT Entertainment">
     <meta name="Author" content="ycs">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/artist_detail.css" type="text/css">
     <link rel="stylesheet" href="./css/modal.css" type="text/css">
+    <link rel="shortcut icon" href="./images/icon.png">
     <script src="./js/jquery.js"></script>
     <title>Kim Jung-Hwa</title>
 </head>
@@ -17,11 +18,11 @@
     <div id="container">
         <header>
             <div class="logoMenu">
-                <div class="confix">
+                <div class="headerConfix">
                     <div class="logo">
-                        <h1><a href="../index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+                        <h1><a href="./../../index.html"><img src="./images/logoWhite.png" alt="로고"></a></h1>
                         <div class="mobileLogo">
-                            <a href="../index.html"><img src="./images/logo.png" alt="로고"></a>
+                            <a href="./../../index.html"><img src="./images/logo.png" alt="로고"></a>
                         </div>
                     </div><!-- logo end -->
 
@@ -33,20 +34,20 @@
 
                     <nav class="mainMenu">
                         <ul class="gnb">
-                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="./../company/about.html">COMPANY</a></li>
                             <li><a href="./artist.html">ARTISTS</a></li>
-                            <li><a href="./notice.html">NOTICE</a></li>
-                            <li><a href="./audition.html">AUDITION</a></li>
+                            <li><a href="./../notice/notice.html">NOTICE</a></li>
+                            <li><a href="./../notice/audition.html">AUDITION</a></li>
                         </ul>
                     </nav>
 
                     <div class="loginSignup">
                         <ul>
-                            <li><a href="./login.html">Login</a></li>
-                            <li><a href="./signUp.html">Sign up</a></li>
+                            <li><a href="./../notice/login.html">Login</a></li>
+                            <li><a href="./../notice/signUp.html">Sign up</a></li>
                         </ul>
                     </div>
-                </div> <!-- confix -->
+                </div> <!-- headerConfix end-->
             </div><!-- logoMenu end -->
         </header>
 
@@ -55,7 +56,8 @@
             <div class="mainImg">
                 <img src="images/Kim_Jung_Hwa/main_detail.jpg" alt="">
             </div>
-            <div class="wrap">
+            <section class="wrap">
+                <h2 class="none">artist details</h2>
                 <div class="confix">
                     <aside class="profile">
                         <div class="profileLeftBox">
@@ -208,16 +210,16 @@
                                     <div>
                                         <a href="https://tv.naver.com/v/8101157" target="_blank" class="video1">
                                             <img src="images/Kim_Jung_Hwa/video1.jpg" alt="">
-                                            <span class="date">2020.04.07</span>
                                             <span>tvN &lt;자백&gt;</span>
+                                            <span class="date">2020.04.07</span>
                                         </a>
                                     </div>
                                     <div>
                                         <a href="https://www.youtube.com/watch?v=H9_TxHmpzOQ&feature=emb_title&ab_channel=cellbijou"
                                             target="_blank" class="video1">
                                             <img src="images/Kim_Jung_Hwa/video2.jpg" alt="">
-                                            <span class="date">2020.04.07</span>
                                             <span>'셀비쥬' 광고</span>
+                                            <span class="date">2020.04.07</span>
                                         </a>
                                     </div>
                                 </div>
@@ -226,8 +228,8 @@
                                         <a href="https://www.youtube.com/watch?v=BvIiBgJ1lGw&feature=emb_title&ab_channel=SALTEntertainment"
                                             target="_blank" class="video1">
                                             <img src="images/Kim_Jung_Hwa/video4.jpg" alt="">
-                                            <span class="date">2020.04.07</span>
                                             <span>'아나 드론' 화보</span>
+                                            <span class="date">2020.04.07</span>
                                         </a>
                                     </div>
 
@@ -235,24 +237,24 @@
                                         <a href="https://www.youtube.com/watch?v=wxhCi3HhEkY&ab_channel=SALTEntertainment"
                                             target="_blank" class="video1">
                                             <img src="images/Kim_Jung_Hwa/video3.jpg" alt="">
-                                            <span class="date">2020.04.07</span>
                                             <span>'여성조선' 화보</span>
+                                            <span class="date">2020.04.07</span>
                                         </a>
                                     </div>
                                 </div>
                                 <button class="more"><img src="images/expand-button.png" alt=""></button>
                                 <button class="close hidden"><img src="images/expand-button.png" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </div><!-- videoLine-->
+                        </div><!-- contentBox end -->
+                    </div><!-- rightBox end-->
+                </div><!-- confix end-->
+            </section><!-- wrap end-->
         </main>
 
         <footer>
             <div class="footerArea confix">
                 <div class="footerLogo">
-                    <h2><a href="../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
+                    <h2><a href="./../../index.html"><img src="./images/footerLogo.png" alt="푸터로고"></a></h2>
                 </div>
 
                 <div class="adrTxt">
@@ -299,7 +301,7 @@
             </div><!-- footerArea -->
         </footer>
     </div><!-- container end -->
-    <script type="text/javascript" src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/headerScroll.js"></script>
     <script src="./js/copy_url.js"></script>
     <script src="./js/mobile.js"></script>

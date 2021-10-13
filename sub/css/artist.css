@@ -1,6 +1,8 @@
 @charset "utf-8";
+
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 /* ===== 그리드 시스템 confix ===== */
@@ -26,6 +28,13 @@ header {
     width: 100%;
     z-index: 9999;
     /* background-color: #fff; */
+}
+
+.headerConfix {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 로고 */
@@ -141,12 +150,14 @@ section h1 {
     width: 100%;
     overflow: hidden;
     }
+
 .slideContainer{
     width:100vw;
     height:600px;
     position: relative;
     overflow: hidden;
 }
+
 .slider{
     display: flex;
     position:absolute;
@@ -720,9 +731,28 @@ footer {
 
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 8px;
-        
+        font-size: 8px;   
     }
+
+    /* 로고 */
+    .logo h1 img {
+        width: 110px;
+    }
+
+    /* mainMenu */
+    .gnb li>a {
+        font-size: 14px;
+    }
+
+    .gnb li:hover a {
+        font-size: 16px;
+    }
+
+    /* 로그인, 회원가입 */
+    .loginSignup li>a {
+        font-size: 10px;
+    }
+
 
     .confix { 
         position: relative;
@@ -935,6 +965,10 @@ footer {
         background: #fff;
         overflow: hidden;
         transition: all 0.3s;
+    }
+
+    .headerConfix {
+        width: 100%;
     }
 
     /* mobileBtn */

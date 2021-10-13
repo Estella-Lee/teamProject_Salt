@@ -161,6 +161,7 @@
     border:none; 
     padding:0; 
     background: none;
+    cursor:pointer;
 }
 
 .more img, .close img {
