@@ -212,7 +212,7 @@ section h1 {
 /* artistLineUp */
 .artistLineUp {
     position: sticky;
-    top: -100px;
+    top: -210px;
     font-size: 2rem;
     z-index: 1;
 }
