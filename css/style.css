@@ -186,7 +186,6 @@ main {
   }
 
 
-
 /* 메인 비디오 */
 .mainvideo {
     position: relative;
@@ -233,6 +232,7 @@ main {
     font-weight: bold;
     color: #fff; 
 }
+
 .videoTxt span {
     display: block;
     font-size: 1.9vw; 
@@ -906,7 +906,7 @@ footer {
 
     /* salt sharing */
     .sharingList {
-        width: 100vw;
+        width: 95vw;
         padding: 0 5vw;
         padding-left: 0;
     }
